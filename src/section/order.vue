@@ -237,7 +237,7 @@
 
   .form {
     width: size(920);
-    height: 270px;
+    height: 347px;
     gap: size(80);
     margin-bottom: size(50);
 
