@@ -24,14 +24,14 @@
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/2.webp" />
         <div class="city absolute">TAIPEI</div>
-        <div class="name absolute">台北信義重劃區</div>
-        <div class="info absolute">台北信義重劃區示意圖</div>
+        <div class="name absolute">台北信義計畫區</div>
+        <div class="info absolute">台北信義計畫區示意圖</div>
       </div>
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/3.webp" />
         <div class="city absolute">TAICHUNG</div>
-        <div class="name absolute">台中七期重劃區</div>
-        <div class="info absolute">台中七期重劃區示意圖</div>
+        <div class="name absolute">台中七期計畫區</div>
+        <div class="info absolute">台中七期計畫區示意圖</div>
       </div>
     </div>
     <div class="slider md:hidden">
