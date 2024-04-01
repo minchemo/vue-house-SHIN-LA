@@ -9,7 +9,7 @@
         <div class="subtitle">CING JING LIN GROUP</div>
       </div>
     </div>
-    <div class="info absolute">情境示意圖</div>
+    <!--div class="info absolute">情境示意圖</div-->
   </section>
 </template>
 

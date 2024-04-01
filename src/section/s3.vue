@@ -3,7 +3,8 @@
     <div class="txt text-center md:flex md:justify-center md:items-center">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">渴望時尚</div>
-        <div class="subtitle">完美的顛覆 <br class="md:hidden">夢想的大位</div>
+        <div class="subtitle">完美的顛覆 夢想的大位</div>
+        <hr class="md:hidden">
         <div class="content">
           台南平實，對位台北信義、台中七期<br>
           集繁華、速度、機能、綠意、價值於一身<br>
@@ -49,7 +50,7 @@
             <div class="city absolute">TAINAN</div>
             <div class="name absolute">台南平實重劃區</div>
             <div class="en absolute">LANDMARK OF TAINAN</div>
-            <div class="info absolute">平實重劃區實景拍攝</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
@@ -58,7 +59,7 @@
             <div class="city absolute">TAIPEI</div>
             <div class="name absolute">台北信義計畫區</div>
             <div class="en absolute">LANDMARK OF TAIPEI</div>
-            <div class="info absolute">台北信義計畫區示意圖</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
@@ -67,7 +68,7 @@
             <div class="city absolute">TAICHUNG</div>
             <div class="name absolute">台中七期計畫區</div>
             <div class="en absolute">LANDMARK OF TAICHUNG</div>
-            <div class="info absolute">台中七期計畫區示意圖</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -100,7 +101,7 @@
       font-weight: 700;
       letter-spacing: size-m(9);
       text-indent: size-m(9);
-      margin-bottom: size-m(13);
+      margin-bottom: size-m(0);
       padding-bottom: size-m(13);
       position: relative;
       line-height: normal;
@@ -111,7 +112,8 @@
         margin-bottom: size(24);
         padding-bottom: size(19);
       }
-  
+
+
       &:after {
         content: '';
         position: absolute;
@@ -120,12 +122,15 @@
         transform: translate(-50%, 0);
         width: size-m(115);
         height: size-m(1);
-        background: #fff;
+        background: #173868;
         @media (min-width: 768px) {
           width: size(215);
           height: size(1);
+          background: #fff;
         }
       }
+  
+      
     }
 
     .subtitle {
@@ -143,6 +148,14 @@
         margin-bottom: size(43);
       }
     }
+  }
+
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
+    border: 1px solid #fff;
   }
 
   .city {

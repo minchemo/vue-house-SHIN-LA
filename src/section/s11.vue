@@ -5,15 +5,29 @@
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">2044坪 夢幻大境</div>
         <div class="subtitle">私院莊園 雍容領地</div>
+
+        <hr class="md:hidden">
+
         <div class="content md:hidden">
-          觸及你所未想，以夢想格局，圍塑千坪璀璨綠廊，四季栽培而出的流動景觀，和泳池、戶外座席、公設平台親暱互動，自然地讓人與自然留連忘返，營造一座碩大卻優雅的高隱私莊園。
+          觸及你所未想，以夢想格局，<br>圍塑千坪璀璨綠廊，四季栽培而出的流動景觀，<br>和泳池、戶外座席、公設平台親暱互動，<br>自然地讓人與自然留連忘返，<br>營造一座碩大卻優雅的高隱私莊園
         </div>
       </div>
     </div>
     <div class="content hidden md:block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       觸及你所未想，以夢想格局，圍塑千坪璀璨綠廊，四季栽培而出的流動景觀，和泳池、戶外座席、公設平台親暱互動，自然地讓人與自然留連忘返，營造一座碩大卻優雅的高隱私莊園。
     </div>
-    <div class="slider">
+    <div class="imgs hidden md:block">
+      <div class="img1 relative">
+            <img class="block" src="@/section/s11/2.webp" />
+            <div class="info absolute">公設3D合成示意圖</div>
+          </div>
+      <div class="img2 relative">
+            <img class="block w-full" src="@/section/s11/1.webp" />
+            <div class="info absolute">景觀3D合成示意圖</div>
+          </div>
+    </div>
+
+    <div class="slider md:hidden">
       <swiper
         :loop="true"
         :navigation="true"
@@ -24,27 +38,27 @@
         :modules="modules"
       >
         <swiper-slide>
-          <div class="img1 relative">
-            <img class="block" src="@/section/s11/1.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
-          </div>
-          <div class="img2 relative">
-            <img class="block w-full" src="@/section/s11/2.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
+          <div class="img relative">
+            <img class="block" src="@/section/s11/1m.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img1 relative">
-            <img class="block" src="@/section/s11/3.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
+          <div class="img relative">
+            <img class="block" src="@/section/s11/2m.webp" />
+            <div class="info absolute"></div>
           </div>
-          <div class="img2 relative">
-            <img class="block w-full" src="@/section/s11/4.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img relative">
+            <img class="block" src="@/section/s11/3m.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
       </swiper>
     </div>
+
+    
   </section>
 </template>
 
@@ -63,10 +77,18 @@
     height: size(1080);
   }
 
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
+  }
+
   .style {
-    top: size-m(-192.36);
-    left: size-m(20);
-    width: size-m(335);
+    top: size-m(-40.36);
+    right: size-m(-70);
+    width: size-m(200);
     @media (min-width: 768px) {
       top: size(-311);
       left: size(1309);

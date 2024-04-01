@@ -1,5 +1,5 @@
 <template>
-  <section class="s10 w-full relative text-white">
+  <section class="s10 w-full relative text-white hidden md:block">
     <div class="bg absolute"></div>
     <img class="cloud absolute" src="@/section/s10/cloud.webp" />
     <img class="moon absolute" src="@/section/s10/moon.webp"  data-aos="fade-down" data-aos-duration="3000" data-aos-delay="200"   />

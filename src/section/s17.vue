@@ -3,7 +3,7 @@
     <div class="txt text-center">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">造夢者 清景麟建築</div>
-        <div class="subtitle">CING JING LIN GROUP</div>
+        <div class="subtitle hidden md:block">CING JING LIN GROUP</div>
         <div class="content">
           專業實力，用心累積，成就您嚮往的家<br>
           突破格局，為住戶追求更好的路上永不止息
@@ -142,6 +142,7 @@
 
   .img {
     width: 100%;
+    margin-bottom: size-m(40);
     @media (min-width: 768px) {
       height: 100%;
     }
@@ -200,9 +201,10 @@
   }
 
   .controls {
-    top: size-m(270);
+    top: size-m(230);
     left: size-m(10);
     width: size-m(375 - 20);
+    z-index: 99;
     @media (min-width: 768px) {
       top: size(540);
       left: size(369);

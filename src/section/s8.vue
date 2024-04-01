@@ -1,15 +1,39 @@
 <template>
-  <section class="s8 w-full relative text-[#173868] bg-[#C8D1D5] md:flex md:items-stretch md:flex-row-reverse">
+  <section class="s8 w-full relative text-[#173868] bg-[#C0C9CD] md:flex md:items-stretch md:flex-row-reverse">
     <div class="txt text-center md:flex md:justify-center md:items-center">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">渴望速度</div>
         <div class="subtitle">無以複製的趨動速度</div>
-        <div class="content text-left">
+
+        <hr class="md:hidden">
+
+
+        <div class="content text-left hidden md:block">
           <p>國道1號／ 速度馳騁大灣交流道、仁德交流道，轉高鐵、接南科，南來北往、東西駕馭，無往不利</p>
-          <p>平實轉運站／ 台南首座整合交通運輸、百貨休閒、都市景觀的轉運中心，台南新生活風格地標誕生</p>
+          <p>平實轉運站／ 台南首座整合交通運輸、百貨辦公、都市景觀的轉運中心，台南新生活風格地標誕生</p>
           <p>藍綠雙捷／ 未來捷運藍線、綠線將交會於平實轉運站，坐擁軌道經濟的交叉雙倍動力</p>
-          <p>台南高鐵／ 悠遊速度，接軌全台一日生活圈，暢達三井OUTLET、綠能智慧科技場域</p>
+          <p>台南高鐵／ 悠遊速度，暢達三井OUTLET、綠能智慧科技場域，接軌全台一日生活圈</p>
         </div>
+
+        <div class="content text-left md:text-center md:hidden">
+          <div class="item">
+            <div class="t">國道1號</div>
+            <div class="c">速度馳騁大灣交流道、仁德交流道，轉高鐵、接南科，南來北往、東西駕馭，無往不利</div>
+          </div>
+          <div class="item">
+            <div class="t">平實轉運站</div>
+            <div class="c">台南首座整合交通運輸、百貨辦公、都市景觀的轉運中心，台南新生活風格地標誕生</div>
+          </div>
+          <div class="item">
+            <div class="t">藍綠雙捷</div>
+            <div class="c">未來捷運藍線、綠線將交會於平實轉運站，坐擁軌道經濟的交叉雙倍動力</div>
+          </div>
+          <div class="item">
+            <div class="t">台南高鐵</div>
+            <div class="c">悠遊速度，暢達三井OUTLET、綠能智慧科技場域，接軌全台一日生活圈</div>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="pic hidden md:flex md:flex-wrap md:flex-1">
@@ -26,6 +50,9 @@
         <div class="info absolute">情境示意圖</div>
       </div>
     </div>
+
+    
+
     <div class="slider md:hidden">
       <swiper
         :loop="true"
@@ -39,19 +66,19 @@
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s8/1.webp" />
-            <div class="info">台南高鐵站實景拍攝</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s8/2.webp" />
-            <div class="info">情境示意圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s8/3.webp" />
-            <div class="info">情境示意圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -78,6 +105,14 @@
       padding: 0 size(132);
     }
 
+    hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(20);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
+  }
+
     p {
       line-height: size-m(20);
       margin-bottom: size-m(10);
@@ -87,13 +122,31 @@
       }
     }
 
+     .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: size-m(15);
+    margin-bottom: size-m(10);
+    
+    .t{
+      font-size: size-m(15);
+      width: size-m(150);
+    }
+
+    .c{
+      margin: 0;
+      width: size-m(380);
+    }
+  }
+
     .title {
       font-family: "Noto Serif TC";
       font-size: size-m(30);
       font-weight: 700;
       letter-spacing: size-m(9);
       text-indent: size-m(9);
-      margin-bottom: size-m(13);
+      margin-bottom: size-m(0);
       padding-bottom: size-m(13);
       position: relative;
       line-height: normal;
@@ -112,7 +165,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         width: size-m(115);
-        height: size-m(1);
+        height: size-m(0);
         background: #173868;
         @media (min-width: 768px) {
           width: size(215);

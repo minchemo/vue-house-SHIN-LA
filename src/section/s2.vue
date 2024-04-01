@@ -1,8 +1,9 @@
 <template>
   <section class="s2 w-full relative text-white">
     <div class="title absolute text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">完美的顛覆 <br class="md:hidden">總和你所渴望</div>
-      <div class="t2">INTERNATIONAL LOCATION</div>
+      <div class="t1 hidden md:block">完美的顛覆 總和你所渴望</div>
+      <div class="t1 md:hidden">完美的顛覆<br>總和你所渴望</div>
+      <div class="t2">LANDMARK OF TAINAN</div>
     </div>
     <div class="info absolute">實景拍攝合成示意圖</div>
   </section>
@@ -23,7 +24,7 @@
 
   .title {
     top: size-m(65);
-    left: size-m(46);
+    left: size-m(65);
     text-align: center;
     font-family: 'Noto Serif TC', serif;
     @media (min-width: 768px) {
@@ -52,8 +53,9 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
-      letter-spacing: size-m(4.8);
-      text-indent: size-m(4.8);
+      letter-spacing: size-m(5.2);
+      text-indent: size-m(5.2);
+      text-align: center;
       @media (min-width: 768px) {
         font-size: size(20);
         letter-spacing: size(10.6);

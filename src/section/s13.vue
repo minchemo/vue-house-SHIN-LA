@@ -1,15 +1,16 @@
 <template>
   <section class="s13 w-full relative text-[#173868] bg-white">
-    <img class="style absolute" src="@/section/s11/style.svg" />
+    <!--img class="style absolute" src="@/section/s11/style.svg" /-->
     <div class="txt text-center md:text-left">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">高訂美學 穿梭想像</div>
-        <div class="subtitle">International Location</div>
-        <div class="content">
-          公設品味五感在線，追夢者的頂極饗宴<br>
-          重點精選世界精品HERMES頂級家具、家飾<br>
-          中庭花園、健身會館、泳池場域，連成澎湃一氣<br>
-          以高奢訂製格局，實踐永恆渴望的夢想之見
+        <div class="subtitle">International Boutique</div>
+        <hr class="md:hidden">
+        <div class="content hidden md:block">
+          公設品味五感在線，追夢者的頂極饗宴；重點精選世界精品HERMES頂級家具、家飾，和豐盛戶外公設連成澎湃一氣；以高奢訂製格局，實踐永恆渴望的夢想之見
+        </div>
+        <div class="content md:hidden">
+          公設品味五感在線，追夢者的頂極饗宴；<br>重點精選世界精品HERMES頂級家具、家飾，<br>和豐盛戶外公設連成澎湃一氣；以高奢訂製格局，<br>實踐永恆渴望的夢想之見
         </div>
       </div>
     </div>
@@ -35,14 +36,14 @@
       >
         <swiper-slide>
           <div class="img relative">
-            <img class="block" src="@/section/s13/1.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
+            <img class="block" src="@/section/s13/1m.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img relative">
             <img class="block" src="@/section/s13/2.webp" />
-            <div class="info absolute">公設3D合成示意圖</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -62,6 +63,14 @@
     font-size: size(19);
     line-height: size(33);
     height: size(1080);
+  }
+
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
   }
 
   .style {

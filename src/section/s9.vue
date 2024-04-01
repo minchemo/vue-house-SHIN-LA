@@ -1,9 +1,11 @@
 <template>
   <section class="s9 w-full relative">
+    <div class="title absolute md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">當渴望的夢想<br>有了家的想像</div>
+    <div class="subtitle absolute md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">IMAGINATION OF HOME</div>
     <img class="cloud absolute" src="@/section/s9/cloud.webp" />
     <img class="moon absolute" src="@/section/s9/moon.webp" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="-200"  />
     <img class="img1 absolute" src="@/section/s9/img1.webp" />
-    <img class="img2 absolute" src="@/section/s9/img2.webp" />
+    <img class="img2 absolute hidden md:block" src="@/section/s9/img2.webp" />
     <div class="butterfly1 absolute"><img src="@/section/s1/butterfly1.svg" /></div>
     <div class="butterfly2 absolute"><img src="@/section/s1/butterfly2.svg" /></div>
   </section>
@@ -56,6 +58,41 @@
       left: size(605);
       width: size(781);
     }
+  }
+
+  .title{
+    font-family: "Noto Serif TC";
+      font-size: size-m(30);
+      font-weight: 700;
+      letter-spacing: size-m(9);
+      margin-bottom: size-m(0);
+      padding-bottom: size-m(13);
+      position: relative;
+      line-height: normal;
+      color: #173868;
+      position: absolute;
+      left: size-m(75);
+      bottom: size-m(60);
+      z-index: 99;
+      text-align: center;
+  }
+
+  .subtitle{
+    font-family: "Noto Serif TC";
+      font-size: size-m(12);
+      font-weight: 700;
+      letter-spacing: size-m(3);
+      margin-bottom: size-m(0);
+      padding-bottom: size-m(13);
+      position: relative;
+      line-height: normal;
+      color: #173868;
+      position: absolute;
+      left: size-m(85);
+      bottom: size-m(40);
+      z-index: 99;
+      text-align: center;
+
   }
 
   .img2 {

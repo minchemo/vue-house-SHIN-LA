@@ -1,13 +1,31 @@
 <template>
-  <section class="s6 w-full relative text-[#173868] bg-[#C8D1D5] md:flex md:items-stretch">
+  <section class="s6 w-full relative text-[#173868] bg-[#C0C9CD] md:flex md:items-stretch">
     <div class="txt text-center md:flex md:justify-center md:items-center">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">渴望綠意</div>
         <div class="subtitle">2.1萬坪平實公園 <br>無以撼動的精彩簇擁</div>
-        <div class="content text-left">
+
+        <hr class="md:hidden">
+
+        <div class="content text-left hidden md:block">
           <p>平實公園／ 比美紐約中央公園綠海壯闊，2.1萬坪森度綠富，同步國際富金景觀哲學</p>
-          <p>明星學區／ 東光國小、復興國中、台南一中、成功大學等一流名校就近讀</p>
-          <p>成大醫院／ 近距成大醫院、榮總台南分院等醫療機能，醫生、護理從業人員優質客群</p>
+          <p>明星學區／ 東光國小、復興國中、台南一中、成功大學等一流名校集結</p>
+          <p>成大醫院／ 近成大醫院、榮總台南分院等醫療資源，健康養生機能俱全</p>
+        </div>
+
+        <div class="content text-left md:text-center md:hidden">
+          <div class="item">
+            <div class="t">平實公園</div>
+            <div class="c">比美紐約中央公園綠海壯闊，2.1萬坪森度綠富，同步國際富金景觀哲學</div>
+          </div>
+          <div class="item">
+            <div class="t">明星學區</div>
+            <div class="c">東光國小、復興國中、台南一中、成功大學等一流名校集結</div>
+          </div>
+          <div class="item">
+            <div class="t">成大醫院</div>
+            <div class="c">近成大醫院、榮總台南分院等醫療資源，健康養生機能俱全</div>
+          </div>
         </div>
         <div class="controls hidden md:flex md:justify-end">
           <svg class="slide-prev block" @click="slidePrev" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,12 +73,7 @@
     <div class="pic hidden md:block md:flex-1">
       <div class="w-full">
         <swiper
-          :loop="true"
           :navigation="false"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
           :modules="modules"
           @init="init"
         >
@@ -68,31 +81,15 @@
             <div class="md:flex md:flex-wrap">
               <div class="img relative w-full img1">
                 <img class="w-full block" src="@/section/s6/1.webp" />
-                <div class="info absolute">平實公園實景拍攝</div>
+                <div class="info absolute">情境示意圖</div>
               </div>
               <div class="img relative half-left mb0 img2">
                 <img class="w-full block" src="@/section/s6/2.webp" />
-                <div class="info absolute">平實公園實景拍攝</div>
+                <div class="info absolute"></div>
               </div>
               <div class="img relative half-right mb0 img3">
                 <img class="w-full block" src="@/section/s6/3.webp" />
-                <div class="info absolute">平實公園實景拍攝</div>
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="md:flex md:flex-wrap">
-              <div class="img relative half-left img4">
-                <img class="w-full block" src="@/section/s6/4.webp" />
-                <div class="info absolute">成功大學實景拍攝</div>
-              </div>
-              <div class="img relative half-right img5">
-                <img class="w-full block" src="@/section/s6/5.webp" />
-                <div class="info absolute">成功大學實景拍攝</div>
-              </div>
-              <div class="img relative w-full mb0 img6">
-                <img class="w-full block" src="@/section/s6/6.webp" />
-                <div class="info absolute">成大醫院實景拍攝</div>
+                <div class="info absolute">以上皆為實景拍攝圖</div>
               </div>
             </div>
           </swiper-slide>
@@ -112,37 +109,19 @@
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s6/1.webp" />
-            <div class="info absolute">平實公園實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/2.webp" />
-            <div class="info absolute">平實公園實景拍攝</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s6/3.webp" />
-            <div class="info absolute">平實公園實景拍攝</div>
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/4.webp" />
-            <div class="info absolute">成功大學實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/5.webp" />
-            <div class="info absolute">成功大學實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/6.webp" />
-            <div class="info absolute">成大醫院實景拍攝</div>
+            <img class="block w-full" src="@/section/s6/2.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -162,6 +141,14 @@
     line-height: size(33);
   }
 
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(20);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
+  }
+
   .txt {
     padding: size-m(50) size-m(33);
     @media (min-width: 768px) {
@@ -178,6 +165,24 @@
       }
     }
 
+    .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: size-m(15);
+    margin-bottom: size-m(10);
+    
+    .t{
+      font-size: size-m(15);
+      width: size-m(130);
+    }
+
+    .c{
+      margin: 0;
+      width: size-m(420);
+    }
+  }
+
     .controls {
       margin-top: size(18);
 
@@ -185,6 +190,7 @@
         width: size(40);
         cursor: pointer;
       }
+      @media (min-width: 768px) {display: none;}
     }
 
     .title {
@@ -193,7 +199,7 @@
       font-weight: 700;
       letter-spacing: size-m(9);
       text-indent: size-m(9);
-      margin-bottom: size-m(13);
+      margin-bottom: size-m(0);
       padding-bottom: size-m(13);
       position: relative;
       line-height: normal;
@@ -212,7 +218,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         width: size-m(115);
-        height: size-m(1);
+        height: size-m(0);
         background: #173868;
         @media (min-width: 768px) {
           width: size(215);

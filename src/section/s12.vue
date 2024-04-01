@@ -4,25 +4,27 @@
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">定格國際 對味大器</div>
         <div class="subtitle">外觀語彙 和世界品味齊頭</div>
+
+        <hr class="md:hidden">
         <div class="content md:hidden">
-          平實路交織裕永路的軸線氣度，極淬15層天際之藝<br>
-          獨步時尚與綠海一線的寬懷，私藏世界美學內涵<br>
+          平實路交織裕永路的軸線氣度，<br>
+          極淬15層天際之藝；<br>
+          獨步時尚與綠海一線的寬懷，私藏世界美學內涵；<br>
           玩藝語彙、從容曲線，致敬跨時空的傳世格調
         </div>
       </div>
     </div>
     <div class="content hidden md:block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      平實路交織裕永路的軸線氣度，極淬15層天際之藝<br>
-      獨步時尚與綠海一線的寬懷，私藏世界美學內涵<br>
-      玩藝語彙、從容曲線，致敬跨時空的傳世格調
+      平實路交織裕永路的軸線氣度，極淬15層天際之藝；獨步時尚與綠海一線的寬懷，私藏世界美學內涵；玩藝語彙、從容曲線，致敬跨時空的傳世格調
+
     </div>
     <div class="imgs hidden md:block">
       <div class="img absolute">
-        <img class="block" src="@/section/s12/1.webp" />
+        <img class="block" src="@/section/s12/2.webp" />
         <div class="info absolute">3D外觀合成示意圖</div>
       </div>
       <div class="img absolute">
-        <img class="block" src="@/section/s12/2.webp" />
+        <img class="block" src="@/section/s12/1.webp" />
         <div class="info absolute">3D外觀合成示意圖</div>
       </div>
     </div>
@@ -38,14 +40,14 @@
       >
         <swiper-slide>
           <div class="img relative">
-            <img class="block" src="@/section/s12/1.webp" />
-            <div class="info absolute">3D外觀合成示意圖</div>
+            <img class="block" src="@/section/s12/1m.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img relative">
-            <img class="block" src="@/section/s12/2.webp" />
-            <div class="info absolute">3D外觀合成示意圖</div>
+            <img class="block" src="@/section/s12/2m.webp" />
+            <div class="info absolute"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -65,6 +67,14 @@
     font-size: size(19);
     line-height: size(33);
     height: size(1080);
+  }
+
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
   }
 
   .txt {
@@ -125,7 +135,7 @@
 
   .img {
     width: 100%;
-    height: size-m(446);
+    height: size-m(280);
 
     img {
       display: block;

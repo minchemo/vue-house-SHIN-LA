@@ -4,9 +4,16 @@
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">臺灣蔦屋 客製選冊</div>
         <div class="subtitle">TSUTAYA BOOKSTORE</div>
-        <div class="content">
+        <hr class="md:hidden">
+        <div class="content hidden md:block">
           源於日系血統，配備品味高標，富養氣質內蘊<br>
           專為社區定位、客群分眾以及未來需求而客製的人性選書<br>
+          以書香養心，以人文養情的國際級社區
+        </div>
+        <div class="content md:hidden">
+          源於日系血統，配備品味高標，<br>
+          富養氣質內蘊專為社區定位、客群分眾<br>
+          以及未來需求而客製的人性選書<br>
           以書香養心，以人文養情的國際級社區
         </div>
       </div>
@@ -62,6 +69,14 @@
     height: size(1080);
   }
 
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
+  }
+
   .txt {
     padding: size-m(50) size-m(15);
     z-index: 1;
@@ -111,7 +126,7 @@
 
   .img {
     width: 100%;
-    height: size-m(380);
+    height: size-m(280);
 
     img {
       display: block;

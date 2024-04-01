@@ -7,17 +7,30 @@
           熱烈之巔 繁華眼見為憑<br>
           無以追逐的驚艷成熟
         </div>
+        <hr class="md:hidden">
         
         <div class="content text-left md:text-center hidden md:block">
           <p>南紡購物中心／領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</p>
           <p>小東商圈／質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</p>
           <p>國賓商圈／台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</p>
-          <p>後甲黃昏市場／車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
+          <p>東寧商圈／車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
         </div>
         <div class="content text-left md:text-center md:hidden">
           <div class="item">
             <div class="t">南紡購物中心</div>
-            <p>領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</p>
+            <div class="c">領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</div>
+          </div>
+          <div class="item">
+            <div class="t">小東商圈</div>
+            <div class="c">質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</div>
+          </div>
+          <div class="item">
+            <div class="t">國賓商圈</div>
+            <div class="c">台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</div>
+          </div>
+          <div class="item">
+            <div class="t">東寧商圈</div>
+            <div class="c">車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</div>
           </div>
         </div>
       </div>
@@ -39,7 +52,7 @@
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/4.webp" />
-        <div class="info"></div>
+        <div class="info">情境示意圖</div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/5.webp" />
@@ -79,25 +92,25 @@
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/1.webp" />
-            <div class="info">以上皆為實景拍攝圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/8.webp" />
-            <div class="info">以上皆為實景拍攝圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/6.webp" />
-            <div class="info">以上皆為實景拍攝圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/3.webp" />
-            <div class="info">以上皆為實景拍攝圖</div>
+            <div class="info"></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -127,6 +140,14 @@
     }
   }
 
+  hr{
+    width: size-m(150);
+    margin: 0 auto;
+    margin-top: size-m(20);
+    margin-bottom: size-m(30);
+    border: 1px solid #173868;
+  }
+
   .item{
     display: flex;
     flex-direction: row;
@@ -134,14 +155,14 @@
     gap: size-m(15);
     margin-bottom: size-m(10);
     
-
     .t{
-      font-size: size-m(15);
-      width: size-m(150);
+      font-size: size-m(14);
+      width: size-m(190);
     }
 
-    p{
+    .c{
       margin: 0;
+      width: size-m(420);
     }
   }
 
@@ -169,7 +190,7 @@
       font-weight: 700;
       letter-spacing: size-m(9);
       text-indent: size-m(9);
-      margin-bottom: size-m(13);
+      margin-bottom: size-m(0);
       padding-bottom: size-m(13);
       position: relative;
       line-height: normal;
@@ -189,7 +210,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         width: size-m(115);
-        height: size-m(1);
+        height: size-m(0);
         background: #173868;
         @media (min-width: 768px) {
           width: size(215);
