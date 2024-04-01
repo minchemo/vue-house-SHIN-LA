@@ -1,7 +1,7 @@
 <template>
   <section class="s2 w-full relative text-white">
     <div class="title absolute text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">完美的顛覆<br class="md:hidden">總和你所渴望</div>
+      <div class="t1">完美的顛覆 <br class="md:hidden">總和你所渴望</div>
       <div class="t2">INTERNATIONAL LOCATION</div>
     </div>
     <div class="info absolute">實景拍攝合成示意圖</div>

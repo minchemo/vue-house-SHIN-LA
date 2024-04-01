@@ -3,11 +3,12 @@
     <div class="txt text-center md:flex md:justify-center md:items-center">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">渴望時尚</div>
-        <div class="subtitle">完美的顛覆 <br class="md:hidden">總和你所有的渴望</div>
+        <div class="subtitle">完美的顛覆 <br class="md:hidden">夢想的大位</div>
         <div class="content">
-          台北信義計畫區<br>
-          台中七期計畫區<br>
-          台南平實重劃區
+          台南平實，對位台北信義、台中七期<br>
+          集繁華、速度、機能、綠意、價值於一身<br>
+          一座理所當然的國際城市身段<br>
+          一次絕無僅有的天選極稀機會
         </div>
       </div>
     </div>
@@ -22,14 +23,14 @@
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/2.webp" />
         <div class="city absolute">TAIPEI</div>
-        <div class="name absolute">台北信義計畫區</div>
-        <div class="info absolute">台北信義計畫區示意圖</div>
+        <div class="name absolute">台北信義重劃區</div>
+        <div class="info absolute">台北信義重劃區示意圖</div>
       </div>
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/3.webp" />
         <div class="city absolute">TAICHUNG</div>
-        <div class="name absolute">台中七期計畫區</div>
-        <div class="info absolute">台中七期計畫區示意圖</div>
+        <div class="name absolute">台中七期重劃區</div>
+        <div class="info absolute">台中七期重劃區示意圖</div>
       </div>
     </div>
     <div class="slider md:hidden">

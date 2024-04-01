@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 w-full relative text-center text-white bg-[#173868]">
+  <section class="s4 w-full relative text-center text-white">
     <div class="txt">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="title">渴望熱鬧</div>
@@ -7,54 +7,63 @@
           熱烈之巔 繁華眼見為憑<br>
           無以追逐的驚艷成熟
         </div>
-        <div class="content text-left md:text-center">
-          <p>南紡購物中心／領銜台南時尚之趨，世界精品大牌，誠品生活、老爺行旅都在此</p>
+        
+        <div class="content text-left md:text-center hidden md:block">
+          <p>南紡購物中心／領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</p>
           <p>小東商圈／質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</p>
           <p>國賓商圈／台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</p>
-          <p>後甲黃昏市場／車行3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
+          <p>後甲黃昏市場／車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
+        </div>
+        <div class="content text-left md:text-center md:hidden">
+          <div class="item">
+            <div class="t">南紡購物中心</div>
+            <p>領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</p>
+          </div>
         </div>
       </div>
+      <div class="info">以上皆為實景拍攝圖</div>
     </div>
     <div class="pic hidden md:block relative">
+      
       <div class="img">
         <img class="block w-full" src="@/section/s4/1.webp" />
-        <div class="info">東寧運動公園實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/2.webp" />
-        <div class="info">南紡置地廣場實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/3.webp" />
-        <div class="info">東寧路商圈實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/4.webp" />
-        <div class="info">情境示意圖</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/5.webp" />
-        <div class="info">平實公園實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/6.webp" />
-        <div class="info">南紡置地廣場實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/7.webp" />
-        <div class="info">情境示意圖</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/8.webp" />
-        <div class="info">國賓影城實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/9.webp" />
-        <div class="info">南紡置地廣場實景拍攝</div>
+        <div class="info"></div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/10.webp" />
-        <div class="info">南紡置地廣場實景拍攝</div>
+        <div class="info"></div>
       </div>
     </div>
     <div class="slider md:hidden">
@@ -69,26 +78,26 @@
       >
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/3.webp" />
-            <div class="info">東寧路商圈實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/6.webp" />
-            <div class="info">南紡夢時代實景拍攝</div>
+            <img class="block w-full" src="@/section/s4/1.webp" />
+            <div class="info">以上皆為實景拍攝圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/8.webp" />
-            <div class="info">國賓影城實景拍攝</div>
+            <div class="info">以上皆為實景拍攝圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/10.webp" />
-            <div class="info">南紡置地廣場實景拍攝</div>
+            <img class="block w-full" src="@/section/s4/6.webp" />
+            <div class="info">以上皆為實景拍攝圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/3.webp" />
+            <div class="info">以上皆為實景拍攝圖</div>
           </div>
         </swiper-slide>
       </swiper>
@@ -103,10 +112,12 @@
   font-size: size-m(12);
   font-weight: 500;
   line-height: size-m(20);
+  background: #C0C9CD;
   @media (min-width: 768px) {
     font-size: size(19);
     line-height: 190%;
     padding-bottom: size(198);
+    background: #173868;
   }
 
   p {
@@ -116,11 +127,41 @@
     }
   }
 
+  .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: size-m(15);
+    margin-bottom: size-m(10);
+    
+
+    .t{
+      font-size: size-m(15);
+      width: size-m(150);
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+
   .txt {
     padding: size-m(50) size-m(33);
+    color: #173868;
     @media (min-width: 768px) {
       padding: size(193) 0 size(151) 0;
+      color: #fff;
     }
+
+    .info {
+        position: absolute;
+        bottom: size(160);
+        right: size(205);
+        font-size: size(12);
+        line-height: normal;
+      }
+
+    
 
     .title {
       font-family: "Noto Serif TC";
@@ -132,6 +173,7 @@
       padding-bottom: size-m(13);
       position: relative;
       line-height: normal;
+      
       @media (min-width: 768px) {
         font-size: size(58);
         letter-spacing: size(19.14);
@@ -148,10 +190,11 @@
         transform: translate(-50%, 0);
         width: size-m(115);
         height: size-m(1);
-        background: #fff;
+        background: #173868;
         @media (min-width: 768px) {
           width: size(215);
           height: size(1);
+          background: #fff;
         }
       }
     }
@@ -178,6 +221,8 @@
     height: size(1246);
     margin: 0 auto;
 
+    
+
     .img {
       position: absolute;
       top: 0;
@@ -195,7 +240,7 @@
         height: size(720);
 
         img {
-          object-position: -2vw;
+          object-position: -22vw;
           transform: scale(1.15);
         }
       }
@@ -237,7 +282,7 @@
         left: size(1 * (362 + 14));
 
         img {
-          object-position: -1.5vw;
+          object-position: -8.5vw;
           transform: scale(1.15);
         }
       }
