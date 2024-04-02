@@ -30,8 +30,8 @@
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/3.webp" />
         <div class="city absolute">TAICHUNG</div>
-        <div class="name absolute">台中七期計畫區</div>
-        <div class="info absolute">台中七期計畫區示意圖</div>
+        <div class="name absolute">台中七期重劃區</div>
+        <div class="info absolute">台中七期重劃區示意圖</div>
       </div>
     </div>
     <div class="slider md:hidden">
@@ -66,7 +66,7 @@
           <div class="img relative h-full">
             <img class="w-full block" src="@/section/s3/3.webp" />
             <div class="city absolute">TAICHUNG</div>
-            <div class="name absolute">台中七期計畫區</div>
+            <div class="name absolute">台中七期重劃區</div>
             <div class="en absolute">LANDMARK OF TAICHUNG</div>
             <div class="info absolute"></div>
           </div>

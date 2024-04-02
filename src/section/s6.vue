@@ -161,7 +161,7 @@
       margin-bottom: size-m(10);
       @media (min-width: 768px) {
         line-height: size(33);
-        margin-bottom: size(0);
+        margin-bottom: size(10);
       }
     }
 
