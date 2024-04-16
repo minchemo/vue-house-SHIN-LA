@@ -1,11 +1,8 @@
 <template>
-  <section class="s2 w-full relative text-white">
-    <div class="title absolute text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1 hidden md:block">完美的顛覆 總和你所渴望</div>
-      <div class="t1 md:hidden">完美的顛覆<br>總和你所渴望</div>
-      <div class="t2">LANDMARK OF TAINAN</div>
+  <section class="s2 w-full relative">
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/K4TOrB7at0Y?si=w4fGjX5KLDm71cxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <div class="info absolute">實景拍攝合成示意圖</div>
   </section>
 </template>
 
@@ -13,65 +10,18 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-  height: size-m(667);
-  background-image: url(@/section/s2/bg.webp);
-  background-size: auto 100%;
-  background-position: size-m(-360) 0;
-  @media (min-width: 768px) {
-    height: size(1308);
-    background-position: size(-0) 0;
-  }
+  .video-container {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
 
-  .title {
-    top: size-m(65);
-    left: size-m(65);
-    text-align: center;
-    font-family: 'Noto Serif TC', serif;
-    @media (min-width: 768px) {
-      top: size(191);
-      left: size(513);
-    }
-
-    .t1 {
-      font-size: size-m(30);
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: size-m(9);
-      text-indent: size-m(9);
-      margin-bottom: size-m(6);
-      text-align: center;
-      @media (min-width: 768px) {
-        font-size: size(60);
-        letter-spacing: size(19.8);
-        text-indent: size(19.8);
-        margin-bottom: size(2);
-      }
-    }
-
-    .t2 {
-      font-size: size-m(12);
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: size-m(5.2);
-      text-indent: size-m(5.2);
-      text-align: center;
-      @media (min-width: 768px) {
-        font-size: size(20);
-        letter-spacing: size(10.6);
-        text-indent: size(10.6);
-      }
-    }
-  }
-
-  .info {
-    bottom: size-m(10);
-    right: size-m(10);
-    font-size: size-m(12);
-    @media (min-width: 768px) {
-      bottom: size(10);
-      right: size(10);
-      font-size: size(12);
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }

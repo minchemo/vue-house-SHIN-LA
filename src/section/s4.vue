@@ -1,441 +1,712 @@
 <template>
-  <section class="s4 w-full relative text-center text-white">
-    <div class="txt">
+  <section class="s4 w-full relative bg-[#E5005C] text-white">
+    <img class="ball-orange1 absolute" src="@/section/balls/orange.png" />
+    <img class="ball-orange2 absolute" src="@/section/balls/orange.png" />
+    <img class="ball-orange3 absolute hidden md:block" src="@/section/balls/orange.png" />
+    <img class="ball-orange4 absolute hidden md:block" src="@/section/balls/orange.png" />
+    <img class="ball-purple1 absolute" src="@/section/balls/purple.png" />
+    <img class="ball-purple2 absolute md:hidden" src="@/section/balls/purple.png" />
+    <img class="ball-green1 absolute" src="@/section/balls/green.png" />
+    <img class="ball-green2 absolute hidden md:block" src="@/section/balls/green.png" />
+    <img class="ball-green3 absolute hidden md:block" src="@/section/balls/green.png" />
+    <img class="ball-blue1 absolute" src="@/section/balls/blue.png" />
+    <img class="ball-blue2 absolute hidden md:block" src="@/section/balls/blue.png" />
+    <img class="ball-yellow1 absolute hidden md:block" src="@/section/balls/yellow.png" />
+
+    <div class="md:flex md:justify-between md:items-end">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="title">渴望熱鬧</div>
-        <div class="subtitle">
-          熱烈之巔 繁華眼見為憑<br>
-          無以追逐的驚艷成熟
+        <div class="t1"><span>10</span> 分鐘 商圈生活一把抓</div>
+        <div class="t2">沙鹿⾞站核⼼商圈，⽣活採買、醫療、學區、運動公園樣樣⿑全，完美機能超便利。</div>
+      </div>
+      <div class="slider1-wrapper relative">
+        <img class="slider-btn absolute md:hidden" src="@/section/s4/btn.svg" @click="clickMap(1)" />
+        <div class="slider1 relative">
+          <swiper
+            :loop="true"
+            :navigation="false"
+            :pagination="{
+              clickable: true,
+            }"
+            :slidesPerView="'auto'"
+            :autoplay="{
+              delay: 3000,
+              disableOnInteraction: false,
+            }"
+            :modules="modules"
+            @init="init1"
+          >
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/1.jpg" />
+                <div class="txt">⾞站商圈實景</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/2.jpg" />
+                <div class="txt">星巴克</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/3.jpg" />
+                <div class="txt">家樂福</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/4.jpg" />
+                <div class="txt">三井Outlet</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/5.jpg" />
+                <div class="txt">沙鹿運動公園</div>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="relative">
+                <img src="@/section/s4/slider1/6.jpg" />
+                <div class="txt">梧棲童綜合醫院</div>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
-        <hr class="md:hidden">
-        
-        <div class="content text-left md:text-center hidden md:block">
-          <p>南紡購物中心／領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</p>
-          <p>小東商圈／質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</p>
-          <p>國賓商圈／台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</p>
-          <p>東寧商圈／車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
+        <div class="slide-prev" @click="slidePrev1">
+          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
+            <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="content text-left md:text-center md:hidden">
-          <div class="item">
-            <div class="t">南紡購物中心</div>
-            <div class="c">領銜台南時尚之趨，集結精緻品牌，誠品生活、老爺行旅都在此</div>
-          </div>
-          <div class="item">
-            <div class="t">小東商圈</div>
-            <div class="c">質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</div>
-          </div>
-          <div class="item">
-            <div class="t">國賓商圈</div>
-            <div class="c">台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</div>
-          </div>
-          <div class="item">
-            <div class="t">東寧商圈</div>
-            <div class="c">車程約3分鐘採購足家庭所需，恰恰好的輕盈豐盛</div>
-          </div>
+        <div class="slide-next" @click="slideNext1">
+          <svg viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
+            <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      </div>
-      <div class="info">以上皆為實景拍攝圖</div>
-    </div>
-    <div class="pic hidden md:block relative">
-      
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/1.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/2.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/3.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/4.webp" />
-        <div class="info">情境示意圖</div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/5.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/6.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/7.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/8.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/9.webp" />
-        <div class="info"></div>
-      </div>
-      <div class="img">
-        <img class="block w-full" src="@/section/s4/10.webp" />
-        <div class="info"></div>
       </div>
     </div>
-    <div class="slider md:hidden">
+    <div class="main-map hidden md:block">
+      <img class="block w-full" src="@/section/s4/map1.jpg" />
+    </div>
+    <div class="slider2">
       <swiper
         :loop="true"
-        :navigation="true"
+        :navigation="false"
+        :pagination="false"
+        :slidesPerView="'auto'"
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
         }"
         :modules="modules"
+        @init="init2"
       >
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/1.webp" />
-            <div class="info"></div>
+          <div class="relative">
+            <img src="@/section/s4/slider2/1.jpg" />
+            <div class="txt">捷運藍線示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/8.webp" />
-            <div class="info"></div>
+          <div class="relative">
+            <img src="@/section/s4/slider2/2.jpg" />
+            <div class="txt">沙鹿車站示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/6.webp" />
-            <div class="info"></div>
+          <div class="relative">
+            <img src="@/section/s4/slider2/3.jpg" />
+            <div class="txt">雙大道交匯暢快動線</div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/3.webp" />
-            <div class="info"></div>
+          <div class="relative">
+            <img src="@/section/s4/slider2/4.jpg" />
+            <div class="txt">台灣大道</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s4/slider2/5.jpg" />
+            <div class="txt">台中機場</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s4/slider2/6.jpg" />
+            <div class="txt">台中港</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s4/slider2/7.jpg" />
+            <div class="txt">台中科學園區</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s4/slider2/8.jpg" />
+            <div class="txt">精密科技園區</div>
           </div>
         </swiper-slide>
       </swiper>
+      <div class="slide-prev" @click="slidePrev2">
+        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
+          <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="slide-next" @click="slideNext2">
+        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
+          <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">一快雙軌三高 動能大利多</div>
+        <div class="t2 bt2">【大境】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
+      </div>
+      <div class="map-preview" @click="clickMap(2)">
+        <img class="block w-full" src="@/section/s4/map-preview.jpg" />
+      </div>
     </div>
   </section>
+
+  <div v-if="showPop" id="s4-popup" class="bg-[#E5005C] text-white">
+    <svg @click="showPop = false" class="popup-close md:hidden" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="2.70711" y1="1.29289" x2="28.7071" y2="27.2929" stroke="white" stroke-width="2"/>
+      <line y1="-1" x2="36.7696" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 28 2)" stroke="white" stroke-width="2"/>
+    </svg>
+    <svg @click="showPop = false" class="popup-close hidden md:block" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="23.7109" cy="24.0303" r="23.2109" fill="white"/>
+      <path d="M12.9683 34.904L34.2587 13.6136" stroke="#E5005C" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12.9683 13.6136L34.2587 34.904" stroke="#E5005C" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="txt">左右滑動可看全圖</div>
+    <div class="img">
+      <img v-if="map === 1" src="@/section/s4/map1.jpg" @load="onImgLoad($event)" />
+      <img v-if="map === 2" src="@/section/s4/map2.jpg" @load="onImgLoad($event)" />
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s4 {
-  font-size: size-m(12);
-  font-weight: 500;
-  line-height: size-m(20);
-  background: #C0C9CD;
+  padding: size-m(70) 0 size-m(50);
   @media (min-width: 768px) {
-    font-size: size(19);
-    line-height: 190%;
-    padding-bottom: size(198);
-    background: #173868;
+    padding: size(63) size(210) size(280);
   }
 
-  p {
-    margin-bottom: size-m(10);
+  .ball-orange1 {
+    top: size-m(23);
+    left: size-m(219);
+    width: size-m(33);
+    transform: translateY(size-m(10));
+    animation: ball 2s ease-in-out 0s infinite alternate;
     @media (min-width: 768px) {
-      margin-bottom: 0;
+      top: size(119);
+      left: size(679);
+      width: size(107);
+      opacity: .7;
+      transform: translateY(size(20));
+      animation: ball 2s ease-in-out 0s infinite alternate;
     }
   }
 
-  hr{
-    width: size-m(150);
-    margin: 0 auto;
-    margin-top: size-m(20);
-    margin-bottom: size-m(30);
-    border: 1px solid #173868;
+  .ball-orange2 {
+    top: size-m(228);
+    left: size-m(-25);
+    width: size-m(102);
+    opacity: .65;
+    z-index: 12;
+    transform: translateY(size-m(-20));
+    animation: ball 3s ease-in-out 0s infinite alternate;
+    @media (min-width: 768px) {
+      top: size(471);
+      left: size(-278);
+      width: size(471);
+      transform: translateY(size(40));
+      animation: ball 3s ease-in-out 0s infinite alternate;
+    }
   }
 
-  .item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: size-m(15);
-    margin-bottom: size-m(10);
+  .ball-orange3 {
+    @media (min-width: 768px) {
+      top: size(2445);
+      left: size(1155);
+      width: size(59);
+      opacity: .62;
+      transform: translateY(size(-30));
+      animation: ball 3s ease-in-out 1s infinite alternate;
+    }
+  }
+
+  .ball-orange4 {
+    @media (min-width: 768px) {
+      top: size(2559);
+      left: size(1469);
+      width: size(236);
+      opacity: .65;
+      z-index: 1;
+      transform: translateY(size(-40));
+      animation: ball 3s ease-in-out 0s infinite alternate;
+    }
+  }
+
+  .ball-purple1 {
+    top: size-m(-88);
+    left: size-m(232);
+    width: size-m(151);
+    transform: translateY(size-m(30));
+    animation: ball 5s ease-in-out 1s infinite alternate;
+    @media (min-width: 768px) {
+      top: size(2486);
+      left: size(1002);
+      width: size(75);
+      opacity: .53;
+      transform: translateY(size(20));
+      animation: ball 3s ease-in-out 0s infinite alternate;
+    }
+  }
+
+  .ball-purple2 {
+    top: size-m(505);
+    left: size-m(96);
+    width: size-m(29);
+    z-index: 12;
+  }
+
+  .ball-green1 {
+    top: size-m(0);
+    left: size-m(332);
+    width: size-m(71);
+    opacity: .68;
+    transform: translateY(size-m(30));
+    animation: ball 3s ease-in-out 1s infinite alternate;
+    @media (min-width: 768px) {
+      top: size(0);
+      left: size(886);
+      width: size(191);
+      opacity: .68;
+      transform: translateY(size(40));
+      animation: ball 3.5s ease-in-out 1s infinite alternate;
+    }
+  }
+
+  .ball-green2 {
+    @media (min-width: 768px) {
+      top: size(2397);
+      left: size(955);
+      width: size(47);
+      opacity: .68;
+      transform: translateY(size(40));
+      animation: ball 3.5s ease-in-out 1s infinite alternate;
+    }
+  }
+
+  .ball-green3 {
+    @media (min-width: 768px) {
+      top: size(2098);
+      left: size(1646);
+      width: size(475);
+      opacity: .68;
+      transform: translateY(size(-40));
+      animation: ball 3.5s ease-in-out 0s infinite alternate;
+    }
+  }
+
+  .ball-blue1 {
+    top: size-m(495);
+    left: size-m(4);
+    width: size-m(96);
+    z-index: 12;
+    opacity: .7;
+    transform: translateY(size-m(30));
+    animation: ball 3.5s ease-in-out 1s infinite alternate;
+    @media (min-width: 768px) {
+      top: size(2382);
+      left: size(647);
+      width: size(308);
+      opacity: .62;
+      transform: translateY(size(-20));
+      animation: ball 3s ease-in-out 0s infinite alternate;
+    }
+  }
+
+  .ball-blue2 {
+    @media (min-width: 768px) {
+      top: size(2421);
+      left: size(-308);
+      width: size(810);
+      opacity: .95;
+      z-index: 12;
+      transform: translateY(size(20));
+      animation: ball 2s ease-in-out 0s infinite alternate;
+    }
+  }
+
+  .ball-yellow1 {
+    @media (min-width: 768px) {
+      top: size(2082);
+      left: size(1396);
+      width: size(146);
+      opacity: .62;
+      transform: translateY(size(30));
+      animation: ball 2.5s ease-in-out 0s infinite alternate;
+    }
+  }
+  
+  .t1 {
+    text-align: center;
+    font-size: size-m(25);
+    line-height: size-m(34);
+    font-weight: 700;
+    margin-bottom: size-m(13);
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: size(58);
+      line-height: size(79);
+      margin-bottom: size(24);
+    }
     
-    .t{
-      font-size: size-m(14);
-      width: size-m(190);
+    span {
+      font-size: size-m(77);
+      line-height: 1;
+      letter-spacing: -0.07em;
+      @media (min-width: 768px) {
+        font-size: size(179);
+      }
+    }
+  }
+
+  .t2 {
+    padding: 0 size-m(30);
+    text-align: center;
+    font-size: size-m(14);
+    line-height: 178%;
+    @media (min-width: 768px) {
+      padding: 0;
+      text-align: left;
+      font-size: size(18);
+      line-height: 178%;
+      letter-spacing: 0.04em;
+      width: size(864);
+
+      &.bt2 {
+        width: size(653);
+      }
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .c{
+    .txt {
+      position: absolute;
+      bottom: size-m(4);
+      right: size-m(6);
+      font-size: size-m(12);
+      text-shadow: size-m(0) size-m(4) size-m(4) rgba(0, 0, 0, 0.80);
+      @media (min-width: 768px) {
+        bottom: size(11);
+        right: size(16);
+        font-size: size(16);
+        text-shadow: size(0) size(4) size(4) rgba(0, 0, 0, 0.80);
+      }
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      line-height: 1;
+      top: -2.6vw;
+      left: 2.2vw !important;
+      bottom: auto !important;
+      width: auto !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: .6;
+      width: size(8);
+      height: size(8);
+      margin: 0 size(5) !important;
+
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: size-m(31);
+    cursor: pointer;
+    z-index: 11;
+    @media (min-width: 768px) {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: size(31);
+    }
+  }
+
+  .slide-next {
+    left: auto;
+    right: 0;
+    transform: translate(50%, -50%);
+    @media (min-width: 768px) {
+      left: 8.5vw;
+      right: auto;
+      transform: translate(0, 0);
+    }
+  }
+
+  .slider1-wrapper {
+    width: size-m(315);
+    margin: size-m(53) auto size-m(50);
+    @media (min-width: 768px) {
+      width: size(597);
       margin: 0;
-      width: size-m(420);
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: size-m(-36);
+      right: size-m(10);
+      width: size-m(128);
+      cursor: pointer;
+      z-index: 11;
+    }
+
+    .slider1 {
+      position: relative;
+      overflow: hidden;
+      width: size-m(315);
+      height: size-m(230);
+      margin: size-m(53) auto size-m(50);
+      @media (min-width: 768px) {
+        width: size(597);
+        height: size(436 + 42);
+        margin: 0;
+        padding-top: size(42);
+      }
+    }
+  }
+  
+  .main-map {
+    @media (min-width: 768px) {
+      width: 100%;
+      margin: size(30) auto;
+    }
+  }
+
+  .slider2 {
+    width: 100%;
+    margin: 0 auto size-m(29);
+    position: relative;
+    @media (min-width: 768px) {
+      margin: 0 auto size(58);
+    }
+
+    .swiper {
+      overflow: hidden;
+    }
+
+    .swiper-slide {
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+    }
+
+    .slide-prev, .slide-next {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+        top: 50%;
+        transform: translate(-2.5vw, -50%);
+      }
+    }
+
+    .slide-next {
+      @media (min-width: 768px) {
+        left: auto;
+        right: 0;
+        transform: translate(2.5vw, -50%);
+      }
+    }
+  }
+
+  .map-preview {
+    width: size-m(315);
+    margin: size-m(29) auto 0;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      width: size(395.03);
+      margin: 0 size(41) 0 0;
+    }
+  }
+}
+
+#s4-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  padding: size-m(76) 0 size-m(84);
+  @media (min-width: 768px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: size(1500);
+    height: size(938);
+    background: rgba(4, 0, 0, 0.8);
+    padding: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(306);
+    background: linear-gradient(180deg, #9C003F 0%, #E5005C 100%);
+    transform: rotate(180deg);
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .popup-close {
+    position: absolute;
+    top: size-m(32);
+    right: size-m(27);
+    width: size-m(26);
+    cursor: pointer;
+    z-index: 1;
+    @media (min-width: 768px) {
+      top: size(34);
+      right: size(34);
+      width: size(46);
     }
   }
 
   .txt {
-    padding: size-m(50) size-m(33);
-    color: #173868;
+    position: absolute;
+    bottom: size-m(27);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: size-m(20);
+    font-weight: 700;
     @media (min-width: 768px) {
-      padding: size(193) 0 size(151) 0;
-      color: #fff;
-    }
-
-    .info {
-        position: absolute;
-        bottom: size(160);
-        right: size(205);
-        font-size: size(12);
-        line-height: normal;
-      }
-
-    
-
-    .title {
-      font-family: "Noto Serif TC";
-      font-size: size-m(30);
-      font-weight: 700;
-      letter-spacing: size-m(9);
-      text-indent: size-m(9);
-      margin-bottom: size-m(0);
-      padding-bottom: size-m(13);
-      position: relative;
-      line-height: normal;
-      
-      @media (min-width: 768px) {
-        font-size: size(58);
-        letter-spacing: size(19.14);
-        text-indent: size(19.14);
-        margin-bottom: size(24);
-        padding-bottom: size(19);
-      }
-  
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: size-m(115);
-        height: size-m(0);
-        background: #173868;
-        @media (min-width: 768px) {
-          width: size(215);
-          height: size(1);
-          background: #fff;
-        }
-      }
-    }
-
-    .subtitle {
-      font-family: "Noto Serif TC";
-      font-size: size-m(15);
-      font-weight: 700;
-      letter-spacing: size-m(5);
-      text-indent: size-m(5);
-      margin-bottom: size-m(26);
-      line-height: normal;
-      @media (min-width: 768px) {
-        font-size: size(24);
-        letter-spacing: size(7.92);
-        text-indent: size(7.92);
-        margin-bottom: size(43);
-      }
+      display: none
     }
   }
 
-  .pic {
-    width: size(1490);
-    height: size(1246);
-    margin: 0 auto;
+  .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    @media (min-width: 768px) {
+      padding: size(33);
+    }
 
-    
-
-    .img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: size(362);
-      overflow: hidden;
-
-      img {
+    img {
+      max-width: none;
+      width: auto;
+      height: 100%;
+      @media (min-width: 768px) {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
-
-      &:nth-child(1) {
-        height: size(720);
-
-        img {
-          object-position: -22vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(2) {
-        height: size(517);
-        top: size(720 + 14);
-        left: 0;
-
-        img {
-          object-position: -17vw;
-        }
-      }
-
-      &:nth-child(3) {
-        height: size(399);
-        top: 0;
-        left: size(1 * (362 + 14));
-
-        img {
-          object-position: -3vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(4) {
-        height: size(397);
-        top: size(399 + 14);
-        left: size(1 * (362 + 14));
-
-        img {
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(5) {
-        height: size(424);
-        top: size(399 + 14 + 397 + 14);
-        left: size(1 * (362 + 14));
-
-        img {
-          object-position: -8.5vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(6) {
-        height: size(720);
-        top: 0;
-        left: size(2 * (362 + 14));
-
-        img {
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(7) {
-        height: size(512);
-        top: size(720 + 14);
-        left: size(2 * (362 + 14));
-      }
-
-      &:nth-child(8) {
-        height: size(427);
-        top: 0;
-        left: size(3 * (362 + 14));
-
-        img {
-          object-position: -1.5vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(9) {
-        height: size(362);
-        top: size(427 + 14);
-        left: size(3 * (362 + 14));
-
-        img {
-          object-position: -5.7vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(10) {
-        height: size(437);
-        top: size(427 + 14 + 362 + 14);
-        left: size(3 * (362 + 14));
-
-        img {
-          object-position: -7vw;
-          transform: scale(1.15);
-        }
-      }
-
-      &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(8) {
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: #fff;
-          opacity: 0.5;
-          transition: opacity .3s;
-        }
-
-        &:hover:after {
-          opacity: 0;
-        }
-      }
-
-      .info {
-        position: absolute;
-        bottom: size(10);
-        right: size(10);
-        font-size: size(12);
-        line-height: normal;
-      }
-    }
-  }
-
-  .slider {
-    .img {
-      height: size-m(250);
-
-      .info {
-        position: absolute;
-        bottom: size-m(10);
-        right: size-m(10);
-        font-size: size-m(12);
-        line-height: normal;
-      }
-    }
-
-    .swiper-wrapper {
-      align-items: stretch;
-
-      .swiper-slide {
-        height: auto;
-
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .swiper-button-next, .swiper-button-prev {
-      width: size-m(40);
-      height: size-m(40);
-      color: #fff;
-      justify-content: flex-start;
-
-      &:after {
-        font-size: 7vw;
-      }
-    }
-
-    .swiper-button-next {
-      justify-content: flex-end;
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from "swiper";
-const modules = ref([Autoplay, Navigation]);
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
+const swiperRef1 = ref(null);
+const swiperRef2 = ref(null);
+const showPop = ref(false);
+const map = ref(1);
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const init1 = swiper => {
+  swiperRef1.value = swiper;
+}
+
+const slidePrev1 = () => {
+  if(swiperRef1.value){
+    swiperRef1.value.slidePrev();
+  }
+}
+
+const slideNext1 = () => {
+  if(swiperRef1.value){
+    swiperRef1.value.slideNext();
+  }
+}
+
+const init2 = swiper => {
+  swiperRef2.value = swiper;
+}
+
+const slidePrev2 = () => {
+  if(swiperRef2.value){
+    swiperRef2.value.slidePrev();
+  }
+}
+
+const slideNext2 = () => {
+  if(swiperRef2.value){
+    swiperRef2.value.slideNext();
+  }
+}
+
+const clickMap = (num) => {
+  map.value = num;
+  showPop.value = true;
+}
+
+function onImgLoad(e) {
+  const img = e.target;
+  const wrapper = img.parentNode;
+  if (img) {
+    wrapper.scrollLeft = img.clientWidth * 0.5 - wrapper.clientWidth/2;
+  }
+}
 </script>

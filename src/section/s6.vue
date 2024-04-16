@@ -1,385 +1,379 @@
 <template>
-  <section class="s6 w-full relative text-[#173868] bg-[#C0C9CD] md:flex md:items-stretch">
-    <div class="txt text-center md:flex md:justify-center md:items-center">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="title">渴望綠意</div>
-        <div class="subtitle">2.1萬坪平實公園 <br>無以撼動的精彩簇擁</div>
-
-        <hr class="md:hidden">
-
-        <div class="content text-left hidden md:block">
-          <p>平實公園／ 比美紐約中央公園綠海壯闊，2.1萬坪森度綠富，同步國際富金景觀哲學</p>
-          <p>明星學區／ 東光國小、復興國中、台南一中、成功大學等一流名校集結</p>
-          <p>成大醫院／ 近成大醫院、榮總台南分院等醫療資源，健康養生機能俱全</p>
-        </div>
-
-        <div class="content text-left md:text-center md:hidden">
-          <div class="item">
-            <div class="t">平實公園</div>
-            <div class="c">比美紐約中央公園綠海壯闊，2.1萬坪森度綠富，同步國際富金景觀哲學</div>
-          </div>
-          <div class="item">
-            <div class="t">明星學區</div>
-            <div class="c">東光國小、復興國中、台南一中、成功大學等一流名校集結</div>
-          </div>
-          <div class="item">
-            <div class="t">成大醫院</div>
-            <div class="c">近成大醫院、榮總台南分院等醫療資源，健康養生機能俱全</div>
-          </div>
-        </div>
-        <div class="controls hidden md:flex md:justify-end">
-          <svg class="slide-prev block" @click="slidePrev" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_14_56466)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4594 31.1329C17.9963 31.6699 18.8669 31.6699 19.4039 31.1329C19.9409 30.5959 19.9409 29.7253 19.4039 29.1884L10.3226 20.107L19.4039 11.0257C19.9409 10.4887 19.9409 9.61811 19.4039 9.08114C18.8669 8.54417 17.9963 8.54417 17.4594 9.08114L7.40575 19.1348C6.86878 19.6717 6.86878 20.5423 7.40575 21.0793L17.4594 31.1329Z" fill="white"/>
-            </g>
-            <defs>
-            <filter id="filter0_d_14_56466" x="3.00305" y="8.67822" width="20.8036" height="30.8574" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14_56466"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14_56466" result="shape"/>
-            </filter>
-            </defs>
-          </svg>
-          <svg class="slide-next block" @click="slideNext" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_14_56465)">
-            <g filter="url(#filter0_d_14_56465)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7551 9.08144C22.2181 8.54447 21.3475 8.54447 20.8106 9.08144C20.2736 9.61841 20.2736 10.489 20.8106 11.026L29.8919 20.1073L20.8106 29.1887C20.2736 29.7256 20.2736 30.5963 20.8106 31.1332C21.3475 31.6702 22.2181 31.6702 22.7551 31.1332L32.8087 21.0796C33.3457 20.5426 33.3457 19.672 32.8087 19.1351L22.7551 9.08144Z" fill="white"/>
-            </g>
-            </g>
-            <defs>
-            <filter id="filter0_d_14_56465" x="16.4078" y="8.67871" width="20.8036" height="30.8574" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14_56465"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14_56465" result="shape"/>
-            </filter>
-            <clipPath id="clip0_14_56465">
-            <rect width="40.2145" height="40.2145" fill="white"/>
-            </clipPath>
-            </defs>
-          </svg>
-        </div>
+  <section class="s6 w-full relative bg-[#E5005C] text-white">
+    <img class="line absolute top-0 left-0 w-full md:hidden" src="@/section/s6/line.svg">
+    <img class="line absolute top-0 right-0 hidden md:block" src="@/section/s6/line2.svg">
+    <div class="ccontainer">
+      <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">千坪陽光花園 奢華散步</div>
+        <div class="t2">收藏一座奢華花園！蝶飛鳥鳴、花樹雲影，彷彿漫步大自然中，感受陽光綠意美好風景。</div>
+      </div>
+      <div class="img relative">
+        <img class="block w-full" src="@/section/s6/img.jpg">
+        <div class="txt absolute">建築外觀3D情境示意圖</div>
+      </div>
+      <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">幸福時光 每天來點正能量</div>
+        <div class="t2">生活需要儀式感！精心規劃藝術門廳、閱覽區、健身房、童話館，下班放學生活超紓壓！</div>
       </div>
     </div>
-    <div class="pic hidden md:block md:flex-1">
-      <div class="w-full">
-        <swiper
-          :navigation="false"
-          :modules="modules"
-          @init="init"
-        >
-          <swiper-slide>
-            <div class="md:flex md:flex-wrap">
-              <div class="img relative w-full img1">
-                <img class="w-full block" src="@/section/s6/1.webp" />
-                <div class="info absolute">情境示意圖</div>
-              </div>
-              <div class="img relative half-left mb0 img2">
-                <img class="w-full block" src="@/section/s6/2.webp" />
-                <div class="info absolute"></div>
-              </div>
-              <div class="img relative half-right mb0 img3">
-                <img class="w-full block" src="@/section/s6/3.webp" />
-                <div class="info absolute">以上皆為實景拍攝圖</div>
-              </div>
-            </div>
-          </swiper-slide>
-        </swiper>
-      </div>
-    </div>
-    <div class="slider md:hidden">
+    <div class="slider">
       <swiper
         :loop="true"
-        :navigation="true"
+        :navigation="false"
+        :pagination="{
+          clickable: true,
+        }"
+        :slidesPerView="'auto'"
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
         }"
         :modules="modules"
+        @init="init"
+        @click="clickSlide"
       >
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/1.webp" />
-            <div class="info absolute"></div>
+          <div class="relative">
+            <img src="@/section/s6/slider/1.jpg" />
+            <div class="txt">雅石迎賓門廳示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/3.webp" />
-            <div class="info absolute"></div>
+          <div class="relative">
+            <img src="@/section/s6/slider/2.jpg" />
+            <div class="txt">澄心交誼空間示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/2.webp" />
-            <div class="info absolute"></div>
+          <div class="relative">
+            <img src="@/section/s6/slider/3.jpg" />
+            <div class="txt">維尼童話館示意圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s6/slider/4.jpg" />
+            <div class="txt">原創會議室示意圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s6/slider/5.jpg" />
+            <div class="txt">柏克健身房示意圖</div>
           </div>
         </swiper-slide>
       </swiper>
+      <div class="slide-prev" @click="slidePrev">
+        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
+          <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="slide-next" @click="slideNext">
+        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
+          <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <img class="mask md:hidden pointer-events-none absolute w-full bottom-0 left-0" src="@/section/s6/mask.svg" />
+      <div class="mask hidden md:block pointer-events-none"></div>
+    </div>
+    <div class="ccontainer">
+      <div class="en text-[#EBA492]">Enjoying the greenery and leisurely pleasures right at home.</div>
     </div>
   </section>
+
+  <div v-if="showPop" id="s6-popup" class="bg-[#E5005C] text-white">
+    <svg @click="showPop = false" class="popup-close" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="2.70711" y1="1.29289" x2="28.7071" y2="27.2929" stroke="white" stroke-width="2"/>
+      <line y1="-1" x2="36.7696" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 28 2)" stroke="white" stroke-width="2"/>
+    </svg>
+    <div class="txt">左右滑動可看全圖</div>
+    <div class="img">
+      <img v-if="clickedIndex === 0" src="@/section/s6/slider/1.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 1" src="@/section/s6/slider/2.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 2" src="@/section/s6/slider/3.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 3" src="@/section/s6/slider/4.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 4" src="@/section/s6/slider/5.jpg" @load="onImgLoad($event)" />
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s6 {
-  font-size: size-m(12);
-  font-weight: 500;
-  line-height: size-m(20);
-  @media (min-width: 768px) {
-    font-size: size(19);
-    line-height: size(33);
+  padding: size-m(59) 0 size-m(48);
+  text-align: center;
+  @media screen and (min-width:768px) {
+    padding: size(193) 0 size(125);
+    text-align: left;
   }
 
-  hr{
-    width: size-m(150);
-    margin: 0 auto;
-    margin-top: size-m(20);
-    margin-bottom: size-m(30);
-    border: 1px solid #173868;
-  }
-
-  .txt {
-    padding: size-m(50) size-m(33);
-    @media (min-width: 768px) {
-      width: calc(size(1920 - 1215));
-      padding: 0 size(132);
-    }
-
-    p {
-      line-height: size-m(20);
-      margin-bottom: size-m(10);
-      @media (min-width: 768px) {
-        line-height: size(33);
-        margin-bottom: size(10);
-      }
-    }
-
-    .item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: size-m(15);
-    margin-bottom: size-m(10);
-    
-    .t{
-      font-size: size-m(15);
-      width: size-m(130);
-    }
-
-    .c{
-      margin: 0;
-      width: size-m(420);
+  .line {
+    @media screen and (min-width:768px) {
+      width: size(1390);
     }
   }
 
-    .controls {
-      margin-top: size(18);
-
-      svg {
-        width: size(40);
-        cursor: pointer;
-      }
-      @media (min-width: 768px) {display: none;}
-    }
-
-    .title {
-      font-family: "Noto Serif TC";
-      font-size: size-m(30);
-      font-weight: 700;
-      letter-spacing: size-m(9);
-      text-indent: size-m(9);
-      margin-bottom: size-m(0);
-      padding-bottom: size-m(13);
-      position: relative;
-      line-height: normal;
-      @media (min-width: 768px) {
-        font-size: size(58);
-        letter-spacing: size(19.14);
-        text-indent: size(19.14);
-        margin-bottom: size(24);
-        padding-bottom: size(19);
-      }
-  
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: size-m(115);
-        height: size-m(0);
-        background: #173868;
-        @media (min-width: 768px) {
-          width: size(215);
-          height: size(1);
-        }
-      }
-    }
-
-    .subtitle {
-      font-family: "Noto Serif TC";
-      font-size: size-m(15);
-      font-weight: 700;
-      letter-spacing: size-m(5);
-      text-indent: size-m(5);
-      margin-bottom: size-m(26);
-      line-height: normal;
-      @media (min-width: 768px) {
-        font-size: size(24);
-        letter-spacing: size(7.92);
-        text-indent: size(7.92);
-        margin-bottom: size(43);
-      }
+  .ccontainer {
+    @media screen and (min-width:768px) {
+      padding: 0 size(236);
     }
   }
 
-  .pic {
-    @media (min-width: 768px) {
-      width: size(1215);
-    }
-
-    .img {
-      margin-bottom: size(12);
-
-      &.mb0 {
-        margin-bottom: 0;
-      }
-
-      &.half-left, &.half-right {
-        &.half-left {
-          width: calc(50% - size(6));
-          margin-right: size(6);
-        }
-
-        &.half-right {
-          width: calc(50% - size(6));
-          margin-left: size(6);
-        }
-      }
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .img1 {
-      height: size(666);
-    }
-
-    .img2, .img3 {
-      height: size(1080 - 666 - 12);
-    }
-
-    .img4, .img5 {
-      height: size(1080 - 574 - 12);
-    }
-
-    .img6 {
-      height: size(574);
-    }
-  }
-
-  .city {
-    font-family: "Noto Serif TC";
-    color: rgba(255, 255, 255, 0.30);
+  .t1 {
+    padding: 0 size-m(30);
+    font-size: size-m(25);
+    line-height: size-m(34);
+    margin-bottom: size-m(13);
     font-weight: 700;
-    line-height: normal;
-    @media (min-width: 768px) {
-      top: size(-24);
-      right: size(-2 - 13.57);
-      font-size: size(59);
-      letter-spacing: size(13.57);
+    @media screen and (min-width:768px) {
+      padding: 0;
+      font-size: size(58);
+      line-height: size(79);
+      margin-bottom: 0;
+      margin-right: size(53);
     }
   }
 
-  .name {
-    font-family: "Noto Serif TC";
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    @media (min-width: 768px) {
-      top: size(23);
-      right: size(27 - 9.18);
+  .t2 {
+    padding: 0 size-m(30);
+    font-size: size-m(14);
+    line-height: 178%;
+    margin-bottom: size-m(28);
+    @media screen and (min-width:768px) {
+      width: size(634);
+      padding: 0;
       font-size: size(18);
-      letter-spacing: size(9.18);
+      margin-bottom: 0;
     }
   }
 
-  .info {
-    color: #fff;
-    @media (min-width: 768px) {
-      bottom: size(6);
-      right: size(9);
-      font-size: size(12);
+  .img {
+    margin-bottom: size-m(41);
+    @media screen and (min-width:768px) {
+      margin: size(32) 0 size(61);
+    }
+
+    .txt {
+      bottom: size-m(6);
+      left: size-m(11);
+      font-size: size-m(12);
+      @media screen and (min-width:768px) {
+        bottom: size(17);
+        left: size(25);
+        font-size: size(16);
+      }
     }
   }
 
   .slider {
-    .img {
-      height: size-m(250);
+    position: relative;
+    height: size-m(212);
+    margin-bottom: size-m(23);
+    @media screen and (min-width:768px) {
+      height: size(559 + 47);
+      margin: size(29) 0 size(68);
+      padding-bottom: size(47);;
 
-      .info {
+      &:after {
+        content: '';
         position: absolute;
-        bottom: size-m(10);
-        right: size-m(10);
-        font-size: size-m(12);
-        line-height: normal;
+        top: 0;
+        right: 0;
+        top: 0;
+        right: 0;
+        width: size(60);
+        height: 100%;
+        background: #E5005C;
       }
     }
 
-    .swiper-wrapper {
-      align-items: stretch;
+    .swiper {
+      overflow: visible;
+    }
 
-      .swiper-slide {
-        height: auto;
+    .swiper-slide {
+      width: 100%;
+      @media screen and (min-width:768px) {
+        width: size(992);
+        margin-right: size(33);
+      }
 
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      img {
+        display: block;
+        width: 100%;
+        height: size-m(212);
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: size(559);
+        }
+      }
+
+      .txt {
+        position: absolute;
+        top: size-m(6);
+        left: size-m(11);
+        font-size: size-m(12);
+        @media screen and (min-width:768px) {
+          top: auto;
+          bottom: size(17);
+          left: size(25);
+          font-size: size(16);
         }
       }
     }
 
-    .swiper-button-next, .swiper-button-prev {
-      width: size-m(40);
-      height: size-m(40);
-      color: #fff;
-      justify-content: flex-start;
+    .swiper-pagination {
+      display: none;
+      @media screen and (min-width:768px) {
+        display: block;
+        line-height: 1;
+        bottom: -2vw;
+      }
 
-      &:after {
-        font-size: 7vw;
+      .swiper-pagination-bullet {
+        background: #fff;
+        opacity: 0.5;
+        width: size(8);
+        height: size(8);
+        margin: 0 size(5) !important;
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+        }
       }
     }
 
-    .swiper-button-next {
-      justify-content: flex-end;
+    .slide-prev, .slide-next {
+      width: size-m(31);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: size-m(14);
+      transform: translate(0, -50%);
+      z-index: 1;
+      @media (min-width: 768px) {
+        width: size(31);
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translate(calc(-50% - 3.7vw), 0);
+      }
+      
+      svg {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .slide-next {
+      left: auto;
+      right: size-m(14);
+      @media (min-width: 768px) {
+        left: 50%;
+        right: auto;
+        transform: translate(calc(-50% + 3.7vw), 0);
+      }
+    }
+
+    .mask {
+      width: 100%;
+      z-index: 1;
+      @media (min-width: 768px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: size(836);
+        height: 100%;
+        background: linear-gradient(270deg, #DB0058 0%, rgba(219, 0, 88, 0.00) 100%);
+      }
+    }
+  }
+
+  .en {
+    padding: 0 size-m(35);
+    font-size: size-m(17);
+    line-height: size-m(23);
+    letter-spacing: 0.04em;
+    text-align: left;
+    @media screen and (min-width:768px) {
+      padding: 0;
+      font-size: size(26);
+      line-height: size(35);
+      letter-spacing: 0.28em;
+    }
+  }
+}
+
+#s6-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  padding: size-m(76) 0 size-m(84);
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(306);
+    background: linear-gradient(180deg, #9C003F 0%, #E5005C 100%);
+    transform: rotate(180deg);
+  }
+
+  .popup-close {
+    position: absolute;
+    top: size-m(32);
+    right: size-m(27);
+    width: size-m(26);
+    cursor: pointer;
+  }
+
+  .txt {
+    position: absolute;
+    bottom: size-m(27);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: size-m(20);
+    font-weight: 700;
+  }
+
+  .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    overflow-y: auto;
+
+    img {
+      max-width: none;
+      width: auto;
+      height: 100%;
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from "swiper";
-const modules = ref([Autoplay, Navigation]);
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
 const swiperRef = ref(null);
+const showPop = ref(false);
+const clickedIndex = ref(0);
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const init = swiper => {
   swiperRef.value = swiper;
@@ -394,6 +388,22 @@ const slidePrev = () => {
 const slideNext = () => {
   if(swiperRef.value){
     swiperRef.value.slideNext();
+  }
+}
+
+const clickSlide = (swiper, event) => {
+  if ( globals.$isMobile() ) {
+    const idx = swiper.realIndex;
+    clickedIndex.value = idx;
+    showPop.value = true;
+  }
+}
+
+function onImgLoad(e) {
+  const img = e.target;
+  const wrapper = img.parentNode;
+  if (img) {
+    wrapper.scrollLeft = img.clientWidth * 0.5 - wrapper.clientWidth/2;
   }
 }
 </script>

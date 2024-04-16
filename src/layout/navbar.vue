@@ -27,17 +27,17 @@
     .menu-btn {
         // position: relative;
         z-index: 1;
-        width: size(54);
-        height: size(54);
-        background: rgba(158, 47, 61, 0.9);
+        width: size(90);
+        height: size(90);
+        // background: rgba(139, 199, 130, 0.8);
         position: fixed;
-        top: size(46);
-        left: size(47);
-        border: 1px solid #fff;
+        top: size(0);
+        right: size(0);
+        // border: 1px solid #fff;
         z-index: 99;
 
         .bar {
-            width: size(28);
+            width: size(38);
             height: 2px;
             background-color: #fff;
             // position: relative;
@@ -118,32 +118,32 @@
     .menu {
         position: fixed;
         top: size(0);
-        left: size(0);
-        background-color: #9E2F3D;
+        right: size(0);
+        background-color: rgba(139, 199, 130, 0.8);
         width: size(280);
         height: 100%;
         z-index: 99;
-        transform: translateX(-100%);
+        transform: translateX(100%);
         transition: all .5s;
         padding: size(100) 0;
         gap: size(20);
 
         .menu-inner {
             width: size(128);
-            margin: 0 size(40) 0 auto;
+            margin: 0 auto;
         }
 
         .menu-item {
-            text-align: right;
-            padding: size(39) 0;
-            border-bottom: 1px solid #fff;
+            text-align: center;
+            padding: size(20) 0;
+            // border-bottom: 1px solid #fff;
 
             &:last-child {
                 border: none;
             }
             
             span {
-                font-size: size(18);
+                font-size: size(24);
                 width: 100%;
                 display: block;
                 white-space: nowrap;
@@ -151,12 +151,12 @@
                 transform-origin: left center;
             }
 
-            &:hover {
-                span {
-                    transform: scale(1.3);
-                    width: 0;
-                }
-            }
+            // &:hover {
+            //     span {
+            //         transform: scale(1.3);
+            //         width: 0;
+            //     }
+            // }
         }
 
         &.open {
@@ -212,14 +212,14 @@
         // border-radius: 9999px;
 
         .menu-btn {
-            width: size-m(45);
-            height: size-m(45);
-            top: size-m(25);
+            width: size-m(60);
+            height: size-m(60);
+            top: size-m(0);
             left: auto;
-            right: size-m(31);
+            right: size-m(0);
 
             .bar {
-                width: size-m(23.33);
+                width: size-m(25);
 
                 &::after {
                     bottom: -#{size-m(8)};
@@ -267,7 +267,7 @@
 
         .menu {
             position: fixed;
-            background-color: rgba(158, 47, 61, 0.9);
+            background-color: rgba(139, 199, 130, 0.8);
             width: 100%;
             padding: 0;
             gap: size-m(45);
@@ -278,10 +278,10 @@
             }
 
             .menu-item {
-                padding: size-m(28.85) 0;
+                padding: size-m(15) 0;
                 
                 span {
-                    font-size: size-m(15);
+                    font-size: size-m(24);
                     width: 100%;
                     display: block;
                     white-space: nowrap;
@@ -289,12 +289,12 @@
                     transform-origin: left center;
                 }
 
-                &:hover {
-                    span {
-                        transform: scale(1.3);
-                        width: 0;
-                    }
-                }
+                // &:hover {
+                //     span {
+                //         transform: scale(1.3);
+                //         width: 0;
+                //     }
+                // }
                 
             }
 

@@ -1,4 +1,4 @@
-const caseName = "夢公園"
+const caseName = "佳鋐大境"
 
 export default {
     meta: {
@@ -35,22 +35,27 @@ export default {
     },
     navList: [
         {
-            name: "JIA 地段",
-            target: ".s2",
+            name: "大城之境",
+            target: ".s3",
             offset: "",
         },
         {
-            name: "JIA 品牌",
-            target: ".s4",
+            name: "大境美宅",
+            target: ".s5",
             offset: "",
         },
         {
-            name: "JIA 美學",
-            target: ".s6",
+            name: "工藝嚴選",
+            target: ".s7",
             offset: "",
         },
         {
-            name: "愛・JIA 人",
+            name: "空間展演",
+            target: ".s8",
+            offset: "",
+        },
+        {
+            name: "預約賞屋",
             target: ".order",
             offset: "",
         },

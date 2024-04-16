@@ -1,78 +1,11 @@
 <template>
-  <section class="s3 w-full relative text-white bg-[#173868] md:flex md:items-stretch md:flex-row-reverse">
-    <div class="txt text-center md:flex md:justify-center md:items-center">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="title">渴望時尚</div>
-        <div class="subtitle">完美的顛覆 夢想的大位</div>
-        <hr class="md:hidden">
-        <div class="content">
-          台南平實，對位台北信義、台中七期<br>
-          集繁華、速度、機能、綠意、價值於一身<br>
-          一座理所當然的國際城市身段<br>
-          一次絕無僅有的天選極稀機會
-        </div>
-      </div>
+  <section class="s3 relative">
+    <div class="map relative" ref="map">
+      <img class="map1" src="@/section/s3/map.jpg" @load="onImgLoad($event)" />
     </div>
-    <div class="pic hidden md:flex md:flex-wrap md:flex-1">
-      <div class="img relative w-full">
-        <img class="w-full block" src="@/section/s3/1.webp" />
-        <div class="city absolute">TAINAN</div>
-        <div class="name absolute">台南平實重劃區</div>
-        <div class="en absolute">LANDMARK OF TAINAN</div>
-        <div class="info absolute">平實重劃區實景拍攝</div>
-      </div>
-      <div class="img relative w-1/2">
-        <img class="w-full h-full block" src="@/section/s3/2.webp" />
-        <div class="city absolute">TAIPEI</div>
-        <div class="name absolute">台北信義計畫區</div>
-        <div class="info absolute">台北信義計畫區示意圖</div>
-      </div>
-      <div class="img relative w-1/2">
-        <img class="w-full h-full block" src="@/section/s3/3.webp" />
-        <div class="city absolute">TAICHUNG</div>
-        <div class="name absolute">台中七期重劃區</div>
-        <div class="info absolute">台中七期重劃區示意圖</div>
-      </div>
-    </div>
-    <div class="slider md:hidden">
-      <swiper
-        :loop="true"
-        :navigation="true"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <div class="img relative h-full">
-            <img class="w-full block" src="@/section/s3/1.webp" />
-            <div class="city absolute">TAINAN</div>
-            <div class="name absolute">台南平實重劃區</div>
-            <div class="en absolute">LANDMARK OF TAINAN</div>
-            <div class="info absolute"></div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img relative h-full">
-            <img class="w-full block" src="@/section/s3/2.webp" />
-            <div class="city absolute">TAIPEI</div>
-            <div class="name absolute">台北信義計畫區</div>
-            <div class="en absolute">LANDMARK OF TAIPEI</div>
-            <div class="info absolute"></div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img relative h-full">
-            <img class="w-full block" src="@/section/s3/3.webp" />
-            <div class="city absolute">TAICHUNG</div>
-            <div class="name absolute">台中七期重劃區</div>
-            <div class="en absolute">LANDMARK OF TAICHUNG</div>
-            <div class="info absolute"></div>
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
+    <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
+    <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
+    <div class="title absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">黃金雙軸串連核心<br class="md:hidden"><span class="hidden md:inline">&nbsp;&nbsp;</span>環扣科技產業聚落</div>
   </section>
 </template>
 
@@ -80,221 +13,111 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  font-size: size-m(14);
-  font-weight: 500;
-  line-height: 200%;
-  @media (min-width: 768px) {
-    font-size: size(19);
-    line-height: size(33);
-  }
-
-  .txt {
-    padding: size-m(50) size-m(33);
-    @media (min-width: 768px) {
-      width: calc(size(1920 - 1215));
-      padding: 0;
+  z-index: 1;
+  @keyframes swing {
+    0% {
+      transform: translateX(0%);
     }
-
-    .title {
-      font-family: "Noto Serif TC";
-      font-size: size-m(30);
-      font-weight: 700;
-      letter-spacing: size-m(9);
-      text-indent: size-m(9);
-      margin-bottom: size-m(0);
-      padding-bottom: size-m(13);
-      position: relative;
-      line-height: normal;
-      @media (min-width: 768px) {
-        font-size: size(58);
-        letter-spacing: size(19.14);
-        text-indent: size(19.14);
-        margin-bottom: size(24);
-        padding-bottom: size(19);
-      }
-
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: size-m(115);
-        height: size-m(1);
-        background: #173868;
-        @media (min-width: 768px) {
-          width: size(215);
-          height: size(1);
-          background: #fff;
-        }
-      }
-  
-      
+    25% {
+      transform: translateX(-15%);
     }
-
-    .subtitle {
-      font-family: "Noto Serif TC";
-      font-size: size-m(15);
-      font-weight: 700;
-      letter-spacing: size-m(5);
-      text-indent: size-m(5);
-      margin-bottom: size-m(26);
-      line-height: normal;
-      @media (min-width: 768px) {
-        font-size: size(24);
-        letter-spacing: size(7.92);
-        text-indent: size(7.92);
-        margin-bottom: size(43);
-      }
+    50% {
+      transform: translateX(0%);
+    }
+    75% {
+      transform: translateX(15%);
+    }
+    100% {
+      transform: translateX(0%);
     }
   }
 
-  hr{
-    width: size-m(150);
-    margin: 0 auto;
-    margin-top: size-m(30);
-    margin-bottom: size-m(30);
-    border: 1px solid #fff;
+  width: 100%;
+  height: size-m(667);
+  @media screen and (min-width:768px) {
+    height: auto;
   }
 
-  .city {
-    font-family: "Noto Serif TC";
-    color: rgba(255, 255, 255, 0.20);
-    font-weight: 700;
-    line-height: normal;
-    top: size-m(-17.16);
-    right: size-m(-3.92);
-    font-size: size-m(42);
-    letter-spacing: size-m(9.66);
-    @media (min-width: 768px) {
-      top: size(-24);
-      right: size(-2 - 13.57);
-      font-size: size(59);
-      letter-spacing: size(13.57);
-    }
-  }
-
-  .name {
-    font-family: "Noto Serif TC";
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    top: size-m(12.84);
-    right: size-m(32);
-    font-size: size-m(20);
-    letter-spacing: size-m(4.2);
-    @media (min-width: 768px) {
-      top: size(23);
-      right: size(27 - 9.18);
-      font-size: size(18);
-      letter-spacing: size(9.18);
-    }
-  }
-
-  .info {
-    bottom: size-m(4);
-    right: size-m(7);
-    font-size: size-m(12);
-    @media (min-width: 768px) {
-      bottom: size(6);
-      right: size(9);
-      font-size: size(12);
-    }
-  }
-
-  .img {
-    margin-top: size(12);
-
-    &:nth-child(2) {
-      width: calc(50% - size(6));
-      margin-right: size(6);
+  .map {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    @media screen and (min-width:768px) {
+      overflow: hidden;
     }
 
-    &:nth-child(3) {
-      width: calc(50% - size(6));
-      margin-left: size(6);
-    }
-  }
-
-  .img:nth-child(1) {
-    margin-top: size(0);
-
-    .city {
-      @media (min-width: 768px) {
-        top: size(-33);
-        right: size(-3 - 18.86);
-        font-size: size(82);
-        letter-spacing: size(18.86);
-      }
-    }
-
-    .name {
-      @media (min-width: 768px) {
-        top: size(26);
-        right: size(35 - 19.38);
-        font-size: size(38);
-        letter-spacing: size(19.38);
-      }
-    }
-
-    .en {
-      font-family: "Noto Serif TC";
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      top: size-m(40);
-      right: size-m(32);
-      font-size: size-m(10);
-      letter-spacing: size-m(2.3);
-      @media (min-width: 768px) {
-        top: size(87);
-        right: size(67 - 7.95);
-        font-size: size(15);
-        letter-spacing: size(7.95);
-      }
-    }
-  }
-
-  .slider {
-    .swiper-wrapper {
-      align-items: stretch;
-
-      .swiper-slide {
+    img {
+      width: auto;
+      height: size-m(667);
+      margin-top: size-m(667 - 667);
+      max-width: none;
+      display: block;
+      @media screen and (min-width:768px) {
+        overflow: hidden;
+        width: 100%;
         height: auto;
-
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        margin-top: 0;
       }
     }
+  }
 
-    .swiper-button-next, .swiper-button-prev {
-      width: size-m(40);
-      height: size-m(40);
-      color: #fff;
-      justify-content: flex-start;
-
-      &:after {
-        font-size: 7vw;
-      }
+  .hand {
+    width: size-m(22.34);
+    top: size-m(333.5);
+    left: size-m(176.33);
+    cursor: pointer;
+    transition: opacity .5s;
+    animation: swing 3s linear 0s infinite;
+    pointer-events: none;
+    @media screen and (min-width:768px) {
+      display: none;
     }
+  }
 
-    .swiper-button-next {
-      justify-content: flex-end;
+  .hand-bg {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+  }
+
+  .title {
+    width: 100%;
+    top: size-m(15);
+    left: 0;
+    font-size: size-m(35);
+    font-weight: 700;
+    text-align: center;
+    @media screen and (min-width:768px) {
+      top: size(92.78);
+      left: size(0);
+      font-size: size(100);
     }
   }
 }
+
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import { Autoplay, Navigation } from "swiper";
-const modules = ref([Autoplay, Navigation]);
+import { ref } from 'vue';
+
+const map = ref();
+
+function onImgLoad(e) {
+  const img = e.target;
+  if (map.value && img) {
+    let status = 0;
+    let hideHand = false;
+    map.value.scrollLeft = img.clientWidth * 0.5 - window.innerWidth/2;
+    map.value.addEventListener("scroll", () => {
+      status++;
+      if(status > 1 && !hideHand){
+        map.value.parentNode.querySelector('.hand').style.opacity = 0;
+        map.value.parentNode.querySelector('.hand-bg').style.opacity = 0;
+        hideHand = true;
+      }
+    });
+  }
+}
 </script>
