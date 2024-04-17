@@ -91,18 +91,6 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-@keyframes ball_up {
-  to {
-    transform: translateY(-3%);
-  }
-}
-
-@keyframes ball_down {
-  to {
-    transform: translateY(3%);
-  }
-}
-
 @keyframes ball {
   to {
     transform: translateY(0);
@@ -111,50 +99,60 @@
 
 .s1 {
   overflow: hidden;
-  @media (min-width: 768px) {
-    
-  }
 
   svg {
     path {
       &:nth-child(1) {
-        animation: ball_up 3s ease-in-out 1s infinite alternate;
+        transform: translateY(4vw);
+        animation: ball 3s ease-in-out 1s infinite alternate;
       }
       &:nth-child(2) {
-        animation: ball_up 4s ease-in-out 2s infinite alternate;
+        transform: translateY(-2vw);
+        animation: ball 3.5s ease-in-out 0s infinite alternate;
       }
       &:nth-child(3) {
-        animation: ball_down 5s ease-in-out 2s infinite alternate;
+        transform: translateY(-3vw);
+        animation: ball 4s ease-in-out 0s infinite alternate;
       }
       &:nth-child(4) {
-        animation: ball_down 4s ease-in-out 1s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3.5s ease-in-out 0.5s infinite alternate;
       }
       &:nth-child(5) {
-        animation: ball_down 5s ease-in-out 0s infinite alternate;
+        transform: translateY(10vw);
+        animation: ball 5s ease-in-out 0s infinite alternate;
       }
       &:nth-child(6) {
-        animation: ball_down 3s ease-in-out 1s infinite alternate;
+        transform: translateY(4vw);
+        animation: ball 2s ease-in-out 1s infinite alternate;
       }
       &:nth-child(7) {
-        animation: ball_up 4s ease-in-out 2s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3s ease-in-out 0s infinite alternate;
       }
       &:nth-child(8) {
-        animation: ball_down 3s ease-in-out 1s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3.5s ease-in-out 0s infinite alternate;
       }
       &:nth-child(9) {
-        animation: ball_up 3s ease-in-out 1s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3.5s ease-in-out 0s infinite alternate;
       }
       &:nth-child(10) {
-        animation: ball_down 2.5s ease-in-out 0s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3s ease-in-out 0s infinite alternate;
       }
       &:nth-child(11) {
-        animation: ball_up 3.5s ease-in-out 1s infinite alternate;
+        transform: translateY(4vw);
+        animation: ball 3.5s ease-in-out 0s infinite alternate;
       }
       &:nth-child(12) {
-        animation: ball_down 5s ease-in-out 2s infinite alternate;
+        transform: translateY(2vw);
+        animation: ball 2s ease-in-out 0s infinite alternate;
       }
       &:nth-child(13) {
-        animation: ball_down 4.5s ease-in-out 0s infinite alternate;
+        transform: translateY(3vw);
+        animation: ball 3s ease-in-out 1s infinite alternate;
       }
     }
   }
@@ -213,8 +211,6 @@
       width: size(224.54);
     }
   }
-  
-  // animation: 5s ease-in-out 1s infinite alternate twinkle1;
 }
 </style>
 

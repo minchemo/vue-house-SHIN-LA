@@ -64,8 +64,9 @@
           '接待會館'
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4" v-html="modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`"></div>
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+          `接待中心：${info.address}`
+      }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
@@ -119,8 +120,8 @@
     } 
 
     .contact-item {
-      background-color: transparent;
-      border: 1px solid #fff;
+      background-color: #040000;
+      border: 1px solid #040000;
       color: #ffffff;
       width: 100%;
       padding: 0 size(40);
@@ -157,6 +158,7 @@
         position: relative;
         max-width: 9999px;
         justify-content: center;
+        border-color: #fff;
 
         &::before {
           content: "";
@@ -189,7 +191,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #0c0c24;
+      background-color: #8BC782;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -253,7 +255,7 @@
         }
 
         &.address {
-          padding: 0 0;
+          padding: size-m(6) 0;
 
           &::before {
             width: 100%;

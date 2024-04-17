@@ -13,7 +13,7 @@
             disableOnInteraction: false,
           }"
           :modules="modules"
-          @init="init"
+          @init="init1"
         >
           <swiper-slide>
             <div class="relative">
@@ -47,14 +47,14 @@
           </swiper-slide>
         </swiper>
 
-        <div class="slide-prev" @click="slidePrev">
+        <div class="slide-prev" @click="slidePrev1">
           <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
             <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="slide-next" @click="slideNext">
+        <div class="slide-next" @click="slideNext1">
           <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
             <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -71,7 +71,7 @@
             disableOnInteraction: false,
           }"
           :modules="modules"
-          @init="init"
+          @init="init2"
         >
           <swiper-slide>
             <div class="relative">
@@ -85,14 +85,14 @@
           </swiper-slide>
         </swiper>
 
-        <div class="slide-prev" @click="slidePrev">
+        <div class="slide-prev" @click="slidePrev2">
           <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
             <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="slide-next" @click="slideNext">
+        <div class="slide-next" @click="slideNext2">
           <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
             <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -217,21 +217,38 @@ import "swiper/css";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
 const modules = ref([Autoplay, Navigation]);
-const swiperRef = ref(null);
+const swiperRef1 = ref(null);
+const swiperRef2 = ref(null);
 
-const init = swiper => {
-  swiperRef.value = swiper;
+const init1 = swiper => {
+  swiperRef1.value = swiper;
 }
 
-const slidePrev = () => {
-  if(swiperRef.value){
-    swiperRef.value.slidePrev();
+const slidePrev1 = () => {
+  if(swiperRef1.value){
+    swiperRef1.value.slidePrev();
   }
 }
 
-const slideNext = () => {
-  if(swiperRef.value){
-    swiperRef.value.slideNext();
+const slideNext1 = () => {
+  if(swiperRef1.value){
+    swiperRef1.value.slideNext();
+  }
+}
+
+const init2 = swiper => {
+  swiperRef2.value = swiper;
+}
+
+const slidePrev2 = () => {
+  if(swiperRef2.value){
+    swiperRef2.value.slidePrev();
+  }
+}
+
+const slideNext2 = () => {
+  if(swiperRef2.value){
+    swiperRef2.value.slideNext();
   }
 }
 </script>

@@ -10,13 +10,16 @@
     <img class="ball-green2 absolute hidden md:block" src="@/section/balls/green.png" />
     <img class="ball-green3 absolute hidden md:block" src="@/section/balls/green.png" />
     <img class="ball-blue1 absolute" src="@/section/balls/blue.png" />
-    <img class="ball-blue2 absolute hidden md:block" src="@/section/balls/blue.png" />
-    <img class="ball-yellow1 absolute hidden md:block" src="@/section/balls/yellow.png" />
+    <img class="ball-blue2 absolute" src="@/section/balls/blue.png" />
+    <img class="ball-yellow1 absolute" src="@/section/balls/yellow.png" />
 
     <div class="md:flex md:justify-between md:items-end">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1"><span>10</span> 分鐘 商圈生活一把抓</div>
-        <div class="t2">沙鹿⾞站核⼼商圈，⽣活採買、醫療、學區、運動公園樣樣⿑全，完美機能超便利。</div>
+        <div class="t2">
+          從麥當勞到星巴克，全聯到家樂福，金融銀行到行政機關，以沙鹿車站為核心的市區商圈，樣樣齊全。<br>
+          醫療、學區、運動公園，全機能超便利。中正國小、梧棲中學九年國教優質校園，父母就近接送最安心。
+        </div>
       </div>
       <div class="slider1-wrapper relative">
         <img class="slider-btn absolute md:hidden" src="@/section/s4/btn.svg" @click="clickMap(1)" />
@@ -208,7 +211,7 @@
   }
 
   .ball-orange1 {
-    top: size-m(23);
+    top: size-m(53);
     left: size-m(219);
     width: size-m(33);
     transform: translateY(size-m(10));
@@ -224,7 +227,7 @@
   }
 
   .ball-orange2 {
-    top: size-m(228);
+    top: size-m(258);
     left: size-m(-25);
     width: size-m(102);
     opacity: .65;
@@ -242,7 +245,7 @@
 
   .ball-orange3 {
     @media (min-width: 768px) {
-      top: size(2445);
+      top: size(2475);
       left: size(1155);
       width: size(59);
       opacity: .62;
@@ -253,7 +256,7 @@
 
   .ball-orange4 {
     @media (min-width: 768px) {
-      top: size(2559);
+      top: size(2589);
       left: size(1469);
       width: size(236);
       opacity: .65;
@@ -264,7 +267,7 @@
   }
 
   .ball-purple1 {
-    top: size-m(-88);
+    top: size-m(-58);
     left: size-m(232);
     width: size-m(151);
     transform: translateY(size-m(30));
@@ -280,14 +283,15 @@
   }
 
   .ball-purple2 {
-    top: size-m(505);
+    top: size-m(585);
     left: size-m(96);
     width: size-m(29);
     z-index: 12;
+    opacity: .53;
   }
 
   .ball-green1 {
-    top: size-m(0);
+    top: size-m(30);
     left: size-m(332);
     width: size-m(71);
     opacity: .68;
@@ -344,6 +348,13 @@
   }
 
   .ball-blue2 {
+    top: size-m(1200);
+    left: size-m(-67);
+    width: size-m(180);
+    z-index: 12;
+    opacity: .95;
+    transform: translateY(size-m(-30));
+    animation: ball 4s ease-in-out 1s infinite alternate;
     @media (min-width: 768px) {
       top: size(2421);
       left: size(-308);
@@ -356,6 +367,12 @@
   }
 
   .ball-yellow1 {
+    top: size-m(814);
+    left: size-m(334);
+    width: size-m(44);
+    opacity: .62;
+    transform: translateY(size-m(30));
+    animation: ball 3.5s ease-in-out 1s infinite alternate;
     @media (min-width: 768px) {
       top: size(2082);
       left: size(1396);
@@ -390,7 +407,7 @@
   }
 
   .t2 {
-    padding: 0 size-m(30);
+    padding: 0 size-m(25);
     text-align: center;
     font-size: size-m(14);
     line-height: 178%;
@@ -587,6 +604,8 @@
     height: size(938);
     background: rgba(4, 0, 0, 0.8);
     padding: 0;
+    max-width: 100%;
+    max-height: calc(100% - size(60));
   }
 
   &:before {
