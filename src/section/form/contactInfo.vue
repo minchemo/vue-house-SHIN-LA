@@ -4,15 +4,15 @@
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="佳鋐大境" srcset="" />
+        <img src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="佳鋐大境" srcset="" />
+        <img src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
         <div>FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="佳鋐大境" srcset="" />
+        <img src="//h65.tw/img/form/fb.svg" alt="fb" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div>接待中心：<br class="md:hidden"><span v-html="info.address"></span></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="佳鋐大境" srcset="" />
+        <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -31,21 +31,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="佳鋐大境" srcset="" />
+      <img src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="佳鋐大境" srcset="" />
+      <img src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="佳鋐大境" srcset="" />
+      <img src="//h65.tw/img/form/pen.svg" alt="pen" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="佳鋐大境" srcset="" />
+      <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -56,9 +56,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="佳鋐大境" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="佳鋐大境" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="佳鋐大境" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -85,6 +85,9 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+.bg-color1{background-color: #E5005C;}
+.hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
   width: size(1200);
@@ -178,10 +181,15 @@
     }
   }
 }
+.modal-box{
+  img{filter:invert(23%) sepia(95%) saturate(7481%) hue-rotate(329deg) brightness(88%) contrast(105%);
+  //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
+  }
+}
 
 @media screen and (max-width:768px) {
   .mo-contact-info {
-    z-index: 49;
+    z-index: 89;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -226,7 +234,7 @@
     .logo {
       width: size-m(258);
       height: size-m(87.68);
-      //background-image: url("@/section/form/logo.svg");
+      //background-image: url("//h65.tw/img/form/logo.svg");
       margin-bottom: size-m(39);
     }
 

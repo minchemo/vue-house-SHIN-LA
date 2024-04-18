@@ -120,6 +120,7 @@
         top: size(0);
         right: size(0);
         background-color: rgba(139, 199, 130, 0.8);
+        backdrop-filter: blur(2px);
         width: size(280);
         height: 100%;
         z-index: 99;
@@ -149,6 +150,7 @@
                 white-space: nowrap;
                 transition: width .4s linear, transform .1s linear;
                 transform-origin: left center;
+                text-shadow: 0 0 .6em #2d612699 ,0 0 .15em #2d612699;
             }
 
             // &:hover {

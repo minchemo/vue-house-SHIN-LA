@@ -1,9 +1,9 @@
 <template>
   <section class="s7 w-full relative text-[#040000]">
     <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">全球工藝 品牌精選</div>
-    <img class="balls absolute hidden md:block" src="@/section/s7/balls.png" />
+    <img class="balls absolute hidden md:block" src="@/section/s7/balls.webp" />
     <div class="md:flex md:justify-between md:items-start">
-      <img class="img" src="@/section/s7/img.png" />
+      <img class="img" src="@/section/s7/img.webp" />
       <div class="slider md:hidden">
         <swiper
           :loop="true"
@@ -48,18 +48,10 @@
         </swiper>
 
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-            <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-            <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
       <div class="slider hidden md:block">
@@ -75,29 +67,21 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s7/1.png" />
+              <img src="@/section/s7/1.webp" />
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s7/2.png" />
+              <img src="@/section/s7/2.webp" />
             </div>
           </swiper-slide>
         </swiper>
 
         <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-            <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-            <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
@@ -109,7 +93,7 @@
 
 .s7 {
   padding: size-m(24) 0;
-  background-image: url(@/section/s7/bg-m.png);
+  background-image: url(@/section/s7/bg-m.webp);
   background-size: cover;
   @media (min-width: 768px) {
     padding: size(90) size(250);
@@ -132,6 +116,7 @@
   }
 
   .balls {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(69);
       left: size(789);

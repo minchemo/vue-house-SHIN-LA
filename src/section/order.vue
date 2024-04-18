@@ -1,70 +1,85 @@
 <template>
-  <div class="order relative bg-[#E5005C] text-center">
-    <div class="order1 relative">
-      <div class="order-title text-white mb-3">
-        <div class="font-bold t1">我想了解</div>
-        <div class="text-base t2">歡迎預約，將有專人與您聯絡，我們將竭誠為您服務</div>
+  <div id="order" class="order bg-[#E5005C] relative text-center">
+    <div class="order-section">
+      <!-- Title -->
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <!-- <div class="cus-divider"></div> -->
+
+      <!-- Title Image
+      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
+ -->
+      <!-- Custom Image -->
+
+      <!-- Form -->
+      <div class="form mx-auto relative flex justify-center">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row"><span>姓名<span>(必填)</span></span>
+          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" /></label>
+            <label class="row"><span>手機<span>(必填)</span></span>
+              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" /></label>
+
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+          </select>
+        </label>
+          <label class="row"><span>居住縣市</span>
+          <select class="select w-full rounded-none" v-model="formData.city">
+            <option value="" selected disabled>請選擇城市</option>
+            <option v-for="city in cityList" :value="city.value">
+              {{ city.label }}
+            </option>
+          </select></label>
+          <label class="row"><span>居住地區</span>
+          <select class="select w-full rounded-none" v-model="formData.area">
+            <option value="" selected disabled>請選擇地區</option>
+            <option v-for="area in areaList" :value="area.value">
+              {{ area.label }}
+            </option>
+          </select></label>
+        </div>
+        <div class="right">
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+        </div>
       </div>
-      <div class="order2 relative">
-        <!-- Form -->
-        <div class="form mx-auto relative flex items-start justify-center">
-          <div class="left h-full flex flex-col justify-between items-center">
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" />
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
-              <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
-              <option value="三房">三房</option>
-              <option value="店面">店面</option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value">
-                {{ city.label }}
-              </option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value">
-                {{ area.label }}
-              </option>
-            </select>
-          </div>
-          <div class="right h-full">
-            <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
-          </div>
-        </div>
 
-        <!-- Policy -->
-        <div class="flex gap-2 items-center justify-center control">
-          <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-            class="checkbox bg-white rounded-md" />
-          <p class="text-white">
-            本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-          </p>
-        </div>
-        <Policy />
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md" />
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        </p>
+      </div>
+      <Policy />
 
-        <!-- Recaptcha -->
-        <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-          @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-        <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 hover:text-white btn cursor-pointer btregistration bg-white text-[#E5005C] rounded-none" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
-        </div>
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+        {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
     </div>
 
+
     <!-- Map -->
-    <Map />
+    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -74,52 +89,93 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+
+.order-section {
+  position: relative;
+ // padding-top: size(406);
+   overflow: hidden;
+    min-height: size(500);
+
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: size(50);
+    vertical-align: middle;
+  }
+
+}
+
 .order {
-  overflow: hidden;
   width: 100%;
-  // padding-top: size(115);
+  padding-top: 0;
+
+  .bird {
+    @apply absolute;
+    width: size(155);
+    top: size(420);
+    right: size(450);
+    animation: fly 6s ease-in-out infinite alternate-reverse;
+
+    @keyframes fly {
+      from {
+        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
+      }
+
+      to {
+        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+
+      }
+    }
+  }
 
   .order-title {
     font-size: size(40);
-    line-height: size(58);
-    margin: 0 auto size(31) auto;
-
-    .t1 {
-      margin-bottom: size(6);
-    }
-
-    .t2 {
-      font-size: size(18);
-      line-height: size(36);
-    }
+    font-weight: 700;
+    color: #fff;
+    padding-top:1.5em;
+    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
-  .order1 {
-    background-color: #E5005C;
-    padding-top: size(110);
+  .order-title-img {
+    width: size(1008);
+    margin-bottom: size(155);
   }
-
-  .order2 {
-    padding: 0;
+  .order-subTitle{
+    font-size: size(17);
+    color: #fff;
+    padding-top:.8em;
+    letter-spacing: .1em;
+    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
-
-  .z-10 {
-    z-index: 10;
-    position: relative;
+  .cus-divider {
+    margin: 0 auto;
+    width: size(300);
+    height: size(2);
+    margin-bottom: size(50);
+    background-color: #055F76;
   }
 
   .form {
     width: size(920);
-    height: 265px;
+    min-width: 680px;
+    //  height: 350px;
     gap: size(80);
+    margin-top: size(45);
     margin-bottom: size(50);
+    z-index: 50;
+    align-items: stretch;
 
     .left {
-      width: size(419);
+      flex: 1;
+      gap: size(20);
+      //   width: size(419);
     }
 
     .right {
-      width: size(419);
+      flex: 1;
+      height: auto;
+      //  width: size(419);
     }
 
     &::after {
@@ -129,19 +185,43 @@
       background-color: #fff;
       position: absolute;
     }
+    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+      display: flex;width: 100%;
+    align-items:center;
+      > span{
+        width: 5.5em;
+        text-align: left;padding-left:1em ;
+        > span{color: #F00;font-size: 12px;}
+      }
+      input,select{background: inherit;flex: 1;}
+      option{color: #666;}
+      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
+      background-size:auto 200%;
+      transition: background .3s;
+      &:focus{
+        background-position:calc(100% - .5em) 0%;
+      }
+      }
+    }
   }
 
   .send {
-    font-size: size(22);
+    font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    width: size(350);
-    height: 3.3em;
+    color: #E5005C;
+    background-color:#fff;;
+    //border: 1px solid #FFF9;
+    border:0;
+    border-radius: 0em;
+
+    width: 308px;
+    height:3.3em;
     line-height: 3.3;
-    border: 0;
     z-index: 10;
+    font-weight: 400;
     position: relative;
-    border: size(1) solid #E5005C;
+    font-weight: 600;
   }
 
   .control {
@@ -152,42 +232,66 @@
 }
 
 @media screen and (max-width:768px) {
+  .order-section {
+    min-height: size-m(800);
+    position: relative;
+    // overflow: hidden;
+   // padding-top: size-m(200);
+
+    .bg-image {
+      position: absolute;
+      width: 100%;
+      left: -#{size-m(30)};
+      bottom: size-m(590);
+    }
+
+  }
+
   .order {
     width: 100%;
+    //padding-bottom: size-m(63);
+    // border-radius: size-m(68) size-m(68) 0 0;
+   /* padding-top: size-m(0);
     margin-top: size-m(0);
 
+    .order-title-img {
+      width: size-m(315);
+      margin-bottom: size-m(22);
+    } */
+
+    .bird {
+      @apply absolute;
+      width: size-m(48.8);
+      top: size-m(205);
+      right: size-m(40);
+    }
+
+    .cus-divider {
+      margin: 0 auto;
+      width: size-m(117);
+      height: size-m(2);
+      margin-bottom: size-m(25);
+      background-color: #055F76;
+    }
+
     .order-title {
-      font-size: size-m(29);
-      line-height: size-m(38);
-      margin: 0 auto size-m(20) auto;
-      width: size-m(330);
-
-      .t1 {
-        margin-bottom: size-m(20);
-      }
-
-      .t2 {
-        font-size: size-m(13);
-        line-height: size-m(24);
-      }
+      font-size: size-m(25);
+      padding-top:1.5em;
     }
-    
-    .order1 {
-      padding-top: size-m(20);
+    .order-subTitle{
+      font-size: size-m(13);
+      padding-top:0;
     }
 
-    .order2 {
-      padding: 0;
-      background-size: cover;
-      background-position: center center;
-    }
 
     .form {
       width: size-m(310);
+      min-width: 0;
       height: auto;
       gap: size-m(15);
       margin-bottom: size-m(20);
       flex-direction: column;
+      margin-top: size-m(20);
 
       .left {
         width: 100%;
@@ -197,6 +301,9 @@
       .right {
         width: 100%;
         height: size-m(100);
+        .row{
+          height: 7em;
+        }
       }
 
       &::after {
@@ -206,8 +313,8 @@
 
     .send {
       font-size: size-m(21);
-      width: size-m(318);
-      border: size-m(1) solid #fff;
+      width: size-m(310);
+      height: size-m(72);
     }
 
     .control {
@@ -226,36 +333,44 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
+
+const sending = ref(false)
 
 const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
-  // email: "",
+  budget: "",
+  project: "",
+  email: "",
   city: "",
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: false,
+  r_verify: true,
 })
 
-const sending = ref(false)
-
 //非必填
-// const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type"];
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  // "信箱", //email
+  "預算", //budget
+  "建案", //project
+  "信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
@@ -306,8 +421,11 @@ const send = () => {
       if (value == "" || value == false) {
         unfill.push(formDataRef.value[idx])
       }
+
     }
-    idx++
+
+    idx++;
+
     presend.append(key, value);
   }
 
@@ -337,6 +455,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

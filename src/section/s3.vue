@@ -1,7 +1,7 @@
 <template>
   <section class="s3 relative">
     <div class="map relative" ref="map">
-      <img class="map1" src="@/section/s3/map.jpg" @load="onImgLoad($event)" />
+      <img class="map1" src="@/section/s3/map.webp" @load="onImgLoad($event)" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
@@ -33,7 +33,7 @@
   }
 
   width: 100%;
-  height: size-m(667);
+  height: size-m(667+50);
   @media screen and (min-width:768px) {
     height: auto;
   }
@@ -42,8 +42,11 @@
     overflow-x: scroll;
     overflow-y: hidden;
     width: 100vw;
+      padding:size-m(50) 0 0 0;
+      background:#4FC9FC;
     @media screen and (min-width:768px) {
       overflow: hidden;
+      padding:0;
     }
 
     img {
@@ -63,7 +66,7 @@
 
   .hand {
     width: size-m(22.34);
-    top: size-m(333.5);
+    top: size-m(333.5+50);
     left: size-m(176.33);
     cursor: pointer;
     transition: opacity .5s;
@@ -76,10 +79,12 @@
 
   .hand-bg {
     width: 100%;
+    padding-top:size-m(50);
     bottom: 0;
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
+    background: #94003b66;
   }
 
   .title {
@@ -89,6 +94,7 @@
     font-size: size-m(35);
     font-weight: 700;
     text-align: center;
+    text-shadow: 0 .1em .1em #059c;
     @media screen and (min-width:768px) {
       top: size(92.78);
       left: size(0);

@@ -1,7 +1,7 @@
 <template>
   <section class="s8 w-full relative text-[#040000]">
     <img class="line" src="@/section/s8/line.svg" />
-    <img class="balls absolute hidden md:block" src="@/section/s8/balls.png" />
+    <img class="balls absolute hidden md:block" src="@/section/s8/balls.webp" />
     <div class="md:flex title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">有光有景 寬心大格局</div>
       <div class="t2">光空間，寬格局，逍遙大尺度！明亮舒適的起居空間，讓生活與心情輕快飛揚。</div>
@@ -26,48 +26,40 @@
             >
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/2/1.jpg" />
+                  <img src="@/section/s8/2/1.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/2/2.jpg" />
+                  <img src="@/section/s8/2/2.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/2/3.jpg" />
+                  <img src="@/section/s8/2/3.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/2/4.jpg" />
+                  <img src="@/section/s8/2/4.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/2/5.jpg" />
+                  <img src="@/section/s8/2/5.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
             </swiper>
             <div class="slide-prev" @click="slidePrev1">
-              <svg viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-                <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M18.7295 5.81241L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
             </div>
             <div class="slide-next" @click="slideNext1">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-                <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12.2705 5.81241L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
             </div>
           </div>
           <div v-else>
@@ -86,54 +78,46 @@
             >
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/1.jpg" />
+                  <img src="@/section/s8/3/1.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/2.jpg" />
+                  <img src="@/section/s8/3/2.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/3.jpg" />
+                  <img src="@/section/s8/3/3.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/4.jpg" />
+                  <img src="@/section/s8/3/4.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/5.jpg" />
+                  <img src="@/section/s8/3/5.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="relative">
-                  <img src="@/section/s8/3/6.jpg" />
+                  <img src="@/section/s8/3/6.webp" />
                   <div class="txt">實品屋實景</div>
                 </div>
               </swiper-slide>
             </swiper>
             <div class="slide-prev" @click="slidePrev2">
-              <svg viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-                <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M18.7295 5.81241L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
             </div>
             <div class="slide-next" @click="slideNext2">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-                <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12.2705 5.81241L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
             </div>
           </div>
         </Transition>
@@ -197,6 +181,7 @@
   }
 
   .balls {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(-97);
       left: size(1075);

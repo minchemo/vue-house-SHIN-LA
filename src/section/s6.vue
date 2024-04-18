@@ -8,7 +8,7 @@
         <div class="t2">奢華就是在家收藏一座大花園！蝶飛鳥鳴、花樹雲影，漫步在精心植栽的大自然裡，感受陽光綠意帶來的美好風景。</div>
       </div>
       <div class="img relative">
-        <img class="block w-full" src="@/section/s6/img.jpg">
+        <img class="block w-full" src="@/section/s6/img.webp">
         <div class="txt absolute">建築外觀3D情境示意圖</div>
       </div>
       <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -34,31 +34,31 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/1.jpg" />
+            <img src="@/section/s6/slider/1.webp" />
             <div class="txt">雅石迎賓門廳示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/2.jpg" />
+            <img src="@/section/s6/slider/2.webp" />
             <div class="txt">澄心交誼空間示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/3.jpg" />
+            <img src="@/section/s6/slider/3.webp" />
             <div class="txt">維尼童話館示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/4.jpg" />
+            <img src="@/section/s6/slider/4.webp" />
             <div class="txt">原創會議室示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/5.jpg" />
+            <img src="@/section/s6/slider/5.webp" />
             <div class="txt">柏克健身房示意圖</div>
           </div>
         </swiper-slide>
@@ -92,11 +92,11 @@
     </svg>
     <div class="txt">左右滑動可看全圖</div>
     <div class="img">
-      <img v-if="clickedIndex === 0" src="@/section/s6/slider/1.jpg" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 1" src="@/section/s6/slider/2.jpg" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 2" src="@/section/s6/slider/3.jpg" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 3" src="@/section/s6/slider/4.jpg" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 4" src="@/section/s6/slider/5.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 0" src="@/section/s6/slider/1.webp" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 1" src="@/section/s6/slider/2.webp" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 2" src="@/section/s6/slider/3.webp" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 3" src="@/section/s6/slider/4.webp" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 4" src="@/section/s6/slider/5.webp" @load="onImgLoad($event)" />
     </div>
   </div>
 </template>

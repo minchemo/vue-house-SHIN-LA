@@ -40,60 +40,52 @@
           >
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/1.jpg" />
+                <img src="@/section/s4/slider1/1.webp" />
                 <div class="txt">⾞站商圈實景</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/2.jpg" />
+                <img src="@/section/s4/slider1/2.webp" />
                 <div class="txt">星巴克</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/3.jpg" />
+                <img src="@/section/s4/slider1/3.webp" />
                 <div class="txt">家樂福</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/4.jpg" />
+                <img src="@/section/s4/slider1/4.webp" />
                 <div class="txt">三井Outlet</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/5.jpg" />
+                <img src="@/section/s4/slider1/5.webp" />
                 <div class="txt">沙鹿運動公園</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative">
-                <img src="@/section/s4/slider1/6.jpg" />
+                <img src="@/section/s4/slider1/6.webp" />
                 <div class="txt">梧棲童綜合醫院</div>
               </div>
             </swiper-slide>
           </swiper>
         </div>
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-            <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-            <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
     <div class="main-map hidden md:block">
-      <img class="block w-full" src="@/section/s4/map1.jpg" />
+      <img class="block w-full" src="@/section/s4/map1.png" />
     </div>
     <div class="slider2">
       <swiper
@@ -110,66 +102,58 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/1.jpg" />
+            <img src="@/section/s4/slider2/1.webp" />
             <div class="txt">捷運藍線示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/2.jpg" />
+            <img src="@/section/s4/slider2/2.webp" />
             <div class="txt">沙鹿車站示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/3.jpg" />
+            <img src="@/section/s4/slider2/3.webp" />
             <div class="txt">雙大道交匯暢快動線</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/4.jpg" />
+            <img src="@/section/s4/slider2/4.webp" />
             <div class="txt">台灣大道</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/5.jpg" />
+            <img src="@/section/s4/slider2/5.webp" />
             <div class="txt">台中機場</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/6.jpg" />
+            <img src="@/section/s4/slider2/6.webp" />
             <div class="txt">台中港</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/7.jpg" />
+            <img src="@/section/s4/slider2/7.webp" />
             <div class="txt">台中科學園區</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/slider2/8.jpg" />
+            <img src="@/section/s4/slider2/8.webp" />
             <div class="txt">精密科技園區</div>
           </div>
         </swiper-slide>
       </swiper>
       <div class="slide-prev" @click="slidePrev2">
-        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-          <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
       </div>
       <div class="slide-next" @click="slideNext2">
-        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-          <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#E5005C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
       </div>
     </div>
     <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
@@ -184,10 +168,7 @@
   </section>
 
   <div v-if="showPop" id="s4-popup" class="bg-[#E5005C] text-white">
-    <svg @click="showPop = false" class="popup-close md:hidden" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="2.70711" y1="1.29289" x2="28.7071" y2="27.2929" stroke="white" stroke-width="2"/>
-      <line y1="-1" x2="36.7696" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 28 2)" stroke="white" stroke-width="2"/>
-    </svg>
+    <svg @click="showPop = false" class="popup-close md:hidden" viewBox="0 0 28 28" fill="none" stroke="#FFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M1,1l26,26 M27,1L1,27"/></svg>
     <svg @click="showPop = false" class="popup-close hidden md:block" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="23.7109" cy="24.0303" r="23.2109" fill="white"/>
       <path d="M12.9683 34.904L34.2587 13.6136" stroke="#E5005C" stroke-width="2" stroke-linecap="round"/>
@@ -195,8 +176,8 @@
     </svg>
     <div class="txt">左右滑動可看全圖</div>
     <div class="img">
-      <img v-if="map === 1" src="@/section/s4/map1.jpg" @load="onImgLoad($event)" />
-      <img v-if="map === 2" src="@/section/s4/map2.jpg" @load="onImgLoad($event)" />
+      <img v-if="map === 1" src="@/section/s4/map1.png" @load="onImgLoad($event)" />
+      <img v-if="map === 2" src="@/section/s4/map2.png" @load="onImgLoad($event)" />
     </div>
   </div>
 </template>
@@ -216,13 +197,13 @@
     width: size-m(33);
     transform: translateY(size-m(10));
     animation: ball 2s ease-in-out 0s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(119);
       left: size(679);
       width: size(107);
       opacity: .7;
       transform: translateY(size(20));
-      animation: ball 2s ease-in-out 0s infinite alternate;
     }
   }
 
@@ -234,16 +215,17 @@
     z-index: 12;
     transform: translateY(size-m(-20));
     animation: ball 3s ease-in-out 0s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(471);
       left: size(-278);
       width: size(471);
       transform: translateY(size(40));
-      animation: ball 3s ease-in-out 0s infinite alternate;
     }
   }
 
   .ball-orange3 {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2475);
       left: size(1155);
@@ -255,6 +237,7 @@
   }
 
   .ball-orange4 {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2589);
       left: size(1469);
@@ -272,6 +255,7 @@
     width: size-m(151);
     transform: translateY(size-m(30));
     animation: ball 5s ease-in-out 1s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2486);
       left: size(1002);
@@ -296,6 +280,7 @@
     width: size-m(71);
     opacity: .68;
     transform: translateY(size-m(30));
+    pointer-events: none;
     animation: ball 3s ease-in-out 1s infinite alternate;
     @media (min-width: 768px) {
       top: size(0);
@@ -308,6 +293,7 @@
   }
 
   .ball-green2 {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2397);
       left: size(955);
@@ -319,6 +305,7 @@
   }
 
   .ball-green3 {
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2098);
       left: size(1646);
@@ -337,6 +324,7 @@
     opacity: .7;
     transform: translateY(size-m(30));
     animation: ball 3.5s ease-in-out 1s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2382);
       left: size(647);
@@ -355,6 +343,7 @@
     opacity: .95;
     transform: translateY(size-m(-30));
     animation: ball 4s ease-in-out 1s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2421);
       left: size(-308);
@@ -373,6 +362,7 @@
     opacity: .62;
     transform: translateY(size-m(30));
     animation: ball 3.5s ease-in-out 1s infinite alternate;
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(2082);
       left: size(1396);
@@ -456,7 +446,7 @@
     @media (min-width: 768px) {
       display: block;
       line-height: 1;
-      top: -2.6vw;
+      top: -2vw;
       left: 2.2vw !important;
       bottom: auto !important;
       width: auto !important;
