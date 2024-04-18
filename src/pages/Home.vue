@@ -31,9 +31,12 @@
 
 <style lang="scss">
   @import "@/assets/style/function.scss";
+  .user-n{
+    user-select:none;
+  }
   .s7s8 {
     @media (min-width: 768px) {
-      background-image: url(@/section/s7/bg.png);
+      background-image: url(@/section/s7/bg.webp);
       background-size: cover;
     }
   }

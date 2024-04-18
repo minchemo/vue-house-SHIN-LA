@@ -1,5 +1,5 @@
 <template>
-  <section class="s9 w-full relative bg-[#E5005C] text-white">
+  <section class="s9 user-n w-full relative bg-[#E5005C] text-white">
     <img class="style absolute w-full top-0 left-0 md:hidden" src="@/section/s9/style-m.svg" />
     <img class="style absolute hidden md:block" src="@/section/s9/style.svg" />
     <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />

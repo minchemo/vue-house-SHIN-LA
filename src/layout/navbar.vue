@@ -23,7 +23,6 @@
 .nav {
     // padding: 0 size(50);
     // height: size(80);
-
     .menu-btn {
         // position: relative;
         z-index: 1;

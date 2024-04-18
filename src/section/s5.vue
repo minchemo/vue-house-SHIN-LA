@@ -1,6 +1,6 @@
 <template>
   <section class="s5 relative">
-    <div class="map relative" ref="map">
+    <div class="map user-n relative" ref="map">
       <img class="map1" src="@/section/s5/map.webp" @load="onImgLoad($event)" />
     </div>
     <img class="rect absolute top-0 left-0 w-full pointer-events-none md:hidden" src="@/section/s5/rect.svg" />
@@ -50,7 +50,7 @@
 
   .hand {
     width: size-m(22.34);
-    top: size-m(293.5);
+    top: size-m(304);
     left: size-m(176.33);
     cursor: pointer;
     transition: opacity .5s;
@@ -63,8 +63,10 @@
 
   .hand-bg {
     width: 100%;
-    padding-top:size-m(20);
-    bottom:size-m(-20);
+    //padding-top:size-m(20);
+    bottom:0;height: 100%;
+    object-fit: cover;
+
     left: 0;
     transition: opacity .5s;
     pointer-events: none;

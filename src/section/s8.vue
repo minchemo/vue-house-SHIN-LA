@@ -1,7 +1,7 @@
 <template>
   <section class="s8 w-full relative text-[#040000]">
     <img class="line" src="@/section/s8/line.svg" />
-    <img class="balls absolute hidden md:block" src="@/section/s8/balls.webp" />
+    <img class="balls user-n absolute hidden md:block" src="@/section/s8/balls.webp" />
     <div class="md:flex title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">有光有景 寬心大格局</div>
       <div class="t2">光空間，寬格局，逍遙大尺度！明亮舒適的起居空間，讓生活與心情輕快飛揚。</div>
@@ -147,7 +147,7 @@
 
 .s8 {
   padding: size-m(24) 0;
-  background-image: url(@/section/s7/bg-m.png);
+  background-image: url(@/section/s7/bg-m.webp);
   background-size: cover;
   @media (min-width: 768px) {
     padding: size(90) size(250);

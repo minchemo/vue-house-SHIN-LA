@@ -1,9 +1,9 @@
 <template>
   <section class="s7 w-full relative text-[#040000]">
     <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">全球工藝 品牌精選</div>
-    <img class="balls absolute hidden md:block" src="@/section/s7/balls.webp" />
+    <img class="balls user-n absolute hidden md:block" src="@/section/s7/balls.webp" />
     <div class="md:flex md:justify-between md:items-start">
-      <img class="img" src="@/section/s7/img.webp" />
+      <img class="img user-n" src="@/section/s7/img.webp" />
       <div class="slider md:hidden">
         <swiper
           :loop="true"
@@ -54,7 +54,7 @@
           <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
-      <div class="slider hidden md:block">
+      <div class="slider user-n hidden md:block">
         <swiper
           :loop="true"
           :navigation="false"

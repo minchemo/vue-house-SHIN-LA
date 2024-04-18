@@ -1,5 +1,5 @@
 <template>
-  <section class="s1 w-full relative">
+  <section class="s1 user-n w-full relative">
     <svg class="balls-m w-full md:hidden" viewBox="0 0 375 667" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_50_148)">
         <rect width="375" height="667" fill="#E5005C"/>
@@ -161,6 +161,7 @@
     top: size-m(92);
     left: size-m(54);
     width: size-m(269);
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(350.07);
       left: size(392);
@@ -172,6 +173,7 @@
     top: size-m(222);
     left: size-m(51);
     width: size-m(272);
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(639.07);
       left: size(386);
@@ -183,6 +185,7 @@
     top: size-m(290);
     left: size-m(53);
     width: size-m(149);
+    pointer-events: none;
     @media (min-width: 768px) {
       top: size(581.2);
       left: size(1040.52);

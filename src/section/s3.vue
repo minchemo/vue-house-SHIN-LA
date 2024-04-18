@@ -1,6 +1,6 @@
 <template>
   <section class="s3 relative">
-    <div class="map relative" ref="map">
+    <div class="map user-n relative" ref="map">
       <img class="map1" src="@/section/s3/map.webp" @load="onImgLoad($event)" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
