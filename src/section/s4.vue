@@ -427,7 +427,7 @@
   .swiper-slide {
     img {
       display: block;
-      height: 100%;
+      height: 100%;width: 100%;
       object-fit: cover;
     }
 
