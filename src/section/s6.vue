@@ -5,7 +5,8 @@
     <div class="ccontainer">
       <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">千坪陽光花園 奢華散步</div>
-        <div class="t2">奢華就是在家收藏一座大花園！蝶飛鳥鳴、花樹雲影，漫步在精心植栽的大自然裡，感受陽光綠意帶來的美好風景。</div>
+        <div class="t2 md:hidden">收藏一座奢華花園！蝶飛鳥鳴、花樹雲影，彷彿漫步大自然中，感受陽光綠意美好風景。</div>
+        <div class="t2 hidden md:block">奢華就是在家收藏一座大花園！蝶飛鳥鳴、花樹雲影，漫步在精心植栽的大自然裡，感受陽光綠意帶來的美好風景。</div>
       </div>
       <div class="img relative">
         <img class="block w-full" src="@/section/s6/img.webp">
@@ -13,7 +14,8 @@
       </div>
       <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">幸福時光 每天來點正能量</div>
-        <div class="t2 p2">生活需要儀式感！精心規劃的藝術門廳、閱覽區、健身房、童話館、戶外遊戲區，讓下班放學後的生活超紓壓，全家大小各擁一片天地，享受專屬你的休閒樂趣！</div>
+        <div class="t2 p2 md:hidden">生活需要儀式感！精心規劃藝術門廳、閱覽區、健身房、童話館，下班放學生活超紓壓！</div>
+        <div class="t2 p2 hidden md:block">生活需要儀式感！精心規劃的藝術門廳、閱覽區、健身房、童話館、戶外遊戲區，讓下班放學後的生活超紓壓，全家大小各擁一片天地，享受專屬你的休閒樂趣！</div>
       </div>
     </div>
     <div class="slider">

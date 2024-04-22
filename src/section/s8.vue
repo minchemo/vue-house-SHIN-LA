@@ -2,9 +2,13 @@
   <section class="s8 w-full relative text-[#040000]">
     <img class="line" src="@/section/s8/line.svg" />
     <img class="balls user-n absolute hidden md:block" src="@/section/s8/balls.webp" />
-    <div class="md:flex title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="md:flex title" v-if="room === 2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">有光有景 寬心大格局</div>
       <div class="t2">光空間，寬格局，逍遙大尺度！明亮舒適的起居空間，讓生活與心情輕快飛揚。</div>
+    </div>
+    <div class="md:flex title" v-if="room === 3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">現代簡約 極致空間展演</div>
+      <div class="t2">高坪效空間，溫馨之外更具機能，小小創意就能打造理想精品飯店宅。</div>
     </div>
 
     <div class="md:flex md:justify-between md:items-end">
@@ -127,7 +131,7 @@
           <div :class="{'room-btn': true, 'active': room === 2}" @click="room = 2"><span>2</span>房</div>
           <div :class="{'room-btn': true, 'active': room === 3}" @click="room = 3"><span>3</span>房</div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div data-aos="fade-up" v-if="room === 2" data-aos-duration="1000" data-aos-delay="0">
           <div class="t1">美式輕時尚，經典再造</div>
           <div class="t2">
             規劃完整落塵區，內外區分保持清潔。<br>
@@ -135,6 +139,16 @@
             無多餘過道，坪效運用優。<br>
             大陽台規劃，面西視野遼闊。<br>
             鄰房皆為透天，5F以上享無限棟距。
+          </div>
+        </div>
+        <div data-aos="fade-up" v-if="room === 3" data-aos-duration="1000" data-aos-delay="0">
+          <div class="t1">時尚新境界，魅力3房</div>
+          <div class="t2">
+            高坪效，動線流暢無虛坪<br>
+            大玄關，鞋櫃掛衣櫃從容收納<br>
+            大面窗，明亮採光心情開朗<br>
+            主臥衛浴，舒適時光輕鬆享<br>
+            獨立廚房，阻絕油煙免操心
           </div>
         </div>
       </div>

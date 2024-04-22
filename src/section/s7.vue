@@ -3,7 +3,9 @@
     <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">全球工藝 品牌精選</div>
     <img class="balls user-n absolute hidden md:block" src="@/section/s7/balls.webp" />
     <div class="md:flex md:justify-between md:items-start">
-      <img class="img user-n" src="@/section/s7/img.webp" />
+      <div class="c md:hidden">情境示意圖</div>
+      <img class="img user-n md:hidden" src="@/section/s7/img.jpg" />
+      <img class="img user-n hidden md:block" src="@/section/s7/img.webp" />
       <div class="slider md:hidden">
         <swiper
           :loop="true"
@@ -124,9 +126,17 @@
     }
   }
 
+  .c{
+    position: relative;z-index: 2;
+    font-size: size-m(12);
+    margin: 0 0 -2em 0;
+    color:#0009;
+    padding: 0 1em 0 0;
+    text-align: right;
+  }
   .img {
     position: relative;
-    width: size-m(332);
+    width: 100%;
     margin: 0 auto size-m(20) auto;
     @media (min-width: 768px) {
       width: size(1029);

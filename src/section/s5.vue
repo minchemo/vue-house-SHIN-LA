@@ -78,7 +78,7 @@
     top: size-m(80);
     left: 0;
     text-align: center;
-    padding: 0 size-m(30);
+    padding: 0 size-m(30);z-index: 13;
     @media screen and (min-width:768px) {
       width: size(671);
       top: size(192);

@@ -16,7 +16,10 @@
     <div class="md:flex md:justify-between md:items-end">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1"><span>10</span> 分鐘 商圈生活一把抓</div>
-        <div class="t2">
+        <div class="t2 md:hidden">
+          沙鹿⾞站核⼼商圈，⽣活採買、醫療、學區、運動公園樣樣⿑全，完美機能超便利。
+        </div>
+        <div class="t2 hidden md:block">
           從麥當勞到星巴克，全聯到家樂福，金融銀行到行政機關，以沙鹿車站為核心的市區商圈，樣樣齊全。<br>
           醫療、學區、運動公園，全機能超便利。中正國小、梧棲中學九年國教優質校園，父母就近接送最安心。
         </div>
@@ -159,7 +162,8 @@
     <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">一快雙軌三高 動能大利多</div>
-        <div class="t2 bt2">【大境】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
+        <div class="t2 bt2  md:hidden">距藍線B4站僅約1km，收納⼤台中⽣活版圖。快速銜接台61快、三國道，往返全台好便捷！</div>
+        <div class="t2 bt2 hidden md:block">【大境】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
       </div>
       <div class="map-preview" @click="clickMap(2)">
         <img class="block w-full" src="@/section/s4/map-preview.jpg" />
@@ -336,7 +340,7 @@
   }
 
   .ball-blue2 {
-    top: size-m(1200);
+    bottom: size-m(-90);
     left: size-m(-67);
     width: size-m(180);
     z-index: 12;
@@ -345,6 +349,7 @@
     animation: ball 4s ease-in-out 1s infinite alternate;
     pointer-events: none;
     @media (min-width: 768px) {
+      bottom: auto;
       top: size(2421);
       left: size(-308);
       width: size(810);
@@ -568,6 +573,8 @@
   }
 
   .map-preview {
+    position: relative;
+    z-index: 13;
     width: size-m(315);
     margin: size-m(29) auto 0;
     cursor: pointer;
