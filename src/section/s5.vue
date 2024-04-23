@@ -3,6 +3,7 @@
     <div class="map user-n relative" ref="map">
       <img class="map1" src="@/section/s5/map.webp" @load="onImgLoad($event)" />
     </div>
+    <!-- -->
     <img class="rect absolute top-0 left-0 w-full pointer-events-none md:hidden" src="@/section/s5/rect.svg" />
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s5/hand.svg" />
@@ -19,7 +20,7 @@
 
 .s5 {
   width: 100%;
-  height: size-m(607);
+  height: size-m(557);
   background: #E5005C;
   @media screen and (min-width:768px) {
     height: auto;
@@ -35,7 +36,7 @@
 
     img {
       width: auto;
-      height: size-m(449);
+      height: size-m(400);
       margin-top: size-m(607 - 449);
       max-width: none;
       display: block;
