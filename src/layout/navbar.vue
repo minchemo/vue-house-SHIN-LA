@@ -1,17 +1,61 @@
 <template>
-    <div class="nav"
-        v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
-            <div class="menu-inner">
-                <div class="menu-item font-bold cursor-pointer text-white" v-for="item, i in info.navList"
-                    @click="scrollTo(item.target)">
-                    <span>{{ item.name }}</span>
-                </div>
+    <header id="header">
+        <div class="nav-links">
+            <div class="nav-item" @click="scrollTo('.s1')">
+                <img class="nav-logo" src="@/assets/nav-logo.svg" />
+            </div>
+            <div class="nav-item" @click="scrollTo('.s2')">
+                <div>宏普建設<span class="text-[#A32424]">×</span>三井不動產</div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.s3')">
+                <div>東京質地</div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.order')">
+                <div>預約表單</div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.s1')">
+                <img class="nav-logo2" src="@/assets/nav-logo2.svg" />
             </div>
         </div>
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
-            v-bind:class="{ 'open': menuOpen }">
-            <div class="bar z-10"></div>
+        <div class="nav-btn" @click="menuOpen = !menuOpen">
+            <img v-if="menuOpen" src="@/assets/nav-close.svg" />
+            <img v-else src="@/assets/nav-menu.svg" />
+        </div>
+    </header>
+
+    <div id="mob-panel" :class="{open: menuOpen}">
+        <div class="nav-close" @click="menuOpen = false">
+            <img src="@/assets/nav-close-w.svg" />
+        </div>
+        <div>
+            <div class="nav-item" @click="scrollTo('.s1')">
+                <div class="t1">首頁</div>
+                <div class="t2">HOME PAGE</div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.s2')">
+                <div class="t1">宏普建設×三井不動產 </div>
+                <div class="t2">HONG-PU & MITSUI </div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.s3')">
+                <div class="t1">東京質地</div>
+                <div class="t2">LOCATION</div>
+            </div>
+            <div class="nav-item" @click="scrollTo('.order')">
+                <div class="t1">預約表單</div>
+                <div class="t2">BOOK NOW</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-panel" :class="{open: menuOpen}">
+        <div class="nav-item">
+            <img class="w-full block" src="@/assets/location.svg" />
+        </div>
+        <div class="nav-item">
+            <img class="w-full block" src="@/assets/phone.svg" />
+        </div>
+        <div class="nav-item">
+            <img class="w-full block" src="@/assets/messenger.svg" />
         </div>
     </div>
 </template>
@@ -20,319 +64,173 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.nav {
-    // padding: 0 size(50);
-    // height: size(80);
-    .menu-btn {
-        // position: relative;
-        z-index: 1;
-        width: size(90);
-        height: size(90);
-        // background: rgba(139, 199, 130, 0.8);
-        position: fixed;
-        top: size(0);
-        right: size(0);
-        // border: 1px solid #fff;
-        z-index: 99;
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    @media (min-width: 768px) {
+        width: 100%;
+        height: size(160);
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 size(59);
+    }
 
-        .bar {
-            width: size(38);
-            height: 2px;
-            background-color: #fff;
-            // position: relative;
-            transform: all .5s;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+    .nav-links {
+        display: none;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            font-size: size(21);
+            font-weight: 600;
+            letter-spacing: .23em;
+            font-family: "Noto Serif TC";
+            color: #000;
+        }
 
-            &::after {
-                content: '';
-                width: 100%;
-                height: 2px;
-                bottom: -#{size(10)};
-                position: absolute;
-                background-color: #fff;
-                transition: all .5s;
+        .nav-item {
+            &>div {
+                border-left: size(1) solid #A32424;
+                padding: 0 size(34);
+                cursor: pointer;
             }
 
-            &::before {
-                content: '';
-                width: 100%;
-                height: 2px;
-                top: -#{size(10)};
-                position: absolute;
-                background-color: #fff;
-                transition: all .5s;
+            &:nth-last-child(2)>div {
+                border-right: size(1) solid #A32424;
             }
         }
 
-        &:hover {
-            .bar {
-                &::after {
-                    transform: translateX(10%);
-                }
-
-                &::before {
-                    transform: translateX(-10%);
-                }
-            }
+        .nav-logo {
+            width: size(179.73);
+            margin-right: size(53.27);
         }
 
-        &.open {
-            p {
-                color: #fff;
-            }
+        .nav-logo2 {
+            width: size(681.63);
+            margin-left: size(68);
+        }
+    }   
 
-            .bar {
-                height: 0;
+    .nav-btn {
+        width: size-m(88);
+        height: size-m(88);
+        background: #EBECC5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @media (min-width: 768px) {
+            width: size(160);
+            height: size(160);
+        }
 
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    bottom: 50%;
-                    margin-bottom: -1px;
-                    position: absolute;
-                    background-color: #fff;
-                    transition: all .5s;
-                    transform: rotate(135deg);
-                }
-
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    top: 50%;
-                    margin-top: -1px;
-                    position: absolute;
-                    background-color: #fff;
-                    transition: all .5s;
-                    transform: rotate(-135deg);
-                }
+        img {
+            width: size-m(36.64);
+            @media (min-width: 768px) {
+                width: size(42.48);
             }
         }
     }
-
-    .menu {
-        position: fixed;
-        top: size(0);
-        right: size(0);
-        background-color: rgba(139, 199, 130, 0.8);
-        backdrop-filter: blur(2px);
-        width: size(280);
-        height: 100%;
-        z-index: 99;
-        transform: translateX(100%);
-        transition: all .5s;
-        padding: size(100) 0;
-        gap: size(20);
-
-        .menu-inner {
-            width: size(128);
-            margin: 0 auto;
-        }
-
-        .menu-item {
-            text-align: center;
-            padding: size(20) 0;
-            // border-bottom: 1px solid #fff;
-
-            &:last-child {
-                border: none;
-            }
-            
-            span {
-                font-size: size(24);
-                width: 100%;
-                display: block;
-                white-space: nowrap;
-                transition: width .4s linear, transform .1s linear;
-                transform-origin: left center;
-                text-shadow: 0 0 .6em #2d612699 ,0 0 .15em #2d612699;
-            }
-
-            // &:hover {
-            //     span {
-            //         transform: scale(1.3);
-            //         width: 0;
-            //     }
-            // }
-        }
-
-        &.open {
-            transform: translateX(0);
-        }
-    }
-
-    // &.r16-9 {
-    //     background-color: transparent;
-
-    //     .menu-btn {
-    //         &::after {
-    //             content: '';
-    //             width: 160%;
-    //             height: 170%;
-    //             background-color: #fff;
-    //             position: absolute;
-    //             left: 50%;
-    //             top: 50%;
-    //             transform: translate(-50%, -50%);
-    //             border-radius: size(20);
-    //             transition: all .5s;
-    //         }
-
-    //         &:hover {
-    //             &::after {
-    //                 box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
-    //             }
-    //         }
-
-    //         &.open {
-    //             &::after {
-    //                 content: '';
-    //                 background-color: transparent;
-    //                 box-shadow: unset;
-
-    //             }
-
-    //         }
-    //     }
-
-    // }
 }
 
-@media screen and (max-width:768px) {
+#mob-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(183deg, #931F1C 42.05%, #7D1E17 178%);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s;
+    transform: translateX(100%);
+    @media (min-width: 768px) {
+        display: none;
+    }
+    
+    &.open {
+        transform: translateX(0);
+    }
 
-    .nav {
-        // width: size-m(350);
-        // left: size-m(12.5);
-        // top: size-m(12.5);
-        // padding: 0 size-m(24);
-        // height: size-m(35);
-        // border-radius: 9999px;
+    .nav-close {
+        width: size-m(88);
+        height: size-m(88);
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 
-        .menu-btn {
-            width: size-m(60);
-            height: size-m(60);
-            top: size-m(0);
-            left: auto;
-            right: size-m(0);
+        img {
+            display: block;
+            width: size-m(30.66);
+        }
+    }
 
-            .bar {
-                width: size-m(25);
+    .nav-item {
+        border-bottom: size-m(1) solid #fff;
+        padding-bottom: size-m(20);
+        margin-bottom: size-m(20);
+        cursor: pointer;
 
-                &::after {
-                    bottom: -#{size-m(8)};
-                }
-
-                &::before {
-                    top: -#{size-m(8)};
-                }
-            }
-
-            &.open {
-                p {
-                    color: #fff;
-                }
-
-                .bar {
-                    height: 0;
-
-                    &::after {
-                        content: '';
-                        width: 100%;
-                        height: 2px;
-                        bottom: 50%;
-                        margin-bottom: -1px;
-                        position: absolute;
-                        background-color: #fff;
-                        transition: all .5s;
-                        transform: rotate(135deg);
-                    }
-
-                    &::before {
-                        content: '';
-                        width: 100%;
-                        height: 2px;
-                        top: 50%;
-                        margin-top: -1px;
-                        position: absolute;
-                        background-color: #fff;
-                        transition: all .5s;
-                        transform: rotate(-135deg);
-                    }
-                }
-            }
+        .t1 {
+            color: #fff;
+            font-family: "Noto Serif TC";
+            font-size: size-m(24);
+            font-weight: 600;
+            letter-spacing: size-m(3.36);
         }
 
-        .menu {
-            position: fixed;
-            background-color: rgba(139, 199, 130, 0.8);
-            width: 100%;
-            padding: 0;
-            gap: size-m(45);
-
-            .menu-inner {
-                width: size-m(128);
-                margin: 0 auto;
-            }
-
-            .menu-item {
-                padding: size-m(15) 0;
-                
-                span {
-                    font-size: size-m(24);
-                    width: 100%;
-                    display: block;
-                    white-space: nowrap;
-                    transition: width .4s linear, transform .1s linear;
-                    transform-origin: left center;
-                }
-
-                // &:hover {
-                //     span {
-                //         transform: scale(1.3);
-                //         width: 0;
-                //     }
-                // }
-                
-            }
-
-            &.open {
-                transform: translateX(0);
-            }
+        .t2 {
+            color: #E9C468;
+            font-size: size-m(12);
+            font-weight: 500;
+            letter-spacing: size-m(1.92);
         }
+    }
+}
+
+#desktop-panel {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        position: fixed;
+        top: size(160);
+        right: 0;
+        width: size(160);
+        background: linear-gradient(0deg, rgba(235, 236, 197, 0.50) 16%, rgba(235, 245, 207, 0.80) 70%);
+        z-index: 99;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .4s;
+
+        &.open {
+            transform: scaleY(1);
+        }
+    }
+
+    .nav-item {
+        cursor: pointer;
     }
 }
 </style>
 
 <script setup>
-import { inject, getCurrentInstance, onMounted, ref } from 'vue';
+import { inject, ref } from 'vue';
 import info from "@/info"
 
-const menuOpen = ref(false)
+const menuOpen = ref(false);
+const smoothScroll = inject('smoothScroll');
 
-const globals = getCurrentInstance().appContext.config.globalProperties
-const higherScreen = ref(false)
+console.log(info);
 
-const scrollPos = ref(0)
-
-onMounted(() => {
-    const ratio = window.innerHeight / window.innerWidth
-
-    if (!globals.$isMobile() && ratio > 0.46875) {
-        higherScreen.value = true
-    }
-
-    window.addEventListener('scroll', (event) => {
-        let scroll = window.pageYOffset || document.documentElement.scrollTop;
-        scrollPos.value = scroll
-    });
-})
-
-
-const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
     smoothScroll({
         scrollTo: document.querySelector(el)

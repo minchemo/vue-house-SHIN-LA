@@ -13,24 +13,25 @@
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">佳鋐大境</h1>
     <S1 />
-   <!-- 
     <S2 />
-    --> 
     <S3 />
     <S4 />
-    <S5 />
+    <!-- <S5 />
     <S6 />
     <div class="s7s8">
       <S7 />
       <S8 />
     </div>
-    <S9 />
+    <S9 /> -->
     <Order />
   </div>
 </template>
 
 <style lang="scss">
   @import "@/assets/style/function.scss";
+  // img {
+  //   pointer-events: none;
+  // }
   .user-n{
     user-select:none;
   }
@@ -44,14 +45,14 @@
 
 <script setup>
 import S1 from "@/section/s1.vue"
-// import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
+// import S5 from "@/section/s5.vue"
+// import S6 from "@/section/s6.vue"
+// import S7 from "@/section/s7.vue"
+// import S8 from "@/section/s8.vue"
+// import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

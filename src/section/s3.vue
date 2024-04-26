@@ -1,11 +1,55 @@
 <template>
-  <section class="s3 relative">
-    <div class="map user-n relative" ref="map">
-      <img class="map1" src="@/section/s3/map.webp" @load="onImgLoad($event)" />
+  <section class="s3 user-n w-full relative bg-[#931F1C]">
+    <div class="content">
+      <div class="slider">
+        <swiper
+          :effect="'fade'"
+          :speed="1000"
+          :loop="true"
+          :pagination="{
+            clickable: true,
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+          :modules="modules"
+        >
+          <swiper-slide>
+            <div class="relative">
+              <img class="block w-full" src="@/section/s3/slider/1.jpg" />
+              <div class="txt">新光三越 台北南西</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img class="block w-full" src="@/section/s3/slider/2.jpg" />
+              <div class="txt">誠品⽣活南西</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img class="block w-full" src="@/section/s3/slider/3.jpg" />
+              <div class="txt">捷運中山站</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img class="block w-full" src="@/section/s3/slider/4.jpg" />
+              <div class="txt">⼼中山線形公園</div>
+            </div>
+          </swiper-slide>
+        </swiper>
+        <img class="en absolute md:hidden" src="@/section/s3/en-m.svg" />
+        <img class="en absolute hidden md:block" src="@/section/s3/en.svg" />
+      </div>
+      <div class="content-inner">
+        <img class="circle" src="@/section/s3/circle.png" />
+        <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">迷上台北的理由 盡在咫尺</div>
+        <div class="t2 text-center md:text-left text-[#E9C468]">READY TO BE SURPRISED</div>
+        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">入榜英國文化刊物 《Time Out》 全球最酷街區，馳騁三越百貨的潮流之上、沉迷誠品南西的文藝氣韻、走讀五星飯店的聯合競演、感受心中山公園的四季更迭。中山站的尺度，始於你的腳步！</div>
+      </div>
     </div>
-    <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
-    <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
-    <div class="title absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">黃金雙軸串連核心<br class="md:hidden"><span class="hidden md:inline">&nbsp;&nbsp;</span>環扣科技產業聚落</div>
   </section>
 </template>
 
@@ -13,117 +57,165 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  z-index: 1;
-  @keyframes swing {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(-15%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    75% {
-      transform: translateX(15%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
   width: 100%;
-  height: size-m(667+50);
-  @media screen and (min-width:768px) {
-    height: auto;
-  }
 
-  .map {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100vw;
-      padding:size-m(50) 0 0 0;
-      background:#4FC9FC;
-    @media screen and (min-width:768px) {
-      overflow: hidden;
-      padding:0;
-    }
-
-    img {
-      width: auto;
-      height: size-m(667);
-      margin-top: size-m(667 - 667);
-      max-width: none;
-      display: block;
-      @media screen and (min-width:768px) {
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        margin-top: 0;
+  .swiper-slide {
+    .txt {
+      position: absolute;
+      top: size-m(13);
+      right: size-m(23);
+      color: #fff;
+      font-size: size-m(11);
+      line-height: size-m(16);
+      letter-spacing: -0.04em;
+      font-weight: 500;
+      @media (min-width: 768px) {
+        top: auto;
+        bottom: size(21);
+        left: size(30);
+        right: auto;
+        font-size: size(17);
+        line-height: size(25);
       }
     }
   }
 
-  .hand {
-    width: size-m(22.34);
-    top: size-m(333.5+50);
-    left: size-m(176.33);
-    cursor: pointer;
-    transition: opacity .5s;
-    animation: swing 3s linear 0s infinite;
-    pointer-events: none;
-    @media screen and (min-width:768px) {
-      display: none;
+  .content {
+    padding: 0 0 size-m(65) 0;
+    @media (min-width: 768px) {
+      padding: size(121) size(180) size(137) size(185);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
     }
-  }
 
-  .hand-bg {
-    width: 100%;
-    padding-top:size-m(50);
-    bottom: 0;
-    left: 0;
-    transition: opacity .5s;
-    pointer-events: none;
-    background: #94003b66;
-  }
+    .slider {
+      position: relative;
+      margin-bottom: size-m(57);
+      @media (min-width: 768px) {
+        width: size(935);
+        margin-bottom: 0;
+      }
 
-  .title {
-    width: 100%;
-    top: size-m(15);
-    left: 0;
-    font-size: size-m(35);
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 0 .1em .1em #059c;
-    @media screen and (min-width:768px) {
-      top: size(92.78);
-      left: size(0);
-      font-size: size(100);
+      .swiper-pagination {
+        line-height: 1;
+        width: auto;
+        left: auto;
+        right: size-m(39);
+        bottom: size-m(23.75);
+        @media (min-width: 768px) {
+          left: auto;
+          right: size(30);
+          bottom: size(21);
+        }
+
+        .swiper-pagination-bullet {
+          background: none;
+          border: size-m(1) solid #fff;
+          opacity: 1;
+          width: size-m(11.25);
+          height: size-m(11.25);
+          margin: 0 size-m(5);
+          @media (min-width: 768px) {
+            border-width: size(1);
+            width: size(13);
+            height: size(13);
+            margin: 0 size(6);
+          }
+
+          &.swiper-pagination-bullet-active {
+            background: #fff;
+          }
+        }
+      }
+
+      .en {
+        position: absolute;
+        bottom: size-m(18.9);
+        left: size-m(29.8);
+        width: size-m(148);
+        z-index: 1;
+        @media (min-width: 768px) {
+          top: size(-30);
+          left: auto;
+          right: size(-45.57);
+          width: size(73.57);
+        }
+      }
+    }
+
+    .content-inner {
+      @media (min-width: 768px) {
+        position: relative;
+        width: size(473);
+      }
+
+      .circle {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+          position: absolute;
+          top: size(12);
+          left: size(-25);
+          width: size(115.5);
+        }
+      }
+    }
+
+    .t1 {
+      font-size: size-m(19);
+      line-height: size-m(27);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      margin-bottom: size-m(9);
+      @media (min-width: 768px) {
+        // width: size(388);
+        padding-left: size(135);
+        font-size: size(41);
+        line-height: size(59);
+        margin-bottom: size(20);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(9.5);
+      line-height: size-m(14);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      margin-bottom: size-m(24);
+      @media (min-width: 768px) {
+        padding-left: size(135);
+        font-size: size(18);
+        line-height: size(26);
+        margin-bottom: size(73);
+      }
+    }
+
+    .t3 {
+      font-size: size-m(11);
+      line-height: 201.1%;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      width: size-m(295);
+      margin: 0 auto;
+      @media (min-width: 768px) {
+        font-size: size(20);
+        letter-spacing: 0.11em;
+        margin: 0;
+        width: size(455);
+      }
     }
   }
 }
-
 </style>
 
 <script setup>
-import { ref } from 'vue';
-
-const map = ref();
-
-function onImgLoad(e) {
-  const img = e.target;
-  if (map.value && img) {
-    let status = 0;
-    let hideHand = false;
-    map.value.scrollLeft = img.clientWidth * 0.5 - window.innerWidth/2;
-    map.value.addEventListener("scroll", () => {
-      status++;
-      if(status > 1 && !hideHand){
-        map.value.parentNode.querySelector('.hand').style.opacity = 0;
-        map.value.parentNode.querySelector('.hand-bg').style.opacity = 0;
-        hideHand = true;
-      }
-    });
-  }
-}
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+import { Autoplay, Pagination, EffectFade } from "swiper";
+const modules = ref([Autoplay, Pagination, EffectFade]);
 </script>
