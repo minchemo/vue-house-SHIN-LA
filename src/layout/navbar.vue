@@ -48,16 +48,46 @@
     </div>
 
     <div id="desktop-panel" :class="{open: menuOpen}">
-        <div class="nav-item">
+        <div class="nav-item" @click="modalOpen = true; modalType = 'gmap'">
             <img class="w-full block" src="@/assets/location.svg" />
         </div>
-        <div class="nav-item">
+        <div class="nav-item" @click="modalOpen = true; modalType = 'phone'">
             <img class="w-full block" src="@/assets/phone.svg" />
         </div>
-        <div class="nav-item">
+        <div class="nav-item" @click="modalOpen = true; modalType = 'fb'">
             <img class="w-full block" src="@/assets/messenger.svg" />
         </div>
     </div>
+
+    <!-- Modal -->
+  <input type="checkbox" v-model="modalOpen" id="nav-modal" class="modal-toggle" />
+  <div class="modal -mt-20 md:-mt-72">
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="nav-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <!-- icon -->
+      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <!-- title -->
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+          '接待會館'
+      }}</div>
+      <!-- content -->
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+          `接待中心：${info.address}`
+      }}</div>
+      <!-- btn -->
+      <div class="btn btn-lg bg-[#931F1C]  border-0 text-white mt-12 hover:bg-[#6f1412]" @click="go()" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+            '開啟導航'
+        }}</div>
+    </div>
+  </div>
 </template>
 
 
@@ -224,17 +254,36 @@
 
 <script setup>
 import { inject, ref } from 'vue';
-import info from "@/info"
+import info from '@/info';
 
 const menuOpen = ref(false);
 const smoothScroll = inject('smoothScroll');
-
-console.log(info);
+const modalOpen = ref(false);
+const modalType = ref('');
 
 const scrollTo = (el) => {
     smoothScroll({
-        scrollTo: document.querySelector(el)
+        scrollTo: document.querySelector(el),
+        offset: el === '.s1' ? 0 : -document.querySelector('#header').clientHeight
     })
     menuOpen.value = false;
+}
+
+const go = () => {
+  if (modalType.value == 'phone') {
+    window.location.href = `tel:${info.phone.replace("-", "")}`;
+    setTimeout(() => {
+      window.location.href = "phoneThanks";
+    }, 1000);
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbMessage);
+  } else if (modalType.value == 'gmap') {
+    window.open(info.googleLink);
+
+  }
+}
+
+const open = () => {
+  window.open(info.fbLink);
 }
 </script>
