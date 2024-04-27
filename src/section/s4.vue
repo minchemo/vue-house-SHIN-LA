@@ -6,7 +6,7 @@
     <img class="hand-bg absolute md:hidden" src="@/section/s4/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s4/hand.svg" />
     <div class="content bg-[#EBECC5]">
-      <div class="md:flex md:justify-between md:items-center">
+      <div class="md:flex md:justify-between md:items-center" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <div>
           <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">上質都心贏者圈  輕藏全方位資產</div>
           <div class="t2 text-center md:text-left text-[#CCB071]">OWN THE CITY, MEET THE FUTURE</div>

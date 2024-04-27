@@ -59,10 +59,10 @@
           </swiper-slide>
         </swiper>
         <img class="circle absolute md:hidden" src="@/section/s2/circle.png" />
-        <img class="en absolute md:hidden" src="@/section/s2/en-m.svg" />
-        <img class="en absolute hidden md:block" src="@/section/s2/en.svg" />
+        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/en-m.svg" />
+        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/en.svg" />
       </div>
-      <div class="content-inner">
+      <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">和苑三井經驗 中山站再現</div>
         <div class="t2 text-center md:text-left text-[#959595]">GATHERING GOOD AND HONOR</div>
         <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC']">

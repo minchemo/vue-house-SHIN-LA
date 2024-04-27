@@ -1,24 +1,24 @@
 <template>
     <header id="header">
         <div class="nav-links">
-            <div class="nav-item" @click="scrollTo('.s1')">
+            <div class="nav-item cursor-pointer" @click="scrollTo('.s1')">
                 <img class="nav-logo" src="@/assets/nav-logo.svg" />
             </div>
-            <div class="nav-item" @click="scrollTo('.s2')">
+            <div class="nav-item cursor-pointer" @click="scrollTo('.s2')">
                 <div>宏普建設<span class="text-[#A32424]">×</span>三井不動產</div>
             </div>
-            <div class="nav-item" @click="scrollTo('.s3')">
+            <div class="nav-item cursor-pointer" @click="scrollTo('.s3')">
                 <div>東京質地</div>
             </div>
-            <div class="nav-item" @click="scrollTo('.order')">
+            <div class="nav-item cursor-pointer" @click="scrollTo('.order')">
                 <div>預約表單</div>
             </div>
-            <div class="nav-item" @click="scrollTo('.s1')">
+            <div class="nav-item">
                 <img class="nav-logo2" src="@/assets/nav-logo2.svg" />
             </div>
         </div>
         <div class="nav-btn" @click="menuOpen = !menuOpen">
-            <img v-if="menuOpen" src="@/assets/nav-close.svg" />
+            <img v-if="menuOpen && !$isMobile()" src="@/assets/nav-close.svg" />
             <img v-else src="@/assets/nav-menu.svg" />
         </div>
     </header>
@@ -74,10 +74,10 @@
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+          `${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#931F1C]  border-0 text-white mt-12 hover:bg-[#6f1412]" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#931F1C] border-0 text-white mt-12 hover:bg-[#6f1412]" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',

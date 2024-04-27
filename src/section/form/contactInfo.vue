@@ -18,7 +18,7 @@
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div>接待中心：<br class="md:hidden"><span v-html="info.address"></span></div>
+        <div><span v-html="info.address"></span></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
@@ -30,23 +30,24 @@
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <div>撥打電話</div>
+    @click="scrollTo('.s1')">
+      <img src="@/section/form/contact-home.svg" />
+      <!-- <div>撥打電話</div> -->
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
-      <div>FB 諮詢</div>
+      <img src="@/section/form/contact-fb.svg" />
+      <!-- <div>FB 諮詢</div> -->
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h65.tw/img/form/pen.svg" alt="pen" srcset="" />
-      <div>預約賞屋</div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'phone'">
+      <img src="@/section/form/contact-phone.svg" />
+      <!-- <div>預約賞屋</div> -->
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
-      <div>地圖導航</div>
+      <img src="@/section/form/contact-location.svg" />
+      <!-- <div>地圖導航</div> -->
     </div>
   </div>
 
@@ -65,10 +66,10 @@
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+          `${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#931F1C] border-0 text-white mt-12 hover:bg-[#6f1412]" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -199,17 +200,19 @@
 
     .contact-item {
       height: 100%;
-      background-color: #8BC782;
+      background-color: #901916;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
 
       img {
-        margin-bottom: size-m(5);
-        max-width: size-m(16.5);
-        height: auto;
-        max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        // margin-bottom: size-m(5);
+        // max-width: size-m(16.5);
+        // height: auto;
+        // max-height: size-m(16.5);
+        // filter: brightness(0) invert(1);
+        height: size-m(42.4);
+        width: auto;
       }
 
     }

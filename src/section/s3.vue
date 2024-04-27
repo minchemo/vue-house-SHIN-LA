@@ -40,10 +40,10 @@
             </div>
           </swiper-slide>
         </swiper>
-        <img class="en absolute md:hidden" src="@/section/s3/en-m.svg" />
-        <img class="en absolute hidden md:block" src="@/section/s3/en.svg" />
+        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/en-m.svg" />
+        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/en.svg" />
       </div>
-      <div class="content-inner">
+      <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <img class="circle" src="@/section/s3/circle.png" />
         <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">迷上台北的理由 盡在咫尺</div>
         <div class="t2 text-center md:text-left text-[#E9C468]">READY TO BE SURPRISED</div>
