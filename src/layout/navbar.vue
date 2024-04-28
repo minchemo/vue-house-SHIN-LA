@@ -262,9 +262,10 @@ const modalOpen = ref(false);
 const modalType = ref('');
 
 const scrollTo = (el) => {
+    const offset = window.matchMedia("(min-width: 768px)").matches ? -document.querySelector('#header').clientHeight : 0;
     smoothScroll({
         scrollTo: document.querySelector(el),
-        offset: el === '.s1' ? 0 : -document.querySelector('#header').clientHeight
+        offset: el === '.s1' ? 0 : offset
     })
     menuOpen.value = false;
 }
@@ -279,7 +280,6 @@ const go = () => {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-
   }
 }
 

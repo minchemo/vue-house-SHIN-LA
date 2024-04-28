@@ -111,7 +111,7 @@
     @media (min-width: 768px) {
       width: size(115.5);
       bottom: size(194);
-      right: size(1572);
+      right: size(232.5);
     }
   }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto flex flex-col items-center justify-between bg-[#931F1C]">
     <!-- <div class="border absolute"></div> -->
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
@@ -91,18 +91,8 @@
 .hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
-  width: size(1200);
-  padding: size(68) size(160) size(50) size(160);
-  // margin-top: size(73);
+  padding: size(151) size(500) size(151) size(500);
   position: relative;
-
-  // .border {
-  //   top: size(21);
-  //   bottom: size(21);
-  //   left: size(23);
-  //   right: size(23);
-  //   border: size(12) solid #e6c57c;
-  // }
 
   .logo {
     width: 19.1145833333vw;
@@ -121,12 +111,26 @@
 
     &.address-wrap {
       margin-top: size(20);
+
+      &>div:nth-child(2) {
+        background: #666666;
+        color: #fff;
+
+        &:hover {
+          background: #303640;
+          color: #fff;
+        }
+
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
     } 
 
     .contact-item {
-      background-color: #040000;
-      border: 1px solid #040000;
-      color: #ffffff;
+      background-color: #fff;
+      // border: 1px solid #fff;
+      color: #000;
       width: 100%;
       padding: 0 size(40);
       font-size: size(16);
@@ -143,6 +147,7 @@
 
         img {
           filter: brightness(0) invert(1);
+          // filter: invert(20%) sepia(21%) saturate(6267%) hue-rotate(343deg) brightness(92%) contrast(96%);
         }
       }
 
@@ -151,7 +156,8 @@
         height: auto;
         max-height: size(27);
         transition: all .5s;
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
+        filter: invert(20%) sepia(21%) saturate(6267%) hue-rotate(343deg) brightness(92%) contrast(96%);
         margin-right: size(10);
       }
 
@@ -221,7 +227,7 @@
   .contact-info {
     width: size-m(375);
     height: auto;
-    padding: size-m(50) size-m(32);
+    padding: size-m(68) size-m(32);
     // margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
