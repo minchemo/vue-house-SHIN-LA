@@ -105,6 +105,7 @@
     justify-content: center;
     gap: size(150);
     max-width: 1624px;
+    margin: 0 auto;
     padding-bottom: size(20);
   }
 
@@ -114,6 +115,7 @@
 
     img {
       width: 100%;
+      max-width: 612px;
     }
   }
 
