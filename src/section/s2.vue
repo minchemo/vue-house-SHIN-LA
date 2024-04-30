@@ -23,37 +23,37 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/1.jpg" />
+              <img class="block w-full" src="@/section/s2/slider/1.webp" />
               <div class="txt">和院三井花園飯店 台北忠孝</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/2.jpg" />
+              <img class="block w-full" src="@/section/s2/slider/2.webp" />
               <div class="txt">MITSUI OUTLET PARK 林口</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/3.jpg" />
+              <img class="block w-full" src="@/section/s2/slider/3.webp" />
               <div class="txt">Mitsui Shopping Park LaLaport 台中</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/4.jpg" />
-              <div class="txt">宏普陽明（台北市 北⼠科）</div>
+              <img class="block w-full" src="@/section/s2/slider/4.webp" />
+              <div class="txt">宏普陽明（台北市 北士科）</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/5.jpg" />
+              <img class="block w-full" src="@/section/s2/slider/5.webp" />
               <div class="txt">宏普頤和（台北市 中山區）</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/6.jpg" />
+              <img class="block w-full" src="@/section/s2/slider/6.webp" />
               <div class="txt">宏普PARK（台北市 ⼤安區）</div>
             </div>
           </swiper-slide>
@@ -65,8 +65,14 @@
       <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">和苑三井經驗 中山站再現</div>
         <div class="t2 text-center md:text-left text-[#959595]">GATHERING GOOD AND HONOR</div>
-        <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC']">
+        <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] md:hidden">
           和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
+          <br>
+          台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
+        </div>
+
+        <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] hidden md:block">
+          和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與<br>三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
           <br>
           台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
         </div>
@@ -208,17 +214,19 @@
         left: size-m(23.5);
         width: size-m(222);
         z-index: 1;
+        filter: drop-shadow(2px 2px 5px #000);
         @media (min-width: 768px) {
           top: size(34);
           left: size(-92);
           width: size(184.64);
+          filter: drop-shadow(2px 2px 5px #00000041);
         }
       }
     }
 
     .content-inner {
       @media (min-width: 768px) {
-        width: size(643);
+        width: size(655);
       }
     }
 

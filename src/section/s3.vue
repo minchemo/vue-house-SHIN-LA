@@ -17,25 +17,25 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/1.jpg" />
+              <img class="block w-full" src="@/section/s3/slider/1.webp" />
               <div class="txt">新光三越 台北南西</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/2.jpg" />
+              <img class="block w-full" src="@/section/s3/slider/2.webp" />
               <div class="txt">誠品⽣活南西</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/3.jpg" />
+              <img class="block w-full" src="@/section/s3/slider/3.webp" />
               <div class="txt">捷運中山站</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/4.jpg" />
+              <img class="block w-full" src="@/section/s3/slider/4.webp" />
               <div class="txt">⼼中山線形公園</div>
             </div>
           </swiper-slide>
@@ -136,11 +136,13 @@
         left: size-m(29.8);
         width: size-m(148);
         z-index: 1;
+        filter: drop-shadow(2px 2px 5px #000);
         @media (min-width: 768px) {
           top: size(-30);
           left: auto;
           right: size(-45.57);
           width: size(73.57);
+          filter: drop-shadow(2px 2px 5px #00000041);
         }
       }
     }

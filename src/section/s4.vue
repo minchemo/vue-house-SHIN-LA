@@ -1,7 +1,7 @@
 <template>
   <section class="s4 relative">
     <div class="map user-n relative" ref="map">
-      <img class="map1" src="@/section/s4/map.jpg" @load="onImgLoad($event)" />
+      <img class="map1" src="@/section/s4/map.webp" @load="onImgLoad($event)" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s4/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s4/hand.svg" />

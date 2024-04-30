@@ -1,11 +1,17 @@
 <template>
   <section class="s1 user-n w-full relative">
     <div class="rect absolute w-full left-0 bottom-0 bg-[#931F1C]"></div>
+
     <img class="logo absolute md:hidden" src="@/section/s1/logo.svg" />
     <img class="logo2 absolute md:hidden" src="@/section/s1/logo2.svg" />
-    <img class="img absolute" src="@/section/s1/img.jpg" />
+
+    <img class="img absolute md:hidden" src="@/section/s1/img-m.webp" />
+    <img class="img absolute hidden md:block" src="@/section/s1/img.webp" />
+    
+
     <img class="title absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="100" src="@/section/s1/title-m.svg" />
     <img class="title absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="100" src="@/section/s1/title.svg" />
+    
     <div class="scroll absolute md:hidden" @click="scrollTo('.s2')">
       <img class="w-full block" src="@/section/s1/scroll-m.svg" />
       <img class="arrow block absolute" src="@/section/s1/arrow-m.svg" />
@@ -95,11 +101,13 @@
   .title {
     top: size-m(220.77);
     left: size-m(257.75);
-    width: size-m(71);
+    width: size-m(85);
+    filter: drop-shadow(2px 2px 5px #000);
     @media (min-width: 768px) {
       top: size(638.42);
       left: size(1060.26);
       width: size(720.61);
+      filter: drop-shadow(2px 2px 5px #000);
     }
   }
 
