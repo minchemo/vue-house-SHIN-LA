@@ -1,4 +1,4 @@
-const caseName = "聯碩JPARK"
+const caseName = "宏普x三井"
 
 export default {
     meta: {
