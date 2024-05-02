@@ -219,7 +219,7 @@
           top: size(34);
           left: size(-92);
           width: size(184.64);
-          filter: drop-shadow(2px 2px 5px #00000041);
+          filter: drop-shadow(2px 2px 5px #00000000);
         }
       }
     }
