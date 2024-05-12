@@ -1,15 +1,13 @@
 <template>
-    <div class="houseinfo flex flex-col md:flex-row items-center justify-between bg-[#E5005C]">
-        <!-- <div class="map"></div> -->
-        <div class="flex-1 items-center justify-center py-4 md:py-10">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
-                    <div class="item flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos">
-                        <p class="mr-5 font-bold border-l-2 border-[#CC8700] text-white pl-2 ">{{ item[0] }}</p>
-                        <p class="whitespace-pre-line leading-normal text-left text-white">{{ item[1] }}</p>
-                    </div>
+    <div class="houseinfo md:flex md:items-center md:justify-between bg-[#E5005C]">
+        <img class="logo" src="@/section/form/logo.svg" />
+        <div class="info-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="title">建案資訊</div>
+            <div class="info-items">
+                <div class="item flex justify-between items-center w-full whitespace-nowrap"
+                    v-for="item in info.houseInfos">
+                    <p>{{ item[0] }}</p>
+                    <p>{{ item[1] }}</p>
                 </div>
             </div>
         </div>
@@ -25,20 +23,33 @@
 @import "@/assets/style/function.scss";
 
 .houseinfo {
-    font-family: "Noto Serif TC";
+    color: #fff;
     background: #C30D23;
+    padding: size(30) size(228) size(60);
+    @media screen and (max-width:768px) {
+        padding: size-m(69) size-m(50);
+    }
+
+    .logo {
+        width: size(494.42);
+        @media screen and (max-width:768px) {
+            width: size-m(223);
+            margin: 0 auto size-m(62) auto;
+        }
+    }
 }
 
 .info-box {
-
-    width: size(900);
+    width: size(680);
 
     .title {
         width: 100%;
-        font-size: size(48);
-        font-weight: 700;
-        margin-bottom: size(23);
-        color: #fff;
+        font-size: size(29);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(1.45);
+        margin-bottom: size(12);
+        text-align: left;
     }
 
     .info-items {
@@ -46,14 +57,19 @@
         column-gap: size(20);
 
         .item {
-            line-height: size(17);
-            font-size: size(17);
+            line-height: normal;
+            font-size: size(18);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
+            letter-spacing: size(0.9);
+            border-bottom: 1px solid #fff;
+            padding-bottom: size(9);
+            margin-bottom: size(9);
 
-            p:first-child {
-                width: 4.5em;
+            &:first-child {
+                border-top: 1px solid #fff;
+                padding-top: size(9);
             }
         }
     }
@@ -65,18 +81,25 @@
     }
 
     .info-box {
-        width: size-m(313);
-        padding: size-m(30) 0;
+        width: size-m(275);
+        padding: 0;
 
         .title {
-            font-size: size-m(29);
+            font-size: size-m(20);
+            margin-bottom: size-m(11);
         }
 
         .info-items {
-            row-gap: size-m(20);
-
             .item {
-                font-size: size-m(14);
+                font-size: size-m(12);
+                letter-spacing: size-m(0);
+                padding-bottom: size-m(8);
+                margin-bottom: size-m(8);
+
+                &:first-child {
+                    border-top: 1px solid #fff;
+                    padding-top: size-m(8);
+                }
             }
         }
     }
