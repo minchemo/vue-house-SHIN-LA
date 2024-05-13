@@ -1,19 +1,30 @@
 <template>
   <section class="s2 user-n w-full relative">
-    <div class="rect relative top-0 left-0 w-full bg-[#931F1C] text-white text-center font-['Noto_Serif_JP']">
-      <img class="style1 absolute left-0 bottom-0" src="@/section/s2/style1.svg" />
-      <img class="style2 absolute right-0 bottom-0" src="@/section/s2/style2.svg" />
-      <img class="circle absolute" src="@/section/s2/circle.png" />
-      <div class="text absolute top-0 left-0 w-full" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">時代の進化と呼応する</div>
+    <img class="logo absolute" src="@/section/s2/logo.svg" />
+    <div class="line absolute" data-aos="cuscus" data-aos-delay="0"></div>
+    <img class="small absolute" src="@/section/s2/small.jpg" />
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">夢が示す方向へ<br class="md:hidden">自信を持って進め</div>
+      <div class="t2">
+        地樺機構｜碩樺建設<br>
+        建築生活藝術家
+      </div>
     </div>
-    <div class="content">
+    <div class="relative md:flex md:items-center md:justify-end md:flex-row-reverse">
+      <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        地樺機構深耕房產逾44年，致力推動城市美學，
+        以訂製學的心意琢磨建築藝術。建築作品橫跨大型都更案、精品酒店與高端住宅。
+        <ol>
+          <li><div>中正區 臺北時代寓所‧北投區 天母常玉</div></li>
+          <li><div>士林區 天母靜好‧信義區 璞真永吉‧南港區 忠孝無極</div></li>
+        </ol>
+      </div>
       <div class="slider">
         <swiper
-          :effect="'fade'"
-          :speed="1000"
           :loop="true"
+          :navigation="true"
           :pagination="{
-            clickable: true,
+            clickable: true
           }"
           :autoplay="{
             delay: 3000,
@@ -22,62 +33,35 @@
           :modules="modules"
         >
           <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/1.webp" />
-              <div class="txt">和院三井花園飯店 台北忠孝</div>
+            <div class="img relative">
+              <img class="w-full" src="@/section/s2/img.jpg" />
+              <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
           <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/2.webp" />
-              <div class="txt">MITSUI OUTLET PARK 林口</div>
+            <div class="img relative">
+              <img class="w-full" src="@/section/s2/img.jpg" />
+              <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
           <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/3.webp" />
-              <div class="txt">Mitsui Shopping Park LaLaport 台中</div>
+            <div class="img relative">
+              <img class="w-full" src="@/section/s2/img.jpg" />
+              <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
           <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/4.webp" />
-              <div class="txt">宏普陽明（台北市 北士科）</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/5.webp" />
-              <div class="txt">宏普頤和（台北市 中山區）</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s2/slider/6.webp" />
-              <div class="txt">宏普PARK（台北市 ⼤安區）</div>
+            <div class="img relative">
+              <img class="w-full" src="@/section/s2/img.jpg" />
+              <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
         </swiper>
-        <img class="circle absolute md:hidden" src="@/section/s2/circle.png" />
-        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/en-m.svg" />
-        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/en.svg" />
       </div>
-      <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">和苑三井經驗 中山站再現</div>
-        <div class="t2 text-center md:text-left text-[#959595]">GATHERING GOOD AND HONOR</div>
-        <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] md:hidden">
-          和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
-          <br>
-          台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
-        </div>
-
-        <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] hidden md:block">
-          和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與<br>三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
-          <br>
-          台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
-        </div>
-        <img class="logo" src="@/section/s2/logo.svg" />
-      </div>
+      <!-- <div class="img relative">
+        <img class="w-full" src="@/section/s2/img.jpg" />
+        <div class="txt absolute">中正區 臺北時代寓所</div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -85,197 +69,224 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+[data-aos=cuscus] {
+  transform: scaleY(0);
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: scaleY(1);
+  }
+}
+
 .s2 {
-  width: 100%;
-
-  .rect {
-    height: size-m(198);
-    @media (min-width: 768px) {
-      height: size(386);
-    }
-  }
-  
-  .style1 {
-    width: size-m(110);
-    filter: brightness(0.45);
-    @media (min-width: 768px) {
-      width: size(473);
-    }
+  background-image: url(@/section/s2/bg.png);
+  background-size: auto size-m(365);
+  background-repeat: no-repeat;
+  padding-top: size-m(124);
+  @media (min-width: 768px) {
+    background-size: auto size(1137);
+    padding-top: size(278);
   }
 
-  .style2 {
-    width: size-m(106.7);
+  .logo {
+    top: size-m(22);
+    left: size-m(25);
+    width: size-m(48.24);
     @media (min-width: 768px) {
-      width: size(386);
+      top: size(82);
+      left: size(79);
+      width: size(85.38);
     }
   }
 
-  .circle {
-    width: size-m(47);
-    bottom: size-m(19);
-    right: size-m(75);
+  .line {
+    top: size-m(106);
+    left: size-m(31);
+    width: 1px;
+    height: calc(100% - size-m(106) - size-m(304));
+    background: #C9A063;
+    transform-origin: 0 0;
+    transition-duration: 2s !important;
     @media (min-width: 768px) {
-      width: size(115.5);
-      bottom: size(194);
-      right: size(232.5);
+      top: size(82);
+      left: size(242);
+      width: size(1);
+      height: calc(100% - size(82) - size(716));
     }
   }
 
-  .text {
-    top: size-m(31);
-    font-size: size-m(16);
-    letter-spacing: .54em;
+  .small {
+    top: size-m(29);
+    right: 0;
+    width: size-m(80);
+    @media (min-width: 768px) {
+      top: size(82);
+      right: 0;
+      width: size(273);
+    }
+  }
+
+  .t1 {
+    color: #981F23;
+    font-family: "Noto Sans JP";
+    font-size: size-m(19);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: size-m(3.61);
+    margin-bottom: size-m(60);
+    padding-left: size-m(55);
+    @media (min-width: 768px) {
+      font-size: size(51);
+      letter-spacing: size(3.57);
+      margin-bottom: size(40);
+      padding-left: size(398);
+    }
+  }
+
+  .t2 {
+    font-size: size-m(23);
     font-weight: 500;
+    line-height: normal;
+    letter-spacing: size-m(1.38);
+    margin-bottom: size-m(21);
+    padding-left: size-m(55);
     @media (min-width: 768px) {
-      top: size(88);
-      font-size: size(45);
+      font-size: size(67);
+      letter-spacing: size(0);
+      margin-bottom: size(143);
+      padding-left: size(398);
     }
   }
 
-  .content {
-    padding: size-m(40) size-m(40) size-m(53) size-m(40);
+  .t3 {
+    font-family: "Noto Sans JP";
+    font-size: size-m(12);
+    font-weight: 500;
+    line-height: 173.6%;
+    letter-spacing: size-m(0.48);
+    margin-bottom: size-m(50);
+    padding-left: size-m(55);
+    width: size-m(278 + 55);
     @media (min-width: 768px) {
-      padding: size(0) size(159) size(138) size(184);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-top: size(-107);
-    }
-
-    .slider {
-      position: relative;
-      margin-bottom: size-m(34);
-      @media (min-width: 768px) {
-        width: size(698);
-        margin-bottom: 0;
-      }
-
-      .swiper-pagination {
-        line-height: 1;
-        width: auto;
-        left: size-m(15);
-        bottom: size-m(42.88);
-        @media (min-width: 768px) {
-          left: size(35);
-          bottom: size(27);
-        }
-
-        .swiper-pagination-bullet {
-          background: none;
-          border: size-m(1) solid #fff;
-          opacity: 1;
-          width: size-m(11.25);
-          height: size-m(11.25);
-          margin: 0 size-m(5);
-          @media (min-width: 768px) {
-            border-width: size(1);
-            width: size(13);
-            height: size(13);
-            margin: 0 size(6);
-          }
-
-          &.swiper-pagination-bullet-active {
-            background: #fff;
-          }
-        }
-      }
-
-      .swiper-slide {
-        .txt {
-          position: absolute;
-          bottom: size-m(17);
-          left: size-m(20);
-          color: #fff;
-          font-size: size-m(11);
-          line-height: size-m(16);
-          letter-spacing: -0.04em;
-          font-weight: 500;
-          @media (min-width: 768px) {
-            bottom: size(22);
-            left: auto;
-            right: size(25);
-            font-size: size(17);
-            line-height: size(25);
-          }
-        }
-      }
-
-      .circle {
-        position: absolute;
-        bottom: size-m(-21);
-        right: size-m(-14);
-        width: size-m(63);
-        z-index: 1;
-      }
-
-      .en {
-        position: absolute;
-        top: size-m(21.55);
-        left: size-m(23.5);
-        width: size-m(222);
-        z-index: 1;
-        filter: drop-shadow(2px 2px 5px #000);
-        @media (min-width: 768px) {
-          top: size(34);
-          left: size(-92);
-          width: size(184.64);
-          filter: drop-shadow(2px 2px 5px #00000000);
-        }
-      }
-    }
-
-    .content-inner {
-      @media (min-width: 768px) {
-        width: size(655);
-      }
-    }
-
-    .t1 {
-      font-size: size-m(19);
-      line-height: size-m(27);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      margin-bottom: size-m(9);
-      @media (min-width: 768px) {
-        font-size: size(41);
-        line-height: size(59);
-        margin-bottom: size(20);
-      }
-    }
-
-    .t2 {
-      font-size: size-m(9.5);
-      line-height: size-m(14);
+      font-size: size(26);
       font-weight: 500;
-      letter-spacing: 0.16em;
-      margin-bottom: size-m(24);
-      @media (min-width: 768px) {
-        font-size: size(18);
-        line-height: size(26);
-        margin-bottom: size(73);
-      }
+      line-height: 163.6%;
+      letter-spacing: size(0.52);
+      margin-bottom: size(0);
+      padding-left: size(112);
+      width: size(670);
     }
 
-    .t3 {
+    ol {
+      margin: size-m(24) 0 0 0;
+      padding-left: size-m(18);
+      color: #981F23;
+      font-family: "Noto Sans JP";
       font-size: size-m(11);
-      line-height: 201.1%;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: size-m(32);
+      font-style: normal;
+      letter-spacing: size-m(0.22);
+      list-style: outside;
       @media (min-width: 768px) {
-        font-size: size(20);
-        letter-spacing: 0.11em;
-        margin-bottom: size(125);
+        margin: size(50) 0 0 0;
+        padding-left: size(30);
+        font-size: size(18);
+        letter-spacing: size(0.46);
+      }
+
+      div {
+        color: #000;
+        font-size: size-m(11);
+        line-height: 163.6%;
+        font-weight: 500;
+        @media (min-width: 768px) {
+          font-size: size(23);
+        }
+      }
+    }
+  }
+
+  .slider {
+    @media (min-width: 768px) {
+      width: size(1017);
+    }
+
+    .swiper-pagination {
+      width: auto;
+      line-height: 1;
+      margin: 0;
+      bottom: size-m(13.67);
+      padding-left: size-m(17 - 2.92);
+      @media (min-width: 768px) {
+        bottom: size(32.7);
+        padding-left: size(36 - 7.915);
+      }
+
+      .swiper-pagination-bullet {
+        width: size-m(3.43);
+        height: size-m(3.43);
+        background: #fff;
+        opacity: 1;
+        margin: 0 size-m(2.92);
+        @media (min-width: 768px) {
+          width: size(9.3);
+          height: size(9.3);
+          margin: 0 size(7.915);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: #C30D23;
+        }
       }
     }
 
-    .logo {
-      width: size-m(295);
-      margin: 0 auto;
-      display: block;
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(5.73);
+      height: size-m(16.45);
+      background-size: contain;
       @media (min-width: 768px) {
-        width: size(608);
-        margin: 0;
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      background-image: url(@/section/s2/arrow-prev.svg);
+    }
+
+    .swiper-button-next {
+      background-image: url(@/section/s2/arrow-next.svg);
+    }
+  }
+
+  .img {
+    img {
+      width: 100%;
+      height: size-m(304);
+      object-fit: cover;
+      @media (min-width: 768px) {
+        width: size(1017);
+        height: auto;
+      }
+    }
+
+    .txt {
+      bottom: size-m(14);
+      right: size-m(16);
+      color: #FFF;
+      font-family: "Noto Sans JP";
+      font-size: size-m(11);
+      font-weight: 500;
+      line-height: 163.6%;
+      letter-spacing: size-m(0.22);
+      @media (min-width: 768px) {
+        bottom: size(33);
+        right: size(49);
+        font-size: size(24);
+        letter-spacing: size(0.48);
       }
     }
   }
@@ -283,11 +294,11 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { Autoplay, Pagination, EffectFade } from "swiper";
-const modules = ref([Autoplay, Pagination, EffectFade]);
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
 </script>

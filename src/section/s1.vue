@@ -3,6 +3,24 @@
     <div class="bg absolute">
       <img class="block w-full h-full" src="@/section/s1/bg.jpg" />
     </div>
+    <div class="links absolute hidden md:flex">
+      <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'gmap'">
+        <img class="icon mr-1" src="//h65.tw/img/form/gmap.svg" alt="gmap" />
+        <div>LOCATION</div>
+      </div>
+      <div class="item flex items-center text-white" @click="open()">
+        <img class="icon mr-1" src="//h65.tw/img/form/fb.svg" alt="fb" />
+        <div>FACEBOOK</div>
+      </div>
+      <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'fb'">
+        <img class="icon mr-1" src="//h65.tw/img/form/messenger.svg" alt="messenger" />
+        <div>MESSAGE</div>
+      </div>
+      <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'phone'">
+        <img class="icon mr-1" src="//h65.tw/img/form/phone.svg" alt="phone" />
+        <div>CONTACT US</div>
+      </div>
+    </div>
     <img class="jp absolute" src="@/section/s1/jp.svg" />
     <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="order-btn absolute text-white" @click="scrollTo('.order')">
@@ -19,6 +37,37 @@
       <img class="block w-full" src="@/section/s1/info.svg" />
     </div>
   </section>
+
+
+  <!-- Modal -->
+  <input type="checkbox" v-model="modalOpen" id="s1-modal" class="modal-toggle" />
+  <div class="modal -mt-20 md:-mt-72">
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="s1-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <!-- icon -->
+      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <!-- title -->
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+          '接待會館'
+      }}</div>
+      <!-- content -->
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+          `${info.address}`
+      }}</div>
+      <!-- btn -->
+      <div class="btn btn-lg bg-[#931F1C] border-0 text-white mt-12 hover:bg-[#6f1412]" @click="go()" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+            '開啟導航'
+        }}</div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -41,20 +90,6 @@
   }
 }
 
-// [data-aos=cuscus] {
-//   opacity: 0;
-//   transform: translateY(2vw);
-//   transition-property: opacity, transform;
-//   @media (min-width: 768px) {
-//     transform: translateY(0.8vw);
-//   }
-
-//   &.aos-animate {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
 .s1 {
   width: 100%;
   height: size-m(740);
@@ -66,6 +101,7 @@
     top: 0;
     left: size-m(-662.95);
     width: size-m(1316.77);
+    height: 100%;
     @media (min-width: 768px) {
       left: 0;
       width: 100%;
@@ -95,6 +131,46 @@
       opacity: 0.5;
       background-blend-mode: hue;
       mix-blend-mode: hue;
+    }
+  }
+
+  .links {
+    top: size(69);
+    right: size(82);
+
+    .item {
+      font-size: size(16);
+      letter-spacing: .1em;
+      margin-left: size(25 * 2);
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: size(-25);
+        width: 1px;
+        height: 100%;
+        background: #fff;
+        transform: translate(0, -50%);
+      }
+
+      &:last-child:after {
+        display: none
+      }
+
+      img {
+        margin-right: size(12);
+        filter: brightness(0) invert(1);
+        max-width: size(30);
+        max-height: size(36);
+        object-fit: contain;
+      }
     }
   }
 
@@ -196,30 +272,37 @@
       }
     }
   }
-
-  // .arrow {
-  //   top: size-m(42);
-  //   left: size-m(23);
-  //   width: size-m(15.75);
-  //   animation: scrollattention 2.6s ease-in-out infinite;
-  //   --scrollY: 1.5vw;
-  //   @media (min-width: 768px) {
-  //     top: size(24.65);
-  //     left: size(16.42);
-  //     width: size(26.25);
-  //     --scrollY: 0.7vw;
-  //   }
-  // }
-
 }
 </style>
 
 <script setup>
-import { inject } from 'vue';
-const smoothScroll = inject('smoothScroll')
+import info from "@/info"
+import { inject, ref } from "vue";
+const modalOpen = ref(false);
+const modalType = ref('');
+const smoothScroll = inject('smoothScroll');
+
 const scrollTo = (el) => {
   smoothScroll({
     scrollTo: document.querySelector(el)
   })
+}
+
+const go = () => {
+  if (modalType.value == 'phone') {
+    window.location.href = `tel:${info.phone.replace("-", "")}`;
+    setTimeout(() => {
+      window.location.href = "phoneThanks";
+    }, 1000);
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbMessage);
+  } else if (modalType.value == 'gmap') {
+    window.open(info.googleLink);
+
+  }
+}
+
+const open = () => {
+  window.open(info.fbLink);
 }
 </script>

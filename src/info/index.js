@@ -1,4 +1,4 @@
-const caseName = "宏普x三井"
+const caseName = "碩樺拾樂"
 
 export default {
     meta: {
@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.18966060061!2d121.50096!3d25.129278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae570c27e6a9%3A0x35c09765f7436fc3!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5aSu5Y2X6Lev5LiA5q61MTY46Jmf!5e0!3m2!1szh-TW!2stw!4v1715518028533!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/j3Z2aGYeQRfMxCRk6",
     phone: "02-0000-0000",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "https://www.facebook.com",
+    fbMessage: "https://www.facebook.com",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "碩樺建設股份有限公司"],

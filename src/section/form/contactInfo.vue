@@ -213,7 +213,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(20%) sepia(21%) saturate(6267%) hue-rotate(343deg) brightness(92%) contrast(96%);
+  img{filter: invert(12%) sepia(69%) saturate(4692%) hue-rotate(348deg) brightness(87%) contrast(86%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
