@@ -22,11 +22,11 @@
 .s5 {
   width: 100%;
   height: size-m(810);
-  background-image: url(@/section/s5/bg-m.jpg);
+  background-image: url(@/section/s5/bg-m.webp);
   background-size: cover;
   @media (min-width: 768px) {
     height: size(1022);
-    background-image: url(@/section/s5/bg.jpg);
+    background-image: url(@/section/s5/bg.webp);
   }
 
   .txt {

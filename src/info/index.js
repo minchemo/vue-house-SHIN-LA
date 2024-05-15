@@ -7,9 +7,9 @@ export default {
         keywords: caseName,
     },
     address: "台北市北投區中央南路一段168號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.18966060061!2d121.50096!3d25.129278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae570c27e6a9%3A0x35c09765f7436fc3!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5aSu5Y2X6Lev5LiA5q61MTY46Jmf!5e0!3m2!1szh-TW!2stw!4v1715518028533!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/j3Z2aGYeQRfMxCRk6",
-    phone: "02-0000-0000",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.18966060061!2d121.50096!3d25.129278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae570c27e6a9%3A0x35c09765f7436fc3!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5aSu5Y2X6Lev5LiA5q61MTY46Jmf!5e0!3m2!1szh-TW!2stw!4v1715743699628!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/gq5EussDh71grEHc6",
+    phone: "02-2898-1888",
     fbLink: "https://www.facebook.com",
     fbMessage: "https://www.facebook.com",
     caseName: caseName,
@@ -25,7 +25,7 @@ export default {
         ["建案位置", "台北市北投區中央南路⼀段168號"],
         ["貴賓專線", "02-28981888"],
     ],
-    gtmCode: ["GTM-MB2MRHWF"], // 可放置多個
+    gtmCode: ["GTM-MLD7JD7D"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

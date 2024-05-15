@@ -23,7 +23,7 @@
   width: 100%;
   height: size-m(779);
   background: #C30D23;
-  background-image: url(@/section/s6/bg.png);
+  background-image: url(@/section/s6/bg.webp);
   background-position: center;
   background-size: auto 100%;
   @media (min-width: 768px) {

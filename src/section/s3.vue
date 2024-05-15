@@ -2,7 +2,7 @@
   <section class="s3 user-n w-full relative">
     <img class="logo absolute" src="@/section/s2/logo.svg" />
     <div class="line absolute" data-aos="cuscus" data-aos-delay="0"></div>
-    <img class="small absolute" src="@/section/s3/small.jpg" />
+    <img class="small absolute" src="@/section/s3/small.webp" />
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">すのものにべて<br class="md:hidden">美しさはあるが</div>
       <div class="t2">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="relative md:flex md:items-center md:justify-end md:flex-row-reverse">
-      <img class="bg absolute hidden md:block top-0 left-0 w-full" src="@/section/s2/bg.png" />
+      <img class="bg absolute hidden md:block top-0 left-0 w-full" src="@/section/s2/bg.webp" />
       <div class="t3 relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <ol>
           <li><div>2011年國際米其林指南綠色，宜居城鎮北投正核心</div></li>
@@ -22,7 +22,7 @@
         </ol>
       </div>
       <div class="img relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="w-full" src="@/section/s3/img.jpg" />
+        <img class="w-full" src="@/section/s3/img.webp" />
       </div>
     </div>
   </section>
@@ -34,7 +34,7 @@
 .s3 {
   padding-top: size-m(124);
   @media (min-width: 768px) {
-    // background-image: url(@/section/s2/bg.png);
+    // background-image: url(@/section/s2/bg.webp);
     // background-size: auto size(716);
     // background-repeat: no-repeat;
     // background-position: right bottom;
@@ -116,7 +116,7 @@
     font-family: "Noto Sans JP";
     font-size: size-m(12);
     font-weight: 500;
-    line-height: 173.6%;
+    line-height: 200%;
     letter-spacing: size-m(0.48);
     margin-bottom: size-m(50);
     padding-left: size-m(55);
@@ -124,11 +124,11 @@
     @media (min-width: 768px) {
       font-size: size(26);
       font-weight: 500;
-      line-height: 163.6%;
+      line-height: 230%;
       letter-spacing: size(0.52);
       margin-bottom: size(0);
       padding-left: size(112);
-      width: size(670);
+      width: size(680);
     }
 
     ol {

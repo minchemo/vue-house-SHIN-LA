@@ -2,7 +2,7 @@
   <section class="s4 user-n w-full relative">
     <img class="logo absolute" src="@/section/s2/logo.svg" />
     <div class="line absolute" data-aos="cuscus" data-aos-delay="0"></div>
-    <img class="small absolute" src="@/section/s4/small.jpg" />
+    <img class="small absolute" src="@/section/s4/small.webp" />
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">幸せはいつも自分<br class="md:hidden">の心が決める</div>
       <div class="t2">
@@ -21,7 +21,7 @@
         </ol>
       </div>
       <div class="img relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="w-full" src="@/section/s4/img.jpg" />
+        <img class="w-full" src="@/section/s4/img.webp" />
       </div>
     </div>
   </section>
@@ -31,7 +31,7 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  background-image: url(@/section/s2/bg.png);
+  background-image: url(@/section/s2/bg.webp);
   background-size: auto size-m(365);
   background-repeat: no-repeat;
   padding-top: size-m(124);
@@ -115,7 +115,7 @@
     font-family: "Noto Sans JP";
     font-size: size-m(12);
     font-weight: 500;
-    line-height: 173.6%;
+    line-height: 200%;
     letter-spacing: size-m(0.48);
     margin-bottom: size-m(50);
     padding-left: size-m(55);
@@ -123,7 +123,7 @@
     @media (min-width: 768px) {
       font-size: size(26);
       font-weight: 500;
-      line-height: 163.6%;
+      line-height: 230%;
       letter-spacing: size(0.52);
       margin-bottom: size(0);
       padding-left: size(112);

@@ -2,7 +2,7 @@
   <section class="s2 user-n w-full relative">
     <img class="logo absolute" src="@/section/s2/logo.svg" />
     <div class="line absolute" data-aos="cuscus" data-aos-delay="0"></div>
-    <img class="small absolute" src="@/section/s2/small.jpg" />
+    <img class="small absolute" src="@/section/s2/small.webp" />
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">夢が示す方向へ<br class="md:hidden">自信を持って進め</div>
       <div class="t2">
@@ -34,32 +34,38 @@
         >
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s2/img.jpg" />
+              <img class="w-full" src="@/section/s2/img.webp" />
               <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s2/img.jpg" />
-              <div class="txt absolute">中正區 臺北時代寓所</div>
+              <img class="w-full" src="@/section/s2/2.webp" />
+              <div class="txt absolute">信義區 璞真永吉</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s2/img.jpg" />
-              <div class="txt absolute">中正區 臺北時代寓所</div>
+              <img class="w-full" src="@/section/s2/3.webp" />
+              <div class="txt absolute">北投區 天母常玉</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s2/img.jpg" />
-              <div class="txt absolute">中正區 臺北時代寓所</div>
+              <img class="w-full" src="@/section/s2/4.webp" />
+              <div class="txt absolute">南港區 忠孝無極</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="img relative">
+              <img class="w-full" src="@/section/s2/5.webp" />
+              <div class="txt absolute">士林區 天母靜好</div>
             </div>
           </swiper-slide>
         </swiper>
       </div>
       <!-- <div class="img relative">
-        <img class="w-full" src="@/section/s2/img.jpg" />
+        <img class="w-full" src="@/section/s2/img.webp" />
         <div class="txt absolute">中正區 臺北時代寓所</div>
       </div> -->
     </div>
@@ -79,7 +85,7 @@
 }
 
 .s2 {
-  background-image: url(@/section/s2/bg.png);
+  background-image: url(@/section/s2/bg.webp);
   background-size: auto size-m(365);
   background-repeat: no-repeat;
   padding-top: size-m(124);
@@ -167,7 +173,7 @@
     letter-spacing: size-m(0.48);
     margin-bottom: size-m(50);
     padding-left: size-m(55);
-    width: size-m(278 + 55);
+    width: size-m(288 + 55);
     @media (min-width: 768px) {
       font-size: size(26);
       font-weight: 500;
@@ -175,7 +181,7 @@
       letter-spacing: size(0.52);
       margin-bottom: size(0);
       padding-left: size(112);
-      width: size(670);
+      width: size(700);
     }
 
     ol {

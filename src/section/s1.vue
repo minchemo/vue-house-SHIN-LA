@@ -1,7 +1,7 @@
 <template>
   <section class="s1 user-n w-full relative">
     <div class="bg absolute">
-      <img class="block w-full h-full" src="@/section/s1/bg.jpg" />
+      <img class="block w-full h-full" src="@/section/s1/bg.webp" />
     </div>
     <div class="links absolute hidden md:flex">
       <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'gmap'">
@@ -233,7 +233,7 @@
     left: size-m(55);
     text-align: center;
     @media (min-width: 768px) {
-      top: size(919);
+      top: size(900);
       left: size(234);
       width: size(1500);
     }
