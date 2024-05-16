@@ -20,6 +20,11 @@
                 @input="(event) => (formData.phone = event.target.value)" />
             </label>
             <label class="row">
+              <span>信箱</span>
+              <input type="text" class="input w-full rounded-none" placeholder="信箱" :value="formData.email"
+                @input="(event) => (formData.email = event.target.value)" />
+            </label>
+            <label class="row">
               <span>居住城市<span>*</span></span>
               <select class="select w-full rounded-none" v-model="formData.city">
                 <option value="" selected disabled>請選擇城市*</option>
