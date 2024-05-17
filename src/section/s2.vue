@@ -34,7 +34,7 @@
         >
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s2/img.webp" />
+              <img class="w-full" src="@/section/s2/1.webp" />
               <div class="txt absolute">中正區 臺北時代寓所</div>
             </div>
           </swiper-slide>
@@ -186,7 +186,7 @@
 
     ol {
       margin: size-m(24) 0 0 0;
-      padding-left: size-m(18);
+      padding-left: size-m(19);
       color: #981F23;
       font-family: "Noto Sans JP";
       font-size: size-m(11);
@@ -195,7 +195,7 @@
       list-style: outside;
       @media (min-width: 768px) {
         margin: size(50) 0 0 0;
-        padding-left: size(30);
+        padding-left: size(24);
         font-size: size(18);
         letter-spacing: size(0.46);
       }
