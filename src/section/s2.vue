@@ -15,8 +15,8 @@
         地樺機構深耕房產逾44年，致力推動城市美學，
         以訂製學的心意琢磨建築藝術。建築作品橫跨大型都更案、精品酒店與高端住宅。
         <ol>
-          <li><div>中正區 臺北時代寓所‧北投區 天母常玉</div></li>
-          <li><div>士林區 天母靜好‧信義區 璞真永吉‧南港區 忠孝無極</div></li>
+          <li><div>中正區 臺北時代寓所<span>‧</span>北投區 天母常玉</div></li>
+          <li><div>士林區 天母靜好<span>‧</span>信義區 璞真永吉<span>‧</span>南港區 忠孝無極</div></li>
         </ol>
       </div>
       <div class="slider">
@@ -208,7 +208,13 @@
         @media (min-width: 768px) {
           font-size: size(23);
         }
+
+        span{
+          color: #981F23;
+        }
+
       }
+      
     }
   }
 
