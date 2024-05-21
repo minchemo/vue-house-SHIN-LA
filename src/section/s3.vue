@@ -22,7 +22,7 @@
         </ol>
       </div>
       <div class="img relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="w-full" src="@/section/s3/img.jpg" />
+        <img class="w-full" src="@/section/s3/img123.jpg" />
       </div>
     </div>
   </section>
